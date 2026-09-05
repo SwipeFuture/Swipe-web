@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { CURRENCIES, type Currency } from "./currency";
 
 export default function CurrencySelect({
@@ -11,18 +12,28 @@ export default function CurrencySelect({
   onChange: (currency: Currency) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [coords, setCoords] = useState({ top: 0, left: 0, width: 0 });
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
 
-  // Rendered with `position: fixed` (see the panel below) instead of being absolutely
-  // positioned inside the input card — the card has `overflow-hidden` for its rounded glass
-  // corners, which was silently clipping the bottom of this list with no way to scroll to
-  // the hidden options. Fixed positioning escapes that clip entirely since none of the
-  // ancestors use a transform/filter, so it renders relative to the viewport instead.
+  useEffect(() => setMounted(true), []);
+
+  // Positioned in page coordinates (rect + scroll offset) and rendered through a portal
+  // into <body>, so the panel scrolls naturally with the page instead of needing scroll/
+  // viewport listeners to stay anchored — it also escapes the input card's `overflow-hidden`
+  // (kept there so the card's backdrop-blur respects its rounded corners), which was
+  // otherwise silently clipping the bottom of this list.
   const openDropdown = () => {
     const rect = triggerRef.current?.getBoundingClientRect();
-    if (rect) setCoords({ top: rect.bottom + 8, left: rect.left, width: rect.width });
+    if (rect) {
+      setCoords({
+        top: rect.bottom + window.scrollY + 8,
+        left: rect.left + window.scrollX,
+        width: rect.width,
+      });
+    }
     setOpen(true);
   };
 
@@ -30,24 +41,28 @@ export default function CurrencySelect({
     if (!open) return;
 
     const handlePointerDown = (e: PointerEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(target) &&
+        panelRef.current &&
+        !panelRef.current.contains(target)
+      ) {
         setOpen(false);
       }
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
-    // Closing on scroll (rather than re-tracking position) keeps this simple and matches
-    // how most floating menus behave.
-    const handleScroll = () => setOpen(false);
+    const handleResize = () => setOpen(false);
 
     window.addEventListener("pointerdown", handlePointerDown);
     window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+    window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("pointerdown", handlePointerDown);
       window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("scroll", handleScroll, true);
+      window.removeEventListener("resize", handleResize);
     };
   }, [open]);
 
@@ -73,39 +88,46 @@ export default function CurrencySelect({
         <span className={`text-stone-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}>▾</span>
       </button>
 
-      {open && (
-        <div
-          role="listbox"
-          style={{ position: "fixed", top: coords.top, left: coords.left, width: coords.width }}
-          className="z-50 origin-top rounded-2xl border border-white/70 bg-white/95 backdrop-blur-xl shadow-2xl"
-        >
-          <div className="max-h-72 overflow-y-auto p-1.5">
-            {CURRENCIES.map((c) => (
-              <button
-                key={c.code}
-                type="button"
-                role="option"
-                aria-selected={c.code === value.code}
-                onClick={() => {
-                  onChange(c);
-                  setOpen(false);
-                }}
-                className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-colors duration-150 ${
-                  c.code === value.code
-                    ? "bg-amber-100 text-amber-800"
-                    : "text-stone-600 hover:bg-amber-50"
-                }`}
-              >
-                <span className="inline-flex w-8 justify-center font-semibold text-amber-600">
-                  {c.position === "none" ? "#" : c.symbol}
-                </span>
-                <span className="font-semibold">{c.code}</span>
-                <span className="text-stone-400">{c.name}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
+      {mounted &&
+        open &&
+        createPortal(
+          <div
+            ref={panelRef}
+            role="listbox"
+            style={{ position: "absolute", top: coords.top, left: coords.left, width: coords.width }}
+            className="z-50 origin-top rounded-2xl border border-white/70 bg-white/95 backdrop-blur-xl shadow-2xl shadow-amber-900/10"
+          >
+            <div className="max-h-72 overflow-y-auto p-1.5">
+              {CURRENCIES.map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  role="option"
+                  aria-selected={c.code === value.code}
+                  onClick={() => {
+                    onChange(c);
+                    setOpen(false);
+                  }}
+                  className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-colors duration-150 ${
+                    c.code === value.code
+                      ? "bg-amber-100 text-amber-800"
+                      : "text-stone-600 hover:bg-amber-50"
+                  }`}
+                >
+                  <span className="inline-flex w-8 justify-center font-semibold text-amber-600">
+                    {c.position === "none" ? "#" : c.symbol}
+                  </span>
+                  <span className="font-semibold">{c.code}</span>
+                  <span className="text-stone-400">{c.name}</span>
+                  {c.code === value.code && (
+                    <span className="ml-auto text-amber-600">✓</span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
