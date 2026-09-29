@@ -69,8 +69,9 @@ const SECTIONS: {
   {
     title: "Subscriptions & Payment",
     blocks: [
-      "If you choose a paid plan, all payment is handled entirely by the Apple App Store or Google Play — we never see, receive, or store your card details or any other payment information. We only store which plan you're currently on, so the app can apply the right daily token limit.",
-      "Managing or cancelling a paid plan is done through your Apple ID or Google Account subscription settings, not within any Swipe app.",
+      "Go and Pro are auto-renewable subscriptions bought through the Apple App Store. All payment is handled entirely by Apple — we never see, receive, or store your card details or any other payment information. We only store which plan you're currently on, so the app can apply the right daily token limit in all four apps.",
+      "We use RevenueCat, a subscription-management service, to verify purchases and keep your plan in sync across the four apps. RevenueCat receives your Swipe account ID (a random identifier) and your App Store purchase records for the Swipe apps — which plan, when it was bought, renewed, or cancelled — but never your name, email address, or payment details.",
+      "Managing or cancelling a subscription is done in your Apple ID subscription settings, not within any Swipe app.",
     ],
   },
   {
@@ -78,6 +79,7 @@ const SECTIONS: {
     blocks: [
       "Your data is stored with Supabase, the third-party backend provider that hosts our database, authentication, and file storage.",
       "Password-reset and recovery-email confirmation emails are sent through Brevo, a third-party email delivery provider. Brevo only receives the address the email is sent to and the email itself, solely to deliver it.",
+      "Subscription purchase records are processed by RevenueCat, as described in \"Subscriptions & Payment\" above.",
       "If you sign in with Apple, Apple handles that sign-in under its own privacy policy; when you delete your account, we ask Apple to revoke the Swipe apps' access to your Apple ID.",
       "We do not share your data with any other third party.",
     ],
@@ -88,7 +90,7 @@ const SECTIONS: {
       "You can edit or remove most profile fields (including your display name, avatar, bio, and country — everything shown on the leaderboard) at any time in the app.",
       "You can hide your profile from the leaderboard and search entirely, making it completely private, at any time in Settings → Privacy → \"Hide From Leaderboard\" — see \"Public Leaderboard & Other Users\" above for exactly what this does.",
       "You can report or block another user directly from their profile if their content is inappropriate; reported profiles are reviewed and can be removed.",
-      "You can switch plans at any time in the app.",
+      "You can upgrade your plan in the app, and change or cancel a subscription at any time in your Apple ID subscription settings.",
       "You can turn streak-reminder notifications and lesson sounds on or off at any time in Settings.",
       "You can permanently delete your account and everything tied to it, including removing yourself from the leaderboard and search, at any time via Settings → Delete Account — this cannot be undone.",
     ],
@@ -298,7 +300,7 @@ export default function PrivacyPolicyApps() {
           </h1>
 
           <p className="mt-5 text-sm sm:text-base text-gray-400">
-            Last updated: September 28, 2026
+            Last updated: September 29, 2026
           </p>
 
           <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-2xl mx-auto">
