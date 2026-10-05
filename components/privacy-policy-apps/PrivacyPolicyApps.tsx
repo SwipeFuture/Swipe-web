@@ -26,6 +26,14 @@ const SECTIONS: {
     ],
   },
   {
+    title: "Who Is Responsible for Your Data",
+    blocks: [
+      "The Swipe apps are offered by, and the party responsible for processing your personal data is:",
+      ["Roger Sigrist", "Jungfrauweg 4", "3053 Lätti", "Switzerland", "Email: swipefuture@icloud.com"],
+      "For any questions about your data or to exercise your rights (see \"Your Rights\" below), contact us at swipefuture@icloud.com.",
+    ],
+  },
+  {
     title: "Information We Collect",
     blocks: [
       "Account information: your email address and password, used only to sign you in (your password is hashed and never visible to us).",
@@ -122,7 +130,7 @@ const SECTIONS: {
         "object to or restrict certain processing of your data",
         "lodge a complaint with a data protection authority, such as the Swiss Federal Data Protection and Information Commissioner (FDPIC) or the authority in your EU country",
       ],
-      "To exercise any of these rights, contact us via swipefuture.dev.",
+      "To exercise any of these rights, email us at swipefuture@icloud.com.",
     ],
   },
   {
@@ -150,7 +158,7 @@ const SECTIONS: {
   },
   {
     title: "Contact",
-    blocks: ["Questions about this policy? Reach out via swipefuture.dev."],
+    blocks: ["Questions about this policy? Email us at swipefuture@icloud.com or reach out via swipefuture.dev."],
     link: { label: "Get in touch", href: "/contact" },
   },
 ];
