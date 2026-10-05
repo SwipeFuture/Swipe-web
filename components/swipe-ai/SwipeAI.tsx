@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import AppShowcase from "@/components/app-showcase/AppShowcase";
 import type { LessonKey, Lesson } from "./lessons/types";
 import { introductionToAI } from "./lessons/01-introduction-to-ai";
 import { howAiWorks } from "./lessons/02-how-ai-works";
@@ -619,6 +620,12 @@ export default function SwipeAI() {
             ))}
           </div>
 
+        </div>
+
+        {/* ============ Swipe AI — Coming Soon showcase (shared with the other app pages) ============ */}
+
+        <div className="mt-16 sm:mt-24 lg:mt-28">
+          <AppShowcase app="ai" />
         </div>
 
         {/* ============ CTA ============ */}

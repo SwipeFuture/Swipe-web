@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import AppShowcase from "@/components/app-showcase/AppShowcase";
 import type { LessonKey, Lesson } from "./lessons/types";
 import { discipline } from "./lessons/01-discipline";
 import { habits } from "./lessons/02-habits";
@@ -626,6 +627,12 @@ export default function PersonalGrowth() {
             ))}
           </div>
 
+        </div>
+
+        {/* ============ Swipe Personal Growth — Coming Soon showcase (shared with the other app pages) ============ */}
+
+        <div className="mt-16 sm:mt-24 lg:mt-28">
+          <AppShowcase app="growth" />
         </div>
 
         {/* ============ CTA ============ */}

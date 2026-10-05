@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import AppShowcase from "@/components/app-showcase/AppShowcase";
 
 // ================= Content =================
 //
@@ -47,17 +48,6 @@ const AREAS: LearningArea[] = [
     text: "Get familiar with Git, code editors, the command line and the everyday tools developers rely on to build and ship software.",
     href: "/coding/developer-tools",
   },
-];
-
-const SWIPE_CODING_FEATURES = [
-  "Interactive lessons",
-  "Step-by-step learning paths",
-  "Coding challenges",
-  "Real-world projects",
-  "Progress tracking",
-  "AI-powered learning",
-  "Certificates",
-  "Community",
 ];
 
 function AreaCard({ area, revealClass }: { area: LearningArea; revealClass: string }) {
@@ -120,9 +110,6 @@ export default function Coding() {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const [gridVisible, setGridVisible] = useState(false);
 
-  const waitlistRef = useRef<HTMLDivElement | null>(null);
-  const [waitlistVisible, setWaitlistVisible] = useState(false);
-
   const ctaRef = useRef<HTMLDivElement | null>(null);
   const [ctaVisible, setCtaVisible] = useState(false);
 
@@ -157,20 +144,17 @@ export default function Coding() {
     const heroObserver = make(setHeroVisible, 0.2);
     const introObserver = make(setIntroVisible, 0.2);
     const gridObserver = make(setGridVisible, 0.1);
-    const waitlistObserver = make(setWaitlistVisible, 0.2);
     const ctaObserver = make(setCtaVisible, 0.3);
 
     if (heroRef.current) heroObserver.observe(heroRef.current);
     if (introRef.current) introObserver.observe(introRef.current);
     if (gridRef.current) gridObserver.observe(gridRef.current);
-    if (waitlistRef.current) waitlistObserver.observe(waitlistRef.current);
     if (ctaRef.current) ctaObserver.observe(ctaRef.current);
 
     return () => {
       heroObserver.disconnect();
       introObserver.disconnect();
       gridObserver.disconnect();
-      waitlistObserver.disconnect();
       ctaObserver.disconnect();
     };
   }, []);
@@ -443,83 +427,10 @@ export default function Coding() {
             ))}
           </div>
 
-          {/* ============ Swipe Coding — Coming Soon (featured) ============ */}
+          {/* ============ Swipe Coding — Coming Soon showcase (shared with the other app pages) ============ */}
 
-          <div
-            ref={waitlistRef}
-            className={`group relative mt-6 sm:mt-7 transition-all duration-1000 ease-out ${
-              waitlistVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-            }`}
-          >
-
-            <div className="absolute -inset-px rounded-[36px] sm:rounded-[48px] bg-gradient-to-br from-green-500/0 via-green-500/50 to-emerald-400/0 opacity-60 blur-lg -z-10" />
-
-            <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px] border border-white/10 bg-gradient-to-br from-green-950 via-green-900 to-emerald-950 p-8 sm:p-12 lg:p-16 shadow-2xl text-center">
-
-              <div className="pointer-events-none absolute inset-0 rounded-[36px] sm:rounded-[48px] bg-gradient-to-b from-white/10 via-transparent to-transparent" />
-
-              <div className="hidden sm:block absolute -right-20 -top-20 w-80 h-80 rounded-full bg-green-500 blur-[130px] opacity-30 -z-10" />
-              <div className="hidden lg:block absolute -left-16 -bottom-20 w-72 h-72 rounded-full bg-emerald-400 blur-[120px] opacity-20 -z-10" />
-
-              {/* Explicit flex-column so the stacking order is unambiguous — badge first,
-                  logos second, regardless of how the inline/block boxes would otherwise flow */}
-              <div className="relative flex flex-col items-center">
-
-                <span className="relative order-1 inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-400/10 backdrop-blur-sm px-5 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold tracking-wide text-green-300">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  Coming Soon
-                </span>
-
-                {/* Both Swipe Coding marks, layered — each PNG already carries its own solid
-                    tile background (black-on-black, black-on-white), so no extra frame is
-                    needed here — just the images themselves, big and soft-cornered */}
-                <div className="relative order-2 mt-10 sm:mt-12 flex items-center justify-center w-56 h-36 sm:w-72 sm:h-44">
-
-                  <div className="absolute inset-0 rounded-[40px] bg-green-400 blur-3xl opacity-20 -z-10" />
-
-                  <img
-                    src="/logo-coding-black.png"
-                    alt="Swipe Coding"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover shadow-2xl -rotate-6 transition-transform duration-500 ease-out group-hover:-rotate-12 group-hover:-translate-x-2"
-                  />
-
-                  <img
-                    src="/logo-coding-white.png"
-                    alt="Swipe Coding"
-                    className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover shadow-2xl rotate-6 transition-transform duration-500 ease-out group-hover:rotate-12 group-hover:translate-x-2"
-                  />
-
-                </div>
-
-              </div>
-
-              <h3 className="relative mt-8 sm:mt-10 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
-                Swipe{" "}
-                <span className="bg-gradient-to-r from-green-300 via-emerald-300 to-green-200 bg-clip-text text-transparent">
-                  Coding
-                </span>
-              </h3>
-
-              <p className="relative mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-green-100/70 max-w-2xl mx-auto">
-                Swipe Coding will become Swipe&apos;s interactive programming
-                platform — built to take you from your first line of code to
-                real, job-ready skills.
-              </p>
-
-              <div className="relative mt-8 flex flex-wrap items-center justify-center gap-2.5 max-w-2xl mx-auto">
-                {SWIPE_CODING_FEATURES.map((feature) => (
-                  <span
-                    key={feature}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm px-3.5 py-2 text-xs sm:text-sm font-medium text-green-100/90"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-green-400" />
-                    {feature}
-                  </span>
-                ))}
-              </div>
-
-            </div>
-
+          <div className="mt-6 sm:mt-7">
+            <AppShowcase app="coding" />
           </div>
 
         </div>
