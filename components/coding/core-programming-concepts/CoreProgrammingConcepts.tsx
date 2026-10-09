@@ -488,7 +488,7 @@ export default function CoreProgrammingConcepts() {
 
           </div>
 
-          <div className="relative order-1 lg:order-2 flex justify-center">
+          <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 

@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import TrackModal from "@/components/app-tracks/TrackModal";
+import ScrollStrip from "@/components/scroll-strip/ScrollStrip";
 
 // ================= App Showcase =================
 //
@@ -17,7 +20,7 @@ export type ShowcaseApp = "coding" | "finance" | "growth" | "ai";
 // Release date of all four apps (local midnight). Once it has passed, the badge
 // switches from "Coming Soon" to "Out now".
 const LAUNCH = new Date(2026, 9, 21);
-const LAUNCH_LABEL = "October 21, 2026";
+export const LAUNCH_LABEL = "October 21, 2026";
 
 type Theme = {
   card: string;
@@ -93,10 +96,10 @@ const THEMES: Record<ShowcaseApp, Theme> = {
   },
 };
 
-type Feature = { icon: string; title: string; text: string };
-type Track = { name: string; levels: number };
+export type Feature = { icon: string; title: string; text: string };
+export type Track = { name: string; levels: number };
 
-type AppContent = {
+export type AppContent = {
   name: string;
   logo: string;
   intro: string;
@@ -125,7 +128,7 @@ const SHARED_FEATURES: Feature[] = [
   },
 ];
 
-const APPS: Record<ShowcaseApp, AppContent> = {
+export const APPS: Record<ShowcaseApp, AppContent> = {
   coding: {
     name: "Coding",
     logo: "coding",
@@ -312,6 +315,7 @@ export default function AppShowcase({ app }: { app: ShowcaseApp }) {
   const t = THEMES[app];
   const c = APPS[app];
   const launched = useLaunched();
+  const [openTrack, setOpenTrack] = useState<string | null>(null);
 
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -427,7 +431,11 @@ export default function AppShowcase({ app }: { app: ShowcaseApp }) {
             </h4>
           </div>
 
-          <div className="mt-6 sm:mt-8 flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory px-6 sm:px-12 lg:px-16 pb-4 [scrollbar-width:thin]">
+          <ScrollStrip
+            className="mt-6 sm:mt-8 flex gap-4 sm:gap-5 px-6 sm:px-12 lg:px-16 pb-4"
+            barClassName="bg-white/15"
+            thumbClassName="bg-white/70"
+          >
             {c.screens.map((caption, i) => (
               <figure key={caption} className="snap-center shrink-0 w-[62%] sm:w-[34%] lg:w-[23%]">
                 <div className="rounded-[28px] sm:rounded-[32px] border border-white/15 bg-black p-1.5 shadow-2xl transition-transform duration-500 ease-out hover:-translate-y-1.5">
@@ -445,7 +453,7 @@ export default function AppShowcase({ app }: { app: ShowcaseApp }) {
                 </figcaption>
               </figure>
             ))}
-          </div>
+          </ScrollStrip>
         </div>
 
         <div className="relative px-6 sm:px-12 lg:px-16">
@@ -482,19 +490,21 @@ export default function AppShowcase({ app }: { app: ShowcaseApp }) {
             </h4>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 max-w-3xl mx-auto">
               {c.tracks.map((track) => (
-                <span
+                <button
                   key={track.name}
-                  className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm pl-3.5 pr-2 py-1.5 text-xs sm:text-sm font-medium ${t.chipText}`}
+                  type="button"
+                  onClick={() => setOpenTrack(track.name)}
+                  className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm pl-3.5 pr-2 py-1.5 text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-white/15 hover:-translate-y-0.5 ${t.chipText}`}
                 >
                   {track.name}
                   <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] sm:text-xs font-semibold text-white/70">
                     {track.levels} levels
                   </span>
-                </span>
+                </button>
               ))}
             </div>
             <p className={`mt-5 text-xs sm:text-sm ${t.muted}`}>
-              Plus a free Sandbox intro and the {c.advisor} — more tracks are already in the works.
+              Tap a track to see every level and lesson. Plus a free Sandbox intro and the {c.advisor} — more tracks are already in the works.
             </p>
           </div>
 
@@ -519,9 +529,22 @@ export default function AppShowcase({ app }: { app: ShowcaseApp }) {
             </div>
           </div>
 
+          {/* ---------- To the /apps page ---------- */}
+          <div className="mt-10 sm:mt-12 flex justify-center">
+            <Link
+              href={`/apps#${app}`}
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-black shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+            >
+              Discover all Swipe Apps
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+
         </div>
 
       </div>
+
+      <TrackModal app={app} track={openTrack} appName={`Swipe ${c.name}`} onClose={() => setOpenTrack(null)} />
     </div>
   );
 }

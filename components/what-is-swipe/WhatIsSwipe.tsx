@@ -237,7 +237,7 @@ const textRef = useRef<HTMLDivElement | null>(null);
 
           <div
             ref={imageRef}
-            className={`relative flex justify-center order-1 transition-all duration-1000 ease-out ${
+            className={`max-lg:hidden relative flex justify-center order-1 transition-all duration-1000 ease-out ${
               imageVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
             }`}
           >

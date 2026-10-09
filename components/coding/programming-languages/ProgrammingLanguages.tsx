@@ -39,7 +39,7 @@ function LanguageSection({
           real logo once one exists for this language, otherwise a
           placeholder; no border, just soft rounded corners. */}
       <div
-        className={`w-full lg:w-[42%] xl:w-[44%] flex ${
+        className={`max-lg:hidden w-full lg:w-[42%] xl:w-[44%] flex ${
           alignRight ? "lg:order-1" : "lg:order-2"
         }`}
       >
@@ -324,7 +324,7 @@ export default function ProgrammingLanguages() {
 
           </div>
 
-          <div className="relative order-1 lg:order-2 flex justify-center">
+          <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 

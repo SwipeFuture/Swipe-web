@@ -507,7 +507,7 @@ export default function PersonalGrowth() {
           </div>
 
           {/* Placeholder image — swap for the final orange liquid-glass illustration later */}
-          <div className="relative order-1 lg:order-2 flex justify-center">
+          <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-orange-500 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
@@ -533,7 +533,7 @@ export default function PersonalGrowth() {
           }`}
         >
 
-          <div className="relative flex justify-center order-1">
+          <div className="max-lg:hidden relative flex justify-center order-1">
 
             <div className="absolute w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full bg-orange-400 blur-[100px] sm:blur-[130px] opacity-40" />
 

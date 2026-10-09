@@ -265,7 +265,7 @@ export default function Footer() {
 
           {/* Image — sits to the far right of every column */}
 
-          <div className="relative w-full sm:w-64 lg:w-80 shrink-0 self-center lg:self-start">
+          <div className="max-lg:hidden relative w-full sm:w-64 lg:w-80 shrink-0 self-center lg:self-start">
             <div className="absolute -inset-6 rounded-[36px] bg-amber-200 blur-3xl opacity-30 -z-10" />
             <img
               src="/liquid-glass-zwei.png"

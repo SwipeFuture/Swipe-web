@@ -152,7 +152,7 @@ export default function Hero() {
 
         {/* Right */}
 
-        <div className="relative w-full max-w-[340px] h-[340px] sm:max-w-[420px] sm:h-[420px] md:max-w-[500px] md:h-[500px] lg:w-[600px] lg:h-[650px] lg:max-w-none flex items-center justify-center">
+        <div className="max-lg:hidden relative w-full max-w-[340px] h-[340px] sm:max-w-[420px] sm:h-[420px] md:max-w-[500px] md:h-[500px] lg:w-[600px] lg:h-[650px] lg:max-w-none flex items-center justify-center">
 
           {/* Main Glow */}
 
