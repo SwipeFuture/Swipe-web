@@ -55,7 +55,7 @@ const FAQ = [
   },
   {
     q: "Which devices are supported?",
-    a: "The Swipe apps are made for iPhone and available on the App Store from October 21, 2026.",
+    a: "The Swipe apps are made for iPhone and available on the App Store from November 1, 2026.",
   },
   {
     q: "How do I cancel a subscription?",
@@ -83,7 +83,7 @@ export default function SwipeApps() {
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-stone-600">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Coming to the App Store · October 21, 2026
+            Coming to the App Store · November 1, 2026
           </span>
           <h1 className="mt-6 sm:mt-8 text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-stone-800">
             The Swipe{" "}

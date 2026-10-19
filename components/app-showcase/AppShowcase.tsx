@@ -19,8 +19,8 @@ export type ShowcaseApp = "coding" | "finance" | "growth" | "ai";
 
 // Release date of all four apps (local midnight). Once it has passed, the badge
 // switches from "Coming Soon" to "Out now".
-const LAUNCH = new Date(2026, 9, 21);
-export const LAUNCH_LABEL = "October 21, 2026";
+const LAUNCH = new Date(2026, 10, 1);
+export const LAUNCH_LABEL = "November 1, 2026";
 
 type Theme = {
   card: string;

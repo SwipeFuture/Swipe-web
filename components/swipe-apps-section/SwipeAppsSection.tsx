@@ -44,7 +44,7 @@ export default function SwipeAppsSection() {
       >
         <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-stone-600">
           <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-          Swipe Apps · Coming October 21, 2026
+          Swipe Apps · Coming November 1, 2026
         </span>
 
         <h2 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-[-0.04em] lg:tracking-[-0.05em] text-stone-800">
