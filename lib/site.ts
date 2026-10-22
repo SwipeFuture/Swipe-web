@@ -12,7 +12,7 @@ export const SITE_UPDATED_LABEL = "October 2026";
 
 // Google Search Console: paste the content value of the "HTML tag" verification method
 // here (only needed for a URL-prefix property; a domain property is verified via DNS).
-export const GOOGLE_SITE_VERIFICATION = "";
+export const GOOGLE_SITE_VERIFICATION = "rL-g-_LRDv1yV1paDrZ02Fe4POs8Njub4iGHMx4cZN0";
 
 export const SOCIAL_LINKS = [
   "https://www.instagram.com/swipe.future",
