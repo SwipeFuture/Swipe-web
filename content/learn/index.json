@@ -1,0 +1,212 @@
+[
+ {
+  "app": "coding",
+  "track": "C++",
+  "slug": "cpp",
+  "lessons": 25
+ },
+ {
+  "app": "coding",
+  "track": "C#",
+  "slug": "csharp",
+  "lessons": 27
+ },
+ {
+  "app": "coding",
+  "track": "Go",
+  "slug": "go",
+  "lessons": 9
+ },
+ {
+  "app": "coding",
+  "track": "HTML",
+  "slug": "html",
+  "lessons": 18
+ },
+ {
+  "app": "coding",
+  "track": "Java",
+  "slug": "java",
+  "lessons": 28
+ },
+ {
+  "app": "coding",
+  "track": "JavaScript",
+  "slug": "javascript",
+  "lessons": 15
+ },
+ {
+  "app": "coding",
+  "track": "Python",
+  "slug": "python",
+  "lessons": 11
+ },
+ {
+  "app": "coding",
+  "track": "Rust",
+  "slug": "rust",
+  "lessons": 8
+ },
+ {
+  "app": "coding",
+  "track": "Ship It",
+  "slug": "ship-it",
+  "lessons": 6
+ },
+ {
+  "app": "coding",
+  "track": "TypeScript",
+  "slug": "typescript",
+  "lessons": 12
+ },
+ {
+  "app": "finance",
+  "track": "Corporate Finance & Investment Banking",
+  "slug": "corporate-finance-and-investment-banking",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Credit & Debt",
+  "slug": "credit-and-debt",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Crypto & Alternative Assets",
+  "slug": "crypto-and-alternative-assets",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Investing Fundamentals",
+  "slug": "investing-fundamentals",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Money Basics",
+  "slug": "money-basics",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Real Estate",
+  "slug": "real-estate",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Retirement & FIRE",
+  "slug": "retirement-and-fire",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Stock Market & Trading",
+  "slug": "stock-market-and-trading",
+  "lessons": 9
+ },
+ {
+  "app": "finance",
+  "track": "Taxes",
+  "slug": "taxes",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Fitness & Movement",
+  "slug": "fitness-and-movement",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Focus & Productivity",
+  "slug": "focus-and-productivity",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Habits & Routines",
+  "slug": "habits-and-routines",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Mindset & Confidence",
+  "slug": "mindset-and-confidence",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Purpose & Direction",
+  "slug": "purpose-and-direction",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Relationships & Communication",
+  "slug": "relationships-and-communication",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Sleep",
+  "slug": "sleep",
+  "lessons": 9
+ },
+ {
+  "app": "growth",
+  "track": "Stress & Emotional Resilience",
+  "slug": "stress-and-emotional-resilience",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "AI Agents & Automation",
+  "slug": "ai-agents-and-automation",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "AI Ethics & Safety",
+  "slug": "ai-ethics-and-safety",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "AI Fundamentals",
+  "slug": "ai-fundamentals",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "Building With AI APIs",
+  "slug": "building-with-ai-apis",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "Deep Learning & Neural Networks",
+  "slug": "deep-learning-and-neural-networks",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "Machine Learning Fundamentals",
+  "slug": "machine-learning-fundamentals",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "Prompt Engineering",
+  "slug": "prompt-engineering",
+  "lessons": 9
+ },
+ {
+  "app": "ai",
+  "track": "Using AI Tools Well",
+  "slug": "using-ai-tools-well",
+  "lessons": 9
+ }
+]

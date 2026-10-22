@@ -242,7 +242,7 @@ export default function PrivacyPolicy() {
           <div className="hidden lg:block absolute -top-16 -right-16 w-56 h-56 rotate-6 opacity-90">
             <div className="absolute inset-4 rounded-full bg-green-300 blur-[80px] opacity-40 -z-10" />
             <img
-              src="/liquid-glass-drei.png"
+              src="/liquid-glass-drei.webp"
               alt=""
               className="w-full h-full object-cover rounded-[32px] shadow-[0_30px_70px_rgba(0,0,0,0.15)] border border-white/70"
             />

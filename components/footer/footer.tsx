@@ -48,6 +48,10 @@ const COLUMNS = [
     links: ["Success Blueprint", "Coding", "Artificial Intelligence", "Finance", "Personal Growth"],
   },
   {
+    heading: "Free",
+    links: ["Free Lessons", "Free Tools", "Learning Advisor", "Swipe Apps"],
+  },
+  {
     heading: "Information",
     links: ["Contact", "About", "Privacy Policy"],
   },
@@ -63,6 +67,10 @@ const LINK_HREFS: Record<string, string> = {
   "Artificial Intelligence": "/ai",
   Finance: "/finance",
   "Personal Growth": "/personal-growth",
+  "Free Lessons": "/learn",
+  "Free Tools": "/tools",
+  "Learning Advisor": "/advisor",
+  "Swipe Apps": "/apps",
   Contact: "/contact",
   About: "/about",
   "Privacy Policy": "/privacy-policy",
@@ -188,7 +196,7 @@ export default function Footer() {
 
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 lg:gap-16">
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-10 flex-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-10 flex-1">
 
             {/* Column 1 — Brand */}
 
@@ -268,7 +276,7 @@ export default function Footer() {
           <div className="max-lg:hidden relative w-full sm:w-64 lg:w-80 shrink-0 self-center lg:self-start">
             <div className="absolute -inset-6 rounded-[36px] bg-amber-200 blur-3xl opacity-30 -z-10" />
             <img
-              src="/liquid-glass-zwei.png"
+              src="/liquid-glass-zwei.webp"
               alt=""
               className="w-full rounded-[28px] shadow-[0_30px_70px_rgba(120,90,50,0.2)] border border-white/70"
             />

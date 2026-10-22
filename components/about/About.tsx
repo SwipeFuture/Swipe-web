@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import AboutStory from "./AboutStory";
 
 type Block =
   | { type: "p"; text: string }
@@ -376,6 +377,9 @@ export default function About() {
           </p>
 
         </div>
+
+        {/* Founder note, how it started, how lessons are made */}
+        <AboutStory />
 
         {/* Card 1 — Why Swipe Exists / Our Philosophy */}
 

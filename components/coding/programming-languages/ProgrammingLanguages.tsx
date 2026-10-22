@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { LANGUAGES, type Language } from "./languages";
+import LearnBanner from "@/components/learn/LearnBanner";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -329,7 +331,7 @@ export default function ProgrammingLanguages() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-computer-green.png"
+              src="/liquid-glass-computer-green.webp"
               alt="Programming Languages preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -337,6 +339,19 @@ export default function ProgrammingLanguages() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title="Which one is right for you?"
+          text="Take the 7-question quiz, then start the free lessons for your language — every language here has two free levels on the web, like in the app."
+          primary={{ href: "/quiz/programming-language", label: "Find my language" }}
+          secondary={[
+            { href: "/learn#coding", label: "Browse free coding lessons" },
+            { href: "/coding/typing-speed-test", label: "Code typing speed test" },
+          ]}
+        />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

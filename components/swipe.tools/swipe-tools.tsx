@@ -250,7 +250,7 @@ export default function SwipeTools() {
   }, []);
 
   return (
-    <section id="learning-paths" ref={sectionRef} className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-40 scroll-mt-24">
+    <section id="learning-paths" ref={sectionRef} className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-28 scroll-mt-24">
 
       {/* ================= Background — identical language to "What is Swipe" ================= */}
 

@@ -503,7 +503,7 @@ export default function SwipeAI() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-violet-600 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-sieben-pmg.png"
+              src="/liquid-glass-sieben-pmg.webp"
               alt="Swipe AI preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(76,29,149,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -529,7 +529,7 @@ export default function SwipeAI() {
             <div className="absolute w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full bg-violet-400 blur-[100px] sm:blur-[130px] opacity-40" />
 
             <img
-              src="/liquid-glass-elf.png"
+              src="/liquid-glass-elf.webp"
               alt="Why AI literacy matters"
               className="relative w-[220px] sm:w-[300px] lg:w-[360px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(76,29,149,0.18)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:-rotate-2 hover:scale-[1.03] rotate-2"
             />

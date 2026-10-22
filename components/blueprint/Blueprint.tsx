@@ -455,13 +455,13 @@ export default function Blueprint() {
 
           </div>
 
-          {/* Hero image — liquid-glass-vier.png */}
+          {/* Hero image — liquid-glass-vier.webp */}
           <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-blue-500 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-vier.png"
+              src="/liquid-glass-vier.webp"
               alt="Blueprint preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(0,0,50,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -638,11 +638,11 @@ export default function Blueprint() {
           className={`relative mt-16 sm:mt-24 lg:mt-28 text-center ${reveal(7)}`}
         >
 
-          {/* Second image — liquid-glass-fuenf.png — floating beside this closing text */}
+          {/* Second image — liquid-glass-fuenf.webp — floating beside this closing text */}
           <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[2%] xl:right-[6%] group/img2">
             <div className="absolute -inset-6 rounded-[40px] bg-cyan-400 blur-[70px] opacity-50 -z-10 transition-opacity duration-500 group-hover/img2:opacity-70" />
             <img
-              src="/liquid-glass-fuenf.png"
+              src="/liquid-glass-fuenf.webp"
               alt="Blueprint detail"
               className="relative w-[190px] xl:w-[230px] rounded-[28px] border border-white/70 shadow-[0_35px_80px_rgba(0,0,50,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 rotate-6 hover:rotate-0 hover:scale-105"
             />

@@ -10,6 +10,8 @@ import { conditions } from "./lessons/04-conditions";
 import { loops } from "./lessons/05-loops";
 import { functions } from "./lessons/06-functions";
 import { arraysAndObjects } from "./lessons/07-arrays-and-objects";
+import LearnBanner from "@/components/learn/LearnBanner";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -493,7 +495,7 @@ export default function CoreProgrammingConcepts() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-brain-green.png"
+              src="/liquid-glass-brain-green.webp"
               alt="Core Programming Concepts preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -501,6 +503,19 @@ export default function CoreProgrammingConcepts() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title="Practise the basics like in the app"
+          text="Variables, conditions and loops click fastest with real code. Start with the free Python lessons from Swipe Coding — short cards and a quick check after every idea."
+          primary={{ href: learnTrackUrl("coding", "python") ?? "/learn#coding", label: "Start free Python lessons" }}
+          secondary={[
+            { href: "/quiz/programming-language", label: "Which language should I learn?" },
+            { href: "/coding/typing-speed-test", label: "Code typing speed test" },
+          ]}
+        />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

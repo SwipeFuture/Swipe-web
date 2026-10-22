@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import Link from "next/link";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // Pop-up outline of one app track: every level with its chapters and lesson
 // titles. The data comes from public/app-tracks/<app>.json, exported straight
@@ -94,6 +96,15 @@ export default function TrackModal({
                   <span className="rounded-full px-2.5 py-1 bg-stone-100 text-stone-600">Level tests</span>
                 )}
               </div>
+            )}
+            {learnTrackUrl(app, track) && (
+              <Link
+                href={learnTrackUrl(app, track)!}
+                onClick={onClose}
+                className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-black px-4 py-2 text-xs sm:text-sm font-bold text-white transition-transform hover:scale-105"
+              >
+                Try levels 1–2 free on the web →
+              </Link>
             )}
           </div>
           <button

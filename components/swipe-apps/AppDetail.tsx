@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import TrackModal from "@/components/app-tracks/TrackModal";
+import Link from "next/link";
+import { appLessons, learnAppUrl, toolsAppUrl } from "@/lib/learn-links";
 import ScrollStrip from "@/components/scroll-strip/ScrollStrip";
 import { APPS, LAUNCH_LABEL, type ShowcaseApp } from "@/components/app-showcase/AppShowcase";
 
@@ -173,7 +175,16 @@ export default function AppDetail({ app, flip = false }: { app: ShowcaseApp; fli
 
           <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-stone-900 px-4 py-2 text-xs sm:text-sm font-semibold text-white">
             <span className={`w-2 h-2 rounded-full ${t.dot} animate-pulse`} />
-            On the App Store · {LAUNCH_LABEL}
+            {LAUNCH_LABEL === "Coming soon" ? "Coming soon to the App Store" : `On the App Store · ${LAUNCH_LABEL}`}
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2.5">
+            <Link href={learnAppUrl(app)} className="rounded-full border border-stone-300 bg-white px-4 py-2 text-xs sm:text-sm font-bold text-stone-800 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+              Try {appLessons(app)} lessons free →
+            </Link>
+            <Link href={toolsAppUrl(app)} className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 text-xs sm:text-sm font-semibold text-stone-600 transition-all hover:-translate-y-0.5 hover:shadow-md">
+              Free tools & quizzes
+            </Link>
           </div>
         </div>
 

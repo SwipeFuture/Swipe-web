@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import LearnBanner from "@/components/learn/LearnBanner";
+import FloatingLearn from "@/components/learn/FloatingLearn";
+import { learnTrackUrl, trackLessons } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -949,6 +952,20 @@ export default function Cpp() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title={`Want to learn ${NAME} like in the app?`}
+          text={`Try ${trackLessons("coding", "cpp")} free ${NAME} lessons from Swipe Coding — short cards, real code, a quick check after every idea and a quiz after every chapter.`}
+          primary={{ href: learnTrackUrl("coding", "cpp") ?? "/learn#coding", label: `Start free ${NAME} lessons` }}
+          secondary={[
+            { href: "/quiz/programming-language", label: "Is it the right language for me?" },
+            { href: "/coding/typing-speed-test", label: "Test your code typing speed" },
+          ]}
+        />
+        <FloatingLearn href={learnTrackUrl("coding", "cpp") ?? "/learn#coding"} label={`Learn ${NAME} free`} />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

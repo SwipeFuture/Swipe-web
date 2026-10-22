@@ -10,6 +10,8 @@ import { github } from "./lessons/04-github";
 import { packageManagers } from "./lessons/05-package-managers";
 import { buildAndDeploymentTools } from "./lessons/06-build-and-deployment-tools";
 import { developerWorkflow } from "./lessons/07-developer-workflow";
+import LearnBanner from "@/components/learn/LearnBanner";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -494,7 +496,7 @@ export default function DeveloperTools() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-tools-green.png"
+              src="/liquid-glass-tools-green.webp"
               alt="Developer Tools preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -502,6 +504,19 @@ export default function DeveloperTools() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title="Ship a real project, step by step"
+          text="The Ship It track in Swipe Coding takes you from idea to a live project — editor, terminal, Git and deployment in short lessons."
+          primary={{ href: learnTrackUrl("coding", "ship-it") ?? "/learn#coding", label: "Start the free Ship It lessons" }}
+          secondary={[
+            { href: "/coding/typing-speed-test", label: "Code typing speed test" },
+            { href: "/learn#coding", label: "All free coding lessons" },
+          ]}
+        />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

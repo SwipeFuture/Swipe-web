@@ -84,8 +84,8 @@ export default function Hero() {
 
           <p className="mt-6 sm:mt-8 lg:mt-10 text-base sm:text-xl lg:text-2xl leading-7 sm:leading-9 lg:leading-10 text-gray-500 max-w-xl mx-auto lg:mx-0">
 
-            Skills, AI, coding and finance —
-            everything you need to build a better future.
+            Learn coding, money, personal growth and AI in five minutes a day —
+            free lessons, tools and four learning apps to build a better future.
 
           </p>
 

@@ -64,7 +64,7 @@ const textRef = useRef<HTMLDivElement | null>(null);
   }, []);
 
   return (
-    <section id="swipe" ref={sectionRef} className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-40 scroll-mt-24">
+    <section id="swipe" ref={sectionRef} className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-28 scroll-mt-24">
 
       {/* ================= Background ================= */}
 
@@ -256,7 +256,7 @@ const textRef = useRef<HTMLDivElement | null>(null);
             <div className="hidden sm:block absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] lg:w-[620px] lg:h-[620px] rounded-full border border-dashed border-amber-300/25 animate-[spin_30s_linear_infinite]" />
 
             <img
-              src="/liquid-glass.png"
+              src="/liquid-glass.webp"
               alt="Liquid Glass"
               className="
 relative

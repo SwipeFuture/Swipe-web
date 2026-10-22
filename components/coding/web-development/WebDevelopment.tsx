@@ -10,6 +10,8 @@ import { javascriptAndTypescript } from "./lessons/04-javascript-and-typescript"
 import { frontendFrameworks } from "./lessons/05-frontend-frameworks";
 import { backendAndApis } from "./lessons/06-backend-and-apis";
 import { deploymentAndDevelopmentWorkflow } from "./lessons/07-deployment-and-development-workflow";
+import LearnBanner from "@/components/learn/LearnBanner";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -494,7 +496,7 @@ export default function WebDevelopment() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-web-green.png"
+              src="/liquid-glass-web-green.webp"
               alt="Web Development preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -502,6 +504,19 @@ export default function WebDevelopment() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title="Build your first web page like in the app"
+          text="Start with HTML, then make it interactive with JavaScript — free lessons from Swipe Coding with real code and quick checks."
+          primary={{ href: learnTrackUrl("coding", "html") ?? "/learn#coding", label: "Start free HTML lessons" }}
+          secondary={[
+            { href: learnTrackUrl("coding", "javascript") ?? "/learn#coding", label: "Free JavaScript lessons" },
+            { href: "/coding/typing-speed-test", label: "Code typing speed test" },
+          ]}
+        />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

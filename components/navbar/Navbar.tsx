@@ -8,9 +8,10 @@ import { usePathname } from "next/navigation";
 // footer itself is rendered globally in the root layout.
 const LINKS = [
   { label: "Home", href: "/#home" },
-  { label: "Swipe", href: "/#swipe" },
   { label: "Why us", href: "/#why-us" },
   { label: "Learning paths", href: "/#learning-paths" },
+  { label: "Free lessons", href: "/learn" },
+  { label: "Tools", href: "/tools" },
   { label: "Apps", href: "/#apps" },
   { label: "Motivation", href: "/#motivation" },
   { label: "Information", href: "#footer" },
@@ -24,6 +25,9 @@ const PATH_LINKS: { label: string; href: string; comingSoon?: boolean }[] = [
   { label: "Artificial Intelligence", href: "/ai" },
   { label: "Finance", href: "/finance" },
   { label: "Personal Growth", href: "/personal-growth" },
+  { label: "Free Lessons", href: "/learn" },
+  { label: "Free Tools & Quizzes", href: "/tools" },
+  { label: "Learning Advisor", href: "/advisor" },
 ];
 
 const APPS_LINK = { label: "Swipe Apps", href: "/apps" };
@@ -201,13 +205,13 @@ export default function Navbar() {
               className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl"
             />
 
-            <h1
+            <span
               className={`hidden sm:block text-lg sm:text-xl lg:text-2xl font-bold tracking-tight transition-colors duration-500 ${
                 isDark ? "text-white" : "text-black"
               }`}
             >
               Swipe
-            </h1>
+            </span>
 
           </div>
 
@@ -313,7 +317,7 @@ export default function Navbar() {
           >
             <span className="flex -space-x-2">
               {["coding", "finance", "growth", "ai"].map((slug) => (
-                <img key={slug} src={`/logo-${slug}-black.png`} alt="" className="w-6 h-6 rounded-md border border-white object-cover" />
+                <img key={slug} src={`/logo-${slug}-black.png`} alt="" loading="lazy" width={24} height={24} className="w-6 h-6 rounded-md border border-white object-cover" />
               ))}
             </span>
             {APPS_LINK.label}

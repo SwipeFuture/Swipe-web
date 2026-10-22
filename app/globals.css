@@ -28,3 +28,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Gradient text (bg-clip-text) is painted only inside the element's box. With tight
+   line-heights that box ends at the baseline area, so descenders (y, g, p) got cut
+   off. A little bottom padding gives them room without changing the layout. */
+.bg-clip-text {
+  padding-bottom: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}

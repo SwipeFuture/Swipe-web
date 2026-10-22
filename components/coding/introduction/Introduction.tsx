@@ -10,6 +10,8 @@ import { problemSolving } from "./lessons/04-problem-solving";
 import { programmingBasics } from "./lessons/05-programming-basics";
 import { choosingYourFirstLanguage } from "./lessons/06-choosing-your-first-language";
 import { developerMindset } from "./lessons/07-developer-mindset";
+import LearnBanner from "@/components/learn/LearnBanner";
+import { learnTrackUrl } from "@/lib/learn-links";
 
 // ================= Content =================
 //
@@ -493,7 +495,7 @@ export default function Introduction() {
             <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
 
             <img
-              src="/liquid-glass-book-green.png"
+              src="/liquid-glass-book-green.webp"
               alt="Introduction to Programming preview"
               className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
@@ -501,6 +503,19 @@ export default function Introduction() {
           </div>
 
         </div>
+
+        {/* Learn it like in the app */}
+        <LearnBanner
+          accent="coding"
+          className="mt-14 sm:mt-20"
+          title="Not sure where to start?"
+          text="Answer 7 quick questions to find your first programming language — then start its free lessons, just like in Swipe Coding."
+          primary={{ href: "/quiz/programming-language", label: "Find my first language" }}
+          secondary={[
+            { href: "/advisor", label: "Ask the learning advisor" },
+            { href: "/learn#coding", label: "Browse free coding lessons" },
+          ]}
+        />
 
         {/* Divider */}
         <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />

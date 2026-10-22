@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { FAQ } from "./faq";
+import KeynoteFilm from "./KeynoteFilm";
 import { type ShowcaseApp } from "@/components/app-showcase/AppShowcase";
 import AppDetail from "./AppDetail";
 
@@ -44,32 +46,6 @@ const PLANS = [
   { name: "Pro", price: "$12.99 / month or $99.99 / year", detail: "No daily limit at all", highlight: false },
 ];
 
-const FAQ = [
-  {
-    q: "Are the apps free?",
-    a: "Yes. All four apps are free to download, and the free plan gives you about five new lessons every day. Replaying lessons you've already opened is always free. Go and Pro are optional subscriptions for more.",
-  },
-  {
-    q: "Do I need four accounts?",
-    a: "No. One Swipe account works in all four apps, and a Go or Pro plan counts in all of them at once.",
-  },
-  {
-    q: "Which devices are supported?",
-    a: "The Swipe apps are made for iPhone and available on the App Store from November 1, 2026.",
-  },
-  {
-    q: "How do I cancel a subscription?",
-    a: "Subscriptions are handled by Apple. You can manage or cancel them anytime in your Apple ID settings, or from the plans screen in the app. Cancel at least 24 hours before the end of the current period to avoid renewal.",
-  },
-  {
-    q: "Can I delete my account?",
-    a: "Yes, directly in the app under Settings → Delete Account. Your account and its data are deleted right away.",
-  },
-  {
-    q: "Is Swipe Finance or Swipe Personal Growth professional advice?",
-    a: "No. All apps are educational. Swipe Finance doesn't give financial, investment, tax or legal advice, and Swipe Personal Growth is not medical or psychological advice.",
-  },
-];
 
 export default function SwipeApps() {
   return (
@@ -83,7 +59,7 @@ export default function SwipeApps() {
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-stone-600">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Coming to the App Store · November 1, 2026
+            Coming soon to the App Store
           </span>
           <h1 className="mt-6 sm:mt-8 text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-stone-800">
             The Swipe{" "}
@@ -117,6 +93,9 @@ export default function SwipeApps() {
             ))}
           </div>
         </div>
+
+        {/* ---------- Keynote film ---------- */}
+        <KeynoteFilm className="mt-24 sm:mt-32" title="The Swipe keynote" />
 
         {/* ---------- How it works ---------- */}
         <div className="mt-24 sm:mt-32">

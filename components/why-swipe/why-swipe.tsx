@@ -102,7 +102,7 @@ export default function WhySwipe() {
   const [topBlocks, bottomBlocks] = [STORY_BLOCKS.slice(0, 2), STORY_BLOCKS.slice(2)];
 
   return (
-    <section id="why-us" ref={sectionRef} className="relative overflow-hidden bg-white py-24 sm:py-32 lg:py-40 scroll-mt-24">
+    <section id="why-us" ref={sectionRef} className="relative overflow-hidden bg-white py-24 sm:py-32 lg:py-28 scroll-mt-24">
 
       {/* ================= Divider ================= */}
 
@@ -300,7 +300,7 @@ export default function WhySwipe() {
 
         <div
           ref={quoteRef}
-          className={`relative mt-20 sm:mt-28 lg:mt-32 text-center transition-all duration-1000 ease-out ${
+          className={`relative mt-20 sm:mt-24 lg:mt-24 text-center transition-all duration-1000 ease-out ${
             quoteVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -324,7 +324,7 @@ export default function WhySwipe() {
 
         <div
           ref={bottomBlocksRef}
-          className="mt-20 sm:mt-28 lg:mt-32 grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-12 sm:gap-y-14"
+          className="mt-20 sm:mt-24 lg:mt-24 grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-12 sm:gap-y-14"
         >
 
           {bottomBlocks.map((block) => (

@@ -94,7 +94,7 @@ export default function Motivation() {
       id="motivation"
       ref={sectionRef}
       data-nav-theme="dark"
-      className="relative overflow-hidden bg-black py-32 sm:py-40 lg:py-56 scroll-mt-24"
+      className="relative overflow-hidden bg-black py-24 sm:py-32 lg:py-40 scroll-mt-24"
     >
 
       {/* ================= Background ================= */}
