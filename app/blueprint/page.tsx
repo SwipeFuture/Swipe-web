@@ -5,7 +5,7 @@ import Blueprint from "@/components/blueprint/Blueprint";
 export const metadata: Metadata = {
   alternates: { canonical: "/blueprint" },
   title: "The Blueprint | Swipe",
-  description: "Build the skills that create opportunities — the full Swipe roadmap.",
+  description: "The Swipe Blueprint: the full roadmap of skills in coding, money, personal growth and AI — and how they build on each other.",
 };
 
 export default function BlueprintPage() {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About Swipe — The Story, the Founder & How We Make Lessons",
   description:
-    "Meet Colin Farron, the founder of Swipe: how Swipe went from a sketchbook to four learning apps with 2,590 lessons, and how every lesson is planned, written and tested.",
+    "Meet Colin Farron, founder of Swipe: from a sketchbook to four learning apps with 2,590 lessons — and how every lesson is made.",
 };
 
 const STRUCTURED_DATA = [
@@ -25,7 +25,7 @@ const STRUCTURED_DATA = [
     name: "Colin Farron",
     jobTitle: "Founder",
     url: `${SITE_URL}/about`,
-    worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe" },
+    worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
     sameAs: SOCIAL_LINKS,
   },
 ];

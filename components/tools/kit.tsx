@@ -58,16 +58,15 @@ export function ToolShell({
         data={[
           {
             "@context": "https://schema.org",
-            "@type": "WebApplication",
+            // WebPage, not WebApplication: Google only accepts app markup with real ratings/reviews
+            "@type": "WebPage",
             name,
             description: intro,
             url: `${SITE_URL}${pathname}`,
-            applicationCategory: theme === "finance" ? "FinanceApplication" : "EducationalApplication",
-            operatingSystem: "Any (web browser)",
             isAccessibleForFree: true,
             dateModified: SITE_UPDATED,
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            publisher: { "@type": "Organization", name: "Swipe", url: SITE_URL },
+            inLanguage: "en",
+            publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
           },
           {
             "@context": "https://schema.org",

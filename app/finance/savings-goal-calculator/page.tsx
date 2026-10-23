@@ -3,7 +3,7 @@ import SavingsGoalCalculator from "@/components/tools/finance/SavingsGoalCalcula
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance/savings-goal-calculator" },
-  title: "Savings Goal Calculator — How Long Until You Reach It? | Swipe Finance",
+  title: "Savings Goal Calculator — How Long Will It Take? | Swipe",
   description:
     "Free savings goal calculator: find out how long it takes to reach your goal, or how much you need to save each month — with interest and a yearly chart.",
 };

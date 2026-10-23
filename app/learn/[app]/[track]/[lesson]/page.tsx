@@ -8,7 +8,8 @@ type Params = { app: string; track: string; lesson: string };
 export const dynamicParams = false;
 
 // Longest variant that still fits Google's title width (~65 characters).
-const pickTitle = (variants: string[]) => variants.find((v) => v.length <= 65) ?? variants[variants.length - 1];
+// Google shows ~60 characters of a title; take the most descriptive variant that fits.
+const pickTitle = (variants: string[]) => variants.find((v) => v.length <= 60) ?? variants[variants.length - 1];
 
 export function generateStaticParams() {
   return allLessonParams();
@@ -31,7 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const lesson = list[i].lesson;
   return {
     alternates: { canonical: `/learn/${app.url}/${track.slug}/${lesson.slug}` },
-    title: pickTitle([`${lesson.title} — Free ${track.track} Lesson | ${app.name}`, `${lesson.title} — ${track.track} | Swipe`, `${lesson.title} | Swipe`]),
+    title: pickTitle([
+      `${lesson.title} — Free ${track.track} Lesson | ${app.name}`,
+      `${lesson.title} — ${track.track} | Swipe`,
+      // short generic titles ("The Shape of This Track") exist in several tracks — keep the track name so titles stay unique
+      ...(lesson.title.length < 30 ? [`${lesson.title} — ${track.track}`] : []),
+      `${lesson.title} | Swipe`,
+      lesson.title,
+    ]),
     description: lessonDescription(lesson, track),
     openGraph: { type: "article" },
   };

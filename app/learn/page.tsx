@@ -5,9 +5,9 @@ import { LEARN_APPS, tracksOf } from "@/lib/learn";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/learn" },
-  title: "Free Lessons — Learn Coding, Finance, Personal Growth & AI | Swipe",
+  title: "Free Lessons — Coding, Finance, Growth & AI | Swipe",
   description:
-    "Hundreds of free, beginner-friendly lessons from the Swipe apps: Python, JavaScript, HTML, investing, money basics, habits, focus, prompt engineering and more — with practice questions and quizzes.",
+    "Hundreds of free beginner lessons from the Swipe apps — Python, JavaScript, investing, habits, focus, AI prompting and more, with quizzes.",
 };
 
 export default function LearnPage() {

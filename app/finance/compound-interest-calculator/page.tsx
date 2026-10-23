@@ -3,9 +3,9 @@ import CompoundInterestCalculator from "@/components/finance/compound-interest-c
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance/compound-interest-calculator" },
-  title: "Compound Interest Calculator — Free & Interactive | Swipe Finance",
+  title: "Compound Interest Calculator — Free | Swipe Finance",
   description:
-    "Free compound interest calculator: enter your starting amount, monthly savings, interest rate and years to see how your money grows — with a live chart and any compounding frequency.",
+    "Free compound interest calculator: enter your start amount, monthly savings, rate and years and watch your money grow on a live chart.",
 };
 
 export default function CompoundInterestCalculatorPage() {

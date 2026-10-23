@@ -5,15 +5,16 @@ import { usePathname } from "next/navigation";
 
 // Section anchors only exist on the homepage, so they're prefixed with "/" to work
 // from any route (e.g. the Privacy Policy page). "#footer" needs no prefix since the
-// footer itself is rendered globally in the root layout.
+// footer itself is rendered globally in the root layout. Apps and Motivation have their
+// own pages, so they link there directly instead of to the homepage sections.
 const LINKS = [
   { label: "Home", href: "/#home" },
   { label: "Why us", href: "/#why-us" },
   { label: "Learning paths", href: "/#learning-paths" },
   { label: "Free lessons", href: "/learn" },
   { label: "Tools", href: "/tools" },
-  { label: "Apps", href: "/#apps" },
-  { label: "Motivation", href: "/#motivation" },
+  { label: "Apps", href: "/apps" },
+  { label: "Motivation", href: "/motivation-experience" },
   { label: "Information", href: "#footer" },
 ];
 

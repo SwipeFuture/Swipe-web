@@ -113,7 +113,25 @@ export default function Quiz({ data }: { data: QuizData }) {
           </div>
           <style>{`@keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }`}</style>
         </Card>
-      ) : (
+      ) : null}
+      {/* What you can get — tells visitors up front what the quiz is about (and gives the
+          page real text, since the questions only show one at a time) */}
+      {!done && (
+        <Card>
+          <h2 className="text-xl font-black tracking-tight text-stone-900 sm:text-2xl">The {ranked.length} possible results</h2>
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {Object.values(data.results).map((r) => (
+              <div key={r.title} className="rounded-[22px] border border-stone-100 bg-white/70 p-5">
+                <p className="text-base font-bold text-stone-900">
+                  <span aria-hidden>{r.emoji}</span> {r.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-stone-500">{r.summary}</p>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+      {done ? (
         <>
           <Card className="text-center">
             <span className={`inline-flex items-center rounded-full border px-3.5 py-1.5 text-xs font-semibold tracking-wide ${t.chip}`}>Your result</span>
@@ -168,7 +186,7 @@ export default function Quiz({ data }: { data: QuizData }) {
             ))}
           </div>
         </>
-      )}
+      ) : null}
     </ToolShell>
   );
 }

@@ -9,7 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Swipe — Learn Coding, Finance, Personal Growth & AI in 5 Minutes a Day",
+  title: "Swipe — Learn Coding, Finance, Growth & AI in 5 Minutes",
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
 };

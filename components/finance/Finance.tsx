@@ -598,14 +598,14 @@ export default function Finance() {
 
             <div className="mt-10 flex justify-center lg:justify-start">
 
-              <a
-                href="#chapters"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-9 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.5)]"
-              >
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                <Link href="/learn#finance" className="group relative inline-flex justify-center items-center gap-2 overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-9 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.5)]">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-400 opacity-0 group-hover:opacity-20 transition-all" />
-                <span className="relative">Start</span>
+                <span className="relative">Start a free lesson</span>
                 <span className="relative transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
+              </Link>
+                <a href="#chapters" className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white/80 px-7 py-4 sm:px-8 sm:py-5 font-semibold text-gray-800 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">Explore topics ↓</a>
+              </div>
 
             </div>
 

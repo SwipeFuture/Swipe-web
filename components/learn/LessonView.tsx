@@ -128,9 +128,10 @@ export default function LessonView({
             isAccessibleForFree: true,
             dateModified: SITE_UPDATED,
             url: `${SITE_URL}${base}/${lesson.slug}`,
-            isPartOf: { "@type": "Course", name: `${track.track} — ${app.name}`, url: `${SITE_URL}${base}` },
+            // reference the full Course on the track page (it carries description + provider)
+            isPartOf: { "@id": `${SITE_URL}${base}#course` },
             provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
-            author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe" },
+            author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
           },
           {
             "@context": "https://schema.org",

@@ -1,8 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const EMAIL = "SwipeFuture@icloud.com";
+
+const QUICK_ANSWERS = [
+  { q: "Where do I start learning?", a: "Hundreds of short lessons in coding, money, personal growth and AI are free right here — no account needed.", href: "/learn", link: "Free lessons" },
+  { q: "I don't know what to learn.", a: "Answer four quick questions and the learning advisor suggests the track that fits your goal and your time.", href: "/advisor", link: "Find your path" },
+  { q: "When can I get the apps?", a: "The four Swipe apps are made for iPhone and coming to the App Store soon. One account works in all of them.", href: "/apps", link: "About the apps" },
+  { q: "What happens with my data?", a: "We don't use your data for advertising and never sell it. You can delete your account at any time in the app's settings.", href: "/privacy-policy-apps", link: "Privacy policy" },
+];
 
 function MailIcon({ className }: { className?: string }) {
   return (
@@ -196,9 +204,27 @@ export default function Contact() {
               </span>
             </a>
 
-            
+
           </div>
 
+        </div>
+
+        {/* Quick answers: most questions are answered on the site already */}
+
+        <div className="mt-16 sm:mt-20 text-left">
+          <h2 className="text-center text-2xl sm:text-3xl font-black tracking-tight text-black">Quick answers</h2>
+          <p className="mt-3 text-center text-sm sm:text-base text-gray-500">Maybe your question is already answered here.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {QUICK_ANSWERS.map((x) => (
+              <Link key={x.q} href={x.href} className="group rounded-[28px] border border-white/70 bg-white/70 p-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <h3 className="text-base font-bold text-black">{x.q}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-500">{x.a}</p>
+                <span className="mt-3 inline-block text-sm font-semibold text-green-700">
+                  {x.link} <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
 
       </div>

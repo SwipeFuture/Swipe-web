@@ -3,7 +3,7 @@ import TypeScript from "@/components/coding/programming-languages/typescript/Typ
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coding/programming-languages/typescript" },
-  title: "TypeScript — What It Is & Why Developers Use It | Swipe Coding",
+  title: "TypeScript — What It Is & How to Learn It | Swipe Coding",
   description:
     "TypeScript explained: JavaScript with types, why big teams use it, how it catches bugs before they ship, code examples and when to learn it.",
 };

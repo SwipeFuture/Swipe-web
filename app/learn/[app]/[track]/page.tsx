@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const n = flatLessons(track).length;
   return {
     alternates: { canonical: `/learn/${app.url}/${track.slug}` },
-    title: [`Learn ${track.track} — ${n} Free Beginner Lessons | ${app.name}`, `Learn ${track.track} — ${n} Free Lessons | Swipe`, `${track.track} — Free Lessons | Swipe`].find((v) => v.length <= 65) ?? `${track.track} | Swipe`,
-    description: `Start learning ${track.track} for free: ${n} short, beginner-friendly lessons with examples, practice questions and chapter quizzes — the first two levels of the ${app.name} track.`,
+    title: [`Learn ${track.track} — ${n} Free Beginner Lessons | ${app.name}`, `Learn ${track.track} — ${n} Free Lessons | Swipe`, `${track.track} — Free Lessons | Swipe`].find((v) => v.length <= 60) ?? `${track.track} | Swipe`,
+    description: `Learn ${track.track} for free: ${n} short beginner lessons with real examples, practice questions and a quiz after every chapter.`,
   };
 }
 
@@ -57,6 +57,7 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
         data={{
           "@context": "https://schema.org",
           "@type": "Course",
+          "@id": `${SITE_URL}${base}#course`,
           name: `${track.track} for Beginners`,
           description: first ? lessonDescription(first, track) : `Learn ${track.track} with Swipe.`,
           url: `${SITE_URL}${base}`,

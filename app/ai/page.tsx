@@ -4,9 +4,9 @@ import SwipeAI from "@/components/swipe-ai/SwipeAI";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ai" },
-  title: "Swipe AI — Learn Artificial Intelligence from the Ground Up | Swipe",
+  title: "Swipe AI — Learn Artificial Intelligence from Zero",
   description:
-    "Understand AI without the hype: how machine learning, neural networks and ChatGPT-style models work, how to prompt well and how to use AI tools in everyday life.",
+    "Understand AI without the hype: how machine learning and ChatGPT-style models work, how to prompt well and use AI tools every day.",
 };
 
 export default function SwipeAIPage() {

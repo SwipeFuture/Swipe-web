@@ -4,9 +4,9 @@ import { LEARN_APPS, flatLessons, getTrack, tracksOf } from "@/lib/learn";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/advisor" },
-  title: "Learning Advisor — What Should I Learn? Find Your Path | Swipe",
+  title: "What Should I Learn? Free Learning Advisor | Swipe",
   description:
-    "Answer four quick questions about your goal, experience and time, and get a personal learning path in coding, money, personal growth or AI — with free lessons to start today.",
+    "Answer four quick questions and get a personal learning path in coding, money, personal growth or AI — with free lessons to start today.",
 };
 
 export default function AdvisorPage() {

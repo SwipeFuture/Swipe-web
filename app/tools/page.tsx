@@ -6,7 +6,7 @@ import { TOOL_AREAS } from "@/lib/tools-catalog";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/tools" },
-  title: "Free Tools, Calculators & Quizzes — Money, Coding, Habits & AI | Swipe",
+  title: "Free Calculators, Quizzes & Tools | Swipe",
   description:
     "Free budget, savings, debt, inflation and FIRE calculators, a sleep calculator, a code typing test, an AI prompt builder and quizzes — no sign-up needed.",
 };

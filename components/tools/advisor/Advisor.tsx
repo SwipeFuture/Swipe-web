@@ -2,7 +2,30 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Card, ToolShell, THEMES, type ToolTheme } from "../kit";
+import { Card, ToolShell, THEMES, type FaqItem, type ToolTheme } from "../kit";
+
+const ADVISOR_FAQ: FaqItem[] = [
+  {
+    q: "How does the learning advisor work?",
+    a: "You pick an area (coding, money, personal growth or AI), your goal, how much you already know and how many minutes a day you have. The advisor matches that to the Swipe track that fits best, links the first free lesson and estimates how many days the free levels take at your pace.",
+  },
+  {
+    q: "Is it really free?",
+    a: "Yes. The advisor and every lesson it recommends are free on this website — no account, no email and no payment. The first two levels of every Swipe track are open to everyone.",
+  },
+  {
+    q: "I'm a complete beginner. Where should I start?",
+    a: "Pick \"Total beginner\" in step three. Every Swipe track starts from zero, so you simply begin with the first lesson. Good first tracks are Python or HTML for coding, Money Basics for finance, Habits & Routines for personal growth and AI Fundamentals for AI.",
+  },
+  {
+    q: "How long does a lesson take?",
+    a: "About five minutes. Every lesson is short, uses real examples and ends with a quick check, and each chapter finishes with a small quiz — so even ten minutes a day gets you through a track surprisingly fast.",
+  },
+  {
+    q: "Can I change my path later?",
+    a: "Of course. Run the advisor again any time or browse all free lessons yourself. Many people combine areas — for example coding plus focus and productivity.",
+  },
+];
 
 // The web version of the in-app advisors: area → goal → experience → time,
 // then a concrete track from the free lesson library with a plan.
@@ -128,6 +151,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
       title="Find Your"
       highlight="Learning Path"
       intro="Four quick questions, one clear answer: which Swipe track fits your goal, where to start and how long the free levels take at your pace."
+      faq={ADVISOR_FAQ}
       related={[
         { href: "/quiz/programming-language", label: "Which programming language?" },
         { href: "/quiz/money-type", label: "Money type quiz" },

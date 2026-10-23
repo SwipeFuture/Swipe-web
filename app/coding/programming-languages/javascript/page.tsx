@@ -3,7 +3,7 @@ import JavaScript from "@/components/coding/programming-languages/javascript/Jav
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coding/programming-languages/javascript" },
-  title: "JavaScript — What It Is, What It's Used For & How to Learn It | Swipe Coding",
+  title: "JavaScript — What It Is & How to Learn It | Swipe Coding",
   description:
     "Learn JavaScript, the language of the web: how it makes websites interactive, where it runs (browser, servers, apps), code examples and how to get started.",
 };
