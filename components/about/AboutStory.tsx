@@ -20,6 +20,111 @@ function Reveal({ children, className = "", id }: { children: ReactNode; classNa
   );
 }
 
+const B = ({ children }: { children: ReactNode }) => <strong className="font-semibold text-black">{children}</strong>;
+
+const SKILLS = [
+  { name: "Personal growth", text: "it starts with an idea, and with the rhythm and motivation to actually go for it." },
+  { name: "Coding", text: "whatever you build today almost certainly involves software." },
+  { name: "AI", text: "nobody builds big things alone anymore. AI can be your team if you know how to use it, and learning the basics of coding helps you understand how it really works." },
+  { name: "Money", text: "once it works and money comes in, you need to know how to handle it." },
+];
+
+const STORY: { title: string; body: ReactNode }[] = [
+  {
+    title: "Why I'm building this",
+    body: (
+      <>
+        <p>
+          I&apos;m Colin. Since secondary school, I&apos;ve had one goal: <B>help as many people as possible build a better future.</B>
+        </p>
+        <p>
+          I didn&apos;t want to build just another app. And I didn&apos;t want to sell a dream that works for 0.001% of people, like dropshipping
+          or trading. I wanted to build something I can actually stand behind.
+        </p>
+        <p>
+          The world has changed completely, but school still teaches mostly the same things it did decades ago. Somewhere along the way, we
+          stopped looking ahead. We lost our direction.
+        </p>
+        <p>
+          That&apos;s where the name comes from. We all spend hours a day swiping through social media, and it gets us nowhere.{" "}
+          <B>Swipe to the Future</B> turns that same swipe into a few minutes a day that move you forward, towards a better version of yourself.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Four skills, one path",
+    body: (
+      <>
+        <p>
+          Coding, money, personal growth and AI are the skills that will matter most in the years ahead, and almost nobody learns them
+          properly. Together they&apos;re the backbone of nearly every startup today:
+        </p>
+        <ul className="space-y-2">
+          {SKILLS.map((s) => (
+            <li key={s.name} className="flex gap-3">
+              <span className="mt-3 h-2 w-2 shrink-0 rounded-full bg-green-500" />
+              <span>
+                <B>{s.name}:</B> {s.text}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "Who it's for, and what to expect",
+    body: (
+      <>
+        <p>
+          SwipeFuture is for anyone who wants to move forward: teenagers who want to build something without taking big risks, students who
+          want to get better at their field, and adults who want to refresh a programming language, get their finances under control or work on
+          themselves.
+        </p>
+        <p>
+          SwipeFuture won&apos;t make you an expert in a year, and it doesn&apos;t have to.{" "}
+          <B>Most of the way is already done once you decide you want it, stay motivated and get the big picture.</B> If the next time you chat
+          with an AI you think <em>&ldquo;I could give it a role&rdquo;</em> or <em>&ldquo;right, it thinks in tokens&rdquo;</em>, then
+          SwipeFuture has done its job.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "From paper to app",
+    body: (
+      <>
+        <p>
+          The first SwipeFuture screens were <B>drawn by hand on paper</B>. Then I designed them in JavaScript, and from there SwipeFuture kept
+          growing, one idea and one detail at a time.
+        </p>
+        <p>
+          The hardest part wasn&apos;t the code. It was <B>getting started</B>: you see other companies doing something similar who are already
+          way ahead, and you have to keep going anyway. What kept me going were the people around me, <B>above all my family, but also teachers
+          and friends.</B> The best moments were when friends saw SwipeFuture and wanted to start something of their own.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Where we're going",
+    body: (
+      <>
+        <p>
+          In five years, I hope SwipeFuture is a little better known: people spending 5 to 10 minutes a day on a lesson or two, and plenty of
+          new features that are still in my head today.
+        </p>
+        <p>
+          These times aren&apos;t easy. But <B>look for the chances.</B> AI can feel scary, and it&apos;s also the tool that can help you build
+          something great. Money doesn&apos;t come overnight. <B>It comes from will and knowledge</B>, and that&apos;s exactly what SwipeFuture is
+          here for.
+        </p>
+      </>
+    ),
+  },
+];
+
 const NUMBERS = [
   { value: "4", label: "apps" },
   { value: "35", label: "learning tracks" },
@@ -71,29 +176,26 @@ const PROCESS = [
 export default function AboutStory() {
   return (
     <div className="mt-16 space-y-20 sm:mt-20 sm:space-y-24">
-      {/* A note from Colin */}
+      {/* Colin's founder story (his own words, approved 2026-10-27; he goes by "Colin" only) */}
       <Reveal id="story">
         <div className="relative overflow-hidden rounded-[32px] border border-gray-200 bg-white p-7 shadow-xl sm:p-12">
           <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-green-200 opacity-40 blur-[100px]" />
           <span className="relative text-xs font-bold uppercase tracking-[0.2em] text-green-700">A note from the founder</span>
-          <h2 className="relative mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">Hi, I&apos;m Colin.</h2>
-          <div className="relative mt-6 space-y-4 text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
-            <p>
-              I&apos;m the person behind Swipe. It started with a simple frustration: the skills that shape your future — how to code, how money
-              works, how to build habits, how to use AI — are the ones you&apos;re rarely taught properly. They&apos;re scattered across endless
-              videos and hour-long courses most people never finish.
-            </p>
-            <p>
-              So I started sketching. Page after page of rough screens and notes, one question at a time: what if learning felt as easy as
-              scrolling — but actually left you better than before? One idea led to the next, and slowly the sketches turned into Swipe.
-            </p>
-            <p>
-              The sketches became a website, the website became an app, and one app became four. Every lesson, every tool and every little
-              detail you see here grew out of that sketchbook — and I&apos;m only getting started.
-            </p>
+          <h2 className="relative mt-3 text-3xl font-black tracking-tight text-black sm:text-5xl">
+            Swipe to the{" "}
+            <span className="bg-gradient-to-r from-black via-green-700 to-emerald-500 bg-clip-text text-transparent">Future.</span>
+          </h2>
+          <div className="relative mt-8 space-y-12 text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
+            {STORY.map((s) => (
+              <section key={s.title}>
+                <h3 className="text-xl font-black tracking-tight text-black sm:text-2xl">{s.title}</h3>
+                <div className="mt-3 space-y-4">{s.body}</div>
+              </section>
+            ))}
           </div>
-          <p className="relative mt-8 font-[cursive] text-3xl text-black">Colin Farron</p>
-          <p className="relative text-sm text-gray-400">Founder of Swipe</p>
+          <p className="relative mt-12 text-xl font-black tracking-tight text-black sm:text-2xl">Swipe to the Future.</p>
+          <p className="relative mt-4 font-[cursive] text-3xl text-black">Colin</p>
+          <p className="relative text-sm text-gray-400">Founder of SwipeFuture</p>
         </div>
       </Reveal>
 

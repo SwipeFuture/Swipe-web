@@ -162,7 +162,7 @@ export default function LessonView({
             A free lesson from {app.name} · {track.track}, level {level} · updated {SITE_UPDATED_LABEL}
           </p>
           <p className="mt-1 text-xs text-stone-400">
-            By the Swipe team, founded by Colin Farron ·{" "}
+            By the Swipe team, founded by Colin ·{" "}
             <Link href="/about#how-we-make-lessons" className="underline-offset-2 hover:underline">
               how we make lessons
             </Link>

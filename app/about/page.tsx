@@ -5,9 +5,9 @@ import { SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About Swipe — The Story, the Founder & How We Make Lessons",
+  title: "About SwipeFuture — Our Story & How We Make Lessons",
   description:
-    "Meet Colin Farron, founder of Swipe: from a sketchbook to four learning apps with 2,590 lessons — and how every lesson is made.",
+    "Meet Colin, founder of SwipeFuture: why he builds it, the four skills that matter for the future, and how every one of the 2,590 lessons is made.",
 };
 
 const STRUCTURED_DATA = [
@@ -22,7 +22,7 @@ const STRUCTURED_DATA = [
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": `${SITE_URL}/about#colin`,
-    name: "Colin Farron",
+    name: "Colin",
     jobTitle: "Founder",
     url: `${SITE_URL}/about`,
     worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },

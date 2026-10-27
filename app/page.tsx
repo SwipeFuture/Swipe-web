@@ -20,7 +20,7 @@ const STRUCTURED_DATA = [
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    founder: { "@type": "Person", "@id": `${SITE_URL}/about#colin`, name: "Colin Farron" },
+    founder: { "@type": "Person", "@id": `${SITE_URL}/about#colin`, name: "Colin" },
     alternateName: "SwipeFuture",
     url: SITE_URL,
     logo: `${SITE_URL}/icon.png`,
