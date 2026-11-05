@@ -3,12 +3,12 @@
 export const SITE_URL = "https://swipefuture.dev";
 export const SITE_NAME = "Swipe";
 export const SITE_DESCRIPTION =
-  "Learn coding, personal finance, personal growth and AI in five minutes a day — short, swipeable lessons, free guides and calculators from Swipe.";
+  "Free short lessons, guides and calculators for coding, personal finance, personal growth and AI from Swipe.";
 // Date of the last real content update — used as lastModified in the sitemap and as the
 // visible "Updated" date. Bump it when content changes (not on every deploy), so search
 // engines can trust it.
-export const SITE_UPDATED = "2026-10-22";
-export const SITE_UPDATED_LABEL = "October 2026";
+export const SITE_UPDATED = "2026-11-05";
+export const SITE_UPDATED_LABEL = "November 2026";
 
 // Google Search Console: paste the content value of the "HTML tag" verification method
 // here (only needed for a URL-prefix property; a domain property is verified via DNS).
@@ -63,5 +63,5 @@ export const ROUTES: { path: string; priority: number }[] = [
   { path: "/about", priority: 0.5 },
   { path: "/contact", priority: 0.4 },
   { path: "/privacy-policy", priority: 0.2 },
-  { path: "/privacy-policy-apps", priority: 0.2 },
+  { path: "/legal-notice", priority: 0.2 },
 ];

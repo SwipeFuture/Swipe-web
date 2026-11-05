@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import AppShowcase from "@/components/app-showcase/AppShowcase";
 import type { LessonKey, Lesson } from "./lessons/types";
 import { introductionToFinance } from "./lessons/01-introduction-to-finance";
 import { budgetingAndSaving } from "./lessons/02-budgeting-and-saving";
@@ -778,12 +777,6 @@ export default function Finance() {
             />
           </div>
 
-        </div>
-
-        {/* ============ Swipe Finance — Coming Soon showcase (shared with the other app pages) ============ */}
-
-        <div className="mt-16 sm:mt-24 lg:mt-28">
-          <AppShowcase app="finance" />
         </div>
 
         {/* ============ CTA ============ */}

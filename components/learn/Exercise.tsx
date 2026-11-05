@@ -96,7 +96,7 @@ export function ChapterQuiz({ title, questions }: { title: string; questions: Pr
     <div className="rounded-[32px] border border-stone-200 bg-gradient-to-br from-white to-stone-50 p-6 shadow-xl sm:p-10">
       <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Chapter quiz</span>
       <h2 className="mt-2 text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">{title.replace(/^Chapter Quiz — /, "")}</h2>
-      <p className="mt-2 text-sm text-stone-500">{questions.length} questions · pass with 60% — just like in the app.</p>
+      <p className="mt-2 text-sm text-stone-500">{questions.length} questions · pass with 60%.</p>
       <div key={key} className="mt-8 space-y-5">
         {questions.map((q, i) => (
           <PracticeCard
@@ -116,7 +116,7 @@ export function ChapterQuiz({ title, questions }: { title: string; questions: Pr
           <div className="mt-3 text-3xl font-black">
             {score}/{questions.length} · {pct}%
           </div>
-          <p className="mt-2 text-sm text-stone-300">{pct >= 60 ? "Chapter passed! In the app, this would earn you stars and XP." : "Not passed yet — read the lessons once more and try again."}</p>
+          <p className="mt-2 text-sm text-stone-300">{pct >= 60 ? "Chapter passed!" : "Not passed yet — read the lessons once more and try again."}</p>
           <button
             type="button"
             onClick={() => {

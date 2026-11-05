@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Card, Chips, ToolShell, THEMES, type FaqItem } from "../kit";
 
 export const SLEEP_FAQ: FaqItem[] = [
-  { q: "How does the sleep calculator work?", a: "Sleep runs in cycles of roughly 90 minutes. Waking up at the end of a cycle usually feels easier than waking up in the middle of deep sleep. The calculator counts back (or forward) in 90-minute cycles and adds about 15 minutes to fall asleep." },
+  { q: "How does the sleep calculator work?", a: "Sleep runs in cycles of roughly 90 minutes. Waking up at the end of a cycle can feel easier than waking up in the middle of one. The calculator counts back (or forward) in 90-minute cycles and adds about 15 minutes to fall asleep." },
   { q: "How many sleep cycles do I need?", a: "Most adults need 7–9 hours, which is 5 or 6 cycles. Teenagers usually need more — around 8–10 hours." },
   { q: "Is the 90-minute cycle exact?", a: "No — cycles vary between about 80 and 120 minutes from person to person and through the night. Treat the times as a good starting point and adjust by 15 minutes if you still wake up groggy." },
 ];
@@ -44,7 +44,7 @@ export default function SleepCalculator() {
       eyebrow="Growth Tool"
       title="Sleep"
       highlight="Calculator"
-      intro="Wake up between sleep cycles instead of in the middle of deep sleep. Find the best time to go to bed — or to set your alarm."
+      intro="Aim to wake up between sleep cycles instead of in the middle of one. Find the best time to go to bed — or to set your alarm."
       faq={SLEEP_FAQ}
       related={[
         { href: "/personal-growth/one-percent-calculator", label: "1% Better Every Day" },

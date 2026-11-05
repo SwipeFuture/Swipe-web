@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AdviceNote from "@/components/learn/AdviceNote";
 import { AreaTools } from "@/components/tools/ToolGrid";
 import Finance from "@/components/finance/Finance";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/finance" },
   title: "Swipe Finance — Learn Personal Finance & Investing | Swipe",
   description:
-    "Master money in twelve chapters: budgeting, saving, debt, credit, ETFs, compound interest and long-term investing — plain-English lessons and free calculators.",
+    "Twelve chapters on money: budgeting, saving, debt, credit, ETFs, compound interest and long-term investing — plain-English lessons and free calculators.",
 };
 
 export default function FinancePage() {
@@ -14,6 +15,9 @@ export default function FinancePage() {
     <>
       <Finance />
       <AreaTools area="finance" />
+      <div className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
+        <AdviceNote area="finance" />
+      </div>
     </>
   );
 }

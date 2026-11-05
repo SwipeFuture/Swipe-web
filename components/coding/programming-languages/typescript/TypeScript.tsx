@@ -1009,7 +1009,7 @@ export default function TypeScript() {
                     {[
                       { label: "First Released", value: "2012" },
                       { label: "Created By", value: "Microsoft" },
-                      { label: "Latest Version", value: "TypeScript 5.x" },
+                      { label: "Latest (Nov 2026)", value: "TypeScript 7.x" },
                       { label: "Typing", value: "Static, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Object-Oriented, Functional, Generic)" },
                       { label: "Primary Use", value: "Large-Scale Frontend & Full-Stack Development" },

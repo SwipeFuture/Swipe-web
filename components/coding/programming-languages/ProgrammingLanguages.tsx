@@ -446,9 +446,7 @@ export default function ProgrammingLanguages() {
             </h3>
 
             <p className="relative mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-green-100/70 max-w-2xl mx-auto">
-              Swipe Coding is our upcoming interactive programming platform —
-              built to take you from your first line of code to real,
-              job-ready skills.
+              Swipe Coding is our upcoming iPhone app for learning to program.
             </p>
 
           </div>

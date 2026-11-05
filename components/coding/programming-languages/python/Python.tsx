@@ -25,7 +25,7 @@ const PLACEHOLDER = "Content for this section is coming soon.";
 const WHAT_IS = `
 Python is a high-level, interpreted programming language known for its simple syntax, readability and versatility. It was designed to help developers write clear, efficient code while reducing unnecessary complexity. Because of its beginner-friendly design, Python is often one of the first programming languages people learn, but it is also powerful enough to build large-scale professional applications.
 
-Unlike compiled languages, Python is an interpreted language. This means your code is executed line by line by the Python interpreter instead of being compiled into machine code before running. This makes development faster, simplifies testing and allows developers to quickly experiment with new ideas.
+Python is usually called an interpreted language. There is no separate build step: when you run a program, Python automatically compiles your code to bytecode and its interpreter runs that, instead of you compiling it into machine code first. This makes development faster, simplifies testing and allows developers to quickly experiment with new ideas.
 
 One of Python's greatest strengths is its clean and readable syntax. Programs written in Python often require fewer lines of code than many other programming languages, making them easier to understand and maintain. Instead of focusing on complex syntax, developers can spend more time solving real-world problems.
 
@@ -1006,7 +1006,7 @@ export default function Python() {
                     {[
                       { label: "First Released", value: "1991" },
                       { label: "Created By", value: "Guido van Rossum" },
-                      { label: "Latest Version", value: "Python 3.13" },
+                      { label: "Latest (Nov 2026)", value: "Python 3.15" },
                       { label: "Typing", value: "Dynamic, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Object-Oriented, Procedural, Functional)" },
                       { label: "Primary Use", value: "General-Purpose Programming, AI, Data Science & Web Development" },

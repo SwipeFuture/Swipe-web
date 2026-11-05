@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import AdviceNote from "@/components/learn/AdviceNote";
 import { usePathname } from "next/navigation";
 import { SITE_UPDATED, SITE_UPDATED_LABEL, SITE_URL } from "@/lib/site";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -109,6 +110,8 @@ export function ToolShell({
 
         <div className="mt-12 space-y-6 sm:mt-16 sm:space-y-8">{children}</div>
 
+        {(theme === "finance" || theme === "growth") && <AdviceNote area={theme} className="mx-auto mt-10 max-w-3xl" />}
+
         {faq && faq.length > 0 && (
           <div className="mt-20 sm:mt-28">
             <h2 className="text-center text-2xl font-black tracking-tight text-stone-800 sm:text-3xl">Frequently asked questions</h2>
@@ -143,28 +146,8 @@ export function ToolShell({
           </div>
         )}
 
-        <AppCta theme={theme} />
       </div>
     </section>
-  );
-}
-
-// Closing card on every tool: the apps teach the why behind the numbers.
-export function AppCta({ theme }: { theme: ToolTheme }) {
-  const t = THEMES[theme];
-  return (
-    <div className={`mx-auto mt-16 max-w-3xl rounded-[28px] border p-6 text-center sm:mt-20 sm:p-8 ${t.softCard}`}>
-      <h3 className="text-lg font-bold tracking-tight text-black sm:text-xl">Learn the skills behind it, five minutes a day</h3>
-      <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
-        Swipe turns coding, money, personal growth and AI into short, swipeable lessons for iPhone — free to start, one account for all four apps.
-      </p>
-      <Link
-        href="/apps"
-        className={`mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${t.button}`}
-      >
-        Discover the Swipe apps →
-      </Link>
-    </div>
   );
 }
 

@@ -15,7 +15,7 @@ export function GET() {
     "Swipe makes four learning apps for iPhone (Swipe Coding, Swipe Finance, Swipe Personal Growth, Swipe AI) with short, swipeable lessons. This website offers free lessons, calculators, quizzes and a learning advisor.",
     "",
     "## Main pages",
-    `- [The Swipe apps](${SITE_URL}/apps): the four iPhone apps, plans and FAQ`,
+    `- [The Swipe apps](${SITE_URL}/apps): the four iPhone apps, coming soon`,
     `- [Free lessons](${SITE_URL}/learn): levels 1–2 of every Swipe track`,
     `- [Free tools](${SITE_URL}/tools): calculators, quizzes and helpers`,
     `- [Learning advisor](${SITE_URL}/advisor): personal learning path in four questions`,

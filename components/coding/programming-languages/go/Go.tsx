@@ -998,7 +998,7 @@ export default function Go() {
                     {[
                       { label: "First Released", value: "2009" },
                       { label: "Created By", value: "Robert Griesemer, Rob Pike & Ken Thompson (Google)" },
-                      { label: "Latest Version", value: "Go 1.24" },
+                      { label: "Latest (Nov 2026)", value: "Go 1.27" },
                       { label: "Typing", value: "Static, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Procedural, Concurrent)" },
                       { label: "Primary Use", value: "Backend Development, Cloud Computing & Distributed Systems" },

@@ -57,10 +57,11 @@ export default function FireCalculator() {
             <NumberInput theme="finance" label="Real return per year (after inflation)" value={ret} onChange={setRet} step={0.5} max={20} suffix="%" />
           </div>
           <div>
-            <span className="text-xs font-semibold text-stone-600 sm:text-sm">Safe withdrawal rate</span>
+            <span className="text-xs font-semibold text-stone-600 sm:text-sm">Withdrawal rate</span>
             <div className="mt-2">
               <Chips theme="finance" options={RATES} value={swr} onChange={setSwr} format={(v) => `${v}%`} />
             </div>
+            <p className="mt-2 text-xs leading-5 text-stone-500">The 4% rule comes mostly from US market history and retirements of about 30 years. For an earlier retirement, a lower rate is safer, and no rate is guaranteed.</p>
           </div>
         </div>
       </Card>

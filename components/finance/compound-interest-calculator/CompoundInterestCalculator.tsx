@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { DEFAULT_INPUTS, calculateCompoundGrowth, type CompoundInputs } from "./calculations";
 import { DEFAULT_CURRENCY, type Currency } from "../shared/currency";
 import InputsCard from "./InputsCard";
+import AdviceNote from "@/components/learn/AdviceNote";
 import ResultsDashboard from "./ResultsDashboard";
 import GrowthChart from "./GrowthChart";
 import YearlyTable from "./YearlyTable";
@@ -230,6 +231,8 @@ export default function CompoundInterestCalculator() {
           <GrowthChart years={result.years} currency={currency} />
 
           <YearlyTable years={result.years} currency={currency} />
+
+          <AdviceNote area="finance" />
 
         </div>
 

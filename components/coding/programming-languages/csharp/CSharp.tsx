@@ -1003,7 +1003,7 @@ export default function CSharp() {
                     {[
                       { label: "First Released", value: "2002" },
                       { label: "Created By", value: "Microsoft" },
-                      { label: "Latest Version", value: "C# 13" },
+                      { label: "Latest (Nov 2026)", value: "C# 14" },
                       { label: "Typing", value: "Static, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Object-Oriented, Functional, Generic)" },
                       { label: "Primary Use", value: "Desktop, Web, Game & Enterprise Development" },

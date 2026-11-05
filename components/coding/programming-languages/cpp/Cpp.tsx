@@ -1009,7 +1009,7 @@ export default function Cpp() {
                     {[
                       { label: "First Released", value: "1985" },
                       { label: "Created By", value: "Bjarne Stroustrup" },
-                      { label: "Latest Version", value: "C++23" },
+                      { label: "Latest (Nov 2026)", value: "C++23" },
                       { label: "Typing", value: "Static, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Procedural, Object-Oriented, Generic, Functional)" },
                       { label: "Primary Use", value: "System Programming, Game Development, High-Performance Applications" },

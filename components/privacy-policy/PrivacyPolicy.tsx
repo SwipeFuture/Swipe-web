@@ -13,14 +13,21 @@ const SECTIONS: {
     title: "Introduction",
     blocks: [
       "Swipe (“we”, “our”, “us”) is a platform focused on helping people build knowledge in coding, artificial intelligence, finance and personal growth.",
-      "We respect your privacy. This Privacy Policy explains what information may be collected when you visit Swipe and how it is used.",
+      "We respect your privacy. This Privacy Policy explains what information may be collected when you visit this website and how it is used.",
+      "The Swipe apps have their own privacy policy, which is linked inside the apps.",
+    ],
+  },
+  {
+    title: "Who Is Responsible",
+    blocks: [
+      ["Roger Sigrist", "Jungfrauweg 4", "3053 Lätti", "Switzerland", "Email: swipefuture@icloud.com"],
     ],
   },
   {
     title: "Information We Collect",
     blocks: [
-      "At this time, Swipe does not require user accounts and does not intentionally collect personal information such as your name, email address or payment details through the website.",
-      "Like most websites, basic technical information (such as browser type, device information and pages visited) may be collected automatically by your browser or by our hosting provider to ensure the website functions correctly.",
+      "The website does not require an account and does not ask for personal information such as your name, email address or payment details. If you email us, we receive your address and whatever you write, and use them only to reply.",
+      "Like most websites, basic technical information (such as your IP address, browser type and the pages requested) is processed automatically by our hosting provider so the website can be delivered and kept secure.",
     ],
   },
   {
@@ -36,16 +43,24 @@ const SECTIONS: {
     ],
   },
   {
+    title: "Analytics",
+    blocks: [
+      "We use Vercel Web Analytics to see how the website is used, in aggregated statistics only. For each page view it may record the time, the page, the referring site, your approximate location (country or region), your browser, your operating system and your device type.",
+      "It does not use third-party cookies. According to Vercel, visits are recognised by a hash created from the incoming request, which is discarded after 24 hours, and the data is not tied to any individual or IP address.",
+    ],
+    link: { label: "How Vercel Web Analytics handles data", href: "https://vercel.com/docs/analytics/privacy-policy" },
+  },
+  {
     title: "Cookies",
     blocks: [
-      "Swipe may use essential cookies or similar technologies that are necessary for the website to function properly.",
-      "If additional analytics or optional cookies are introduced in the future, this Privacy Policy will be updated accordingly.",
+      "The website does not set its own tracking or advertising cookies. If that ever changes, this Privacy Policy will be updated first.",
     ],
   },
   {
     title: "Third-Party Services",
     blocks: [
-      "Our website may rely on trusted third-party providers such as hosting or content delivery services. These providers may process limited technical information required to operate the website.",
+      "The website is hosted by Vercel Inc., a US company, which also provides the analytics described above. Vercel may process technical information on servers outside your country, including in the United States. According to Vercel, such transfers are covered by its Data Privacy Framework certification and standard contractual clauses.",
+      "Links to other sites, such as TikTok, Instagram or a helpline, are only followed if you click them. Those sites have their own privacy policies.",
     ],
   },
   {
@@ -55,16 +70,22 @@ const SECTIONS: {
     ],
   },
   {
+    title: "Legal Basis (EU and EEA Visitors)",
+    blocks: [
+      "If the EU General Data Protection Regulation applies to you, we process this information based on our legitimate interests in delivering the website, keeping it secure and understanding how it is used in aggregated form.",
+    ],
+  },
+  {
     title: "Your Rights",
     blocks: [
-      "Depending on your location, you may have rights regarding your personal information under applicable privacy laws.",
-      "If you have any questions or requests regarding privacy, you can contact us using the information below.",
+      "Depending on where you live, you may have the right to ask what personal information we hold about you and to have it corrected or deleted.",
+      "For questions or requests about privacy, contact us using the link below.",
     ],
   },
   {
     title: "Children's Privacy",
     blocks: [
-      "Swipe is not intended for children under the age of 13. We do not knowingly collect personal information from children.",
+      "Children under 13 should only use this website with a parent or guardian involved. The website does not ask for personal information, and we do not knowingly collect it from children.",
     ],
   },
   {
@@ -76,7 +97,7 @@ const SECTIONS: {
   {
     title: "Contact Us",
     blocks: [
-      "If you have any questions about this Privacy Policy, feel free to contact us.",
+      "If you have any questions about this Privacy Policy, feel free to contact us. If something seems wrong or you're worried about your data, just write to us. We're open to feedback and happy to look into it.",
     ],
     link: { label: "Get in touch", href: "/contact" },
   },
@@ -268,7 +289,7 @@ export default function PrivacyPolicy() {
           </h1>
 
           <p className="mt-5 text-sm sm:text-base text-gray-400">
-            Last updated: July 25, 2026
+            Last updated: November 5, 2026
           </p>
 
           <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-2xl mx-auto">

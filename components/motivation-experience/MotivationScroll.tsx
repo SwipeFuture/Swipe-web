@@ -313,10 +313,10 @@ function Finale() {
           <Words text="Start today." t={t} accent={["today"]} />
         </h2>
         <p className="relative mt-6 max-w-xl text-lg text-zinc-400" style={{ opacity: ease(range(p, 0.35, 0.5)) }}>
-          Five minutes. One lesson. The person you want to become is built exactly like that.
+          One lesson at a time.
         </p>
         <div className="relative mt-10 flex flex-col gap-4 sm:flex-row" style={{ opacity: ease(range(p, 0.42, 0.56)) }}>
-          <Link href="/apps" className="rounded-full bg-emerald-400 px-9 py-4 font-semibold text-black transition-transform duration-300 hover:scale-105">
+          <Link href="/learn" className="rounded-full bg-emerald-400 px-9 py-4 font-semibold text-black transition-transform duration-300 hover:scale-105">
             Learn with Swipe →
           </Link>
           <Link href="/" className="rounded-full border border-white/15 px-9 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white/10">

@@ -151,12 +151,12 @@ const TIMELINE = [
   {
     when: "September 2026",
     title: "One app becomes four",
-    text: "Swipe Coding came first. Then Finance, Personal Growth and AI followed — four apps, one account, one plan, and a personal advisor in each of them.",
+    text: "Swipe Coding came first. Then Finance, Personal Growth and AI followed — four apps with one account and a personal advisor in each of them.",
   },
   {
     when: "October 2026",
     title: "App Store & free lessons",
-    text: "All four apps went to the App Store, and the first two levels of every track — 384 lessons — became free on the web, together with calculators, quizzes and a learning advisor.",
+    text: "All four apps were submitted to the App Store, and the first two levels of every track — 384 lessons — became free on the web, together with calculators, quizzes and a learning advisor.",
   },
   {
     when: "Next",
@@ -169,7 +169,7 @@ const PROCESS = [
   { n: "01", title: "Map the whole path", text: "Every track is planned from zero to advanced before writing starts: levels, chapters and lessons, in the order that actually makes sense to learn them." },
   { n: "02", title: "Write the first level by hand", text: "The first level of a track sets the tone and the quality bar. Everything that follows is measured against it." },
   { n: "03", title: "Same shape, every lesson", text: "Short cards, real examples, a quick check after every idea, a quiz after every chapter and a test after every level — so you always know where you are." },
-  { n: "04", title: "Check, test, fix", text: "Every lesson is reviewed for accuracy and clarity, every quiz answer is verified, and everything is tested in the app before it ships. AI tools help us draft and double-check — every track is planned, reviewed and approved by us." },
+  { n: "04", title: "Check, test, fix", text: "Lessons and quiz answers are checked and tested in the app before they ship, though mistakes can still slip through. AI tools help us draft and double-check — every track is planned, reviewed and approved by us." },
   { n: "05", title: "Keep improving", text: "Feedback, reports from learners and new knowledge flow back into the lessons. Finance and personal-growth lessons are educational, never financial or medical advice." },
 ];
 

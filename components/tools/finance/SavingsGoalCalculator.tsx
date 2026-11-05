@@ -61,7 +61,10 @@ export default function SavingsGoalCalculator() {
   }, [reachable, rate, start, months, perMonth]);
 
   const totalPaid = start + perMonth * (reachable ? months : 0);
-  const finalValue = bars.length ? bars[bars.length - 1].value : 0;
+  // Balance at the same month as totalPaid; the chart's last bar runs on to the end of that year.
+  const r = rate / 100 / 12;
+  let finalValue = start;
+  for (let m = 0; reachable && m < months; m++) finalValue = finalValue * (1 + r) + perMonth;
 
   return (
     <ToolShell

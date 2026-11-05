@@ -53,7 +53,7 @@ const COLUMNS = [
   },
   {
     heading: "Information",
-    links: ["Contact", "About", "Privacy Policy"],
+    links: ["Contact", "About", "Privacy Policy", "Legal Notice"],
   },
 ];
 
@@ -74,6 +74,7 @@ const LINK_HREFS: Record<string, string> = {
   Contact: "/contact",
   About: "/about",
   "Privacy Policy": "/privacy-policy",
+  "Legal Notice": "/legal-notice",
 };
 
 export default function Footer() {

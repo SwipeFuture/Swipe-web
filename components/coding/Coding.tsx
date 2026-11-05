@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import AppShowcase from "@/components/app-showcase/AppShowcase";
 
 // ================= Content =================
 //
@@ -425,12 +424,6 @@ export default function Coding() {
                 revealClass={gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
               />
             ))}
-          </div>
-
-          {/* ============ Swipe Coding — Coming Soon showcase (shared with the other app pages) ============ */}
-
-          <div className="mt-6 sm:mt-7">
-            <AppShowcase app="coding" />
           </div>
 
         </div>

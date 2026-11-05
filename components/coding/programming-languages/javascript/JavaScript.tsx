@@ -936,7 +936,7 @@ export default function JavaScript() {
                     {[
                       { label: "First Released", value: "1995" },
                       { label: "Created By", value: "Brendan Eich" },
-                      { label: "Latest Version", value: "ECMAScript 2025" },
+                      { label: "Latest (Nov 2026)", value: "ECMAScript 2026" },
                       { label: "Typing", value: "Dynamic, Weak" },
                       { label: "Paradigm", value: "Multi-Paradigm (Object-Oriented, Functional, Event-Driven)" },
                       { label: "Primary Use", value: "Frontend & Full-Stack Web Development" },

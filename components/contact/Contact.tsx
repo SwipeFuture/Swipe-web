@@ -8,8 +8,8 @@ const EMAIL = "SwipeFuture@icloud.com";
 const QUICK_ANSWERS = [
   { q: "Where do I start learning?", a: "Hundreds of short lessons in coding, money, personal growth and AI are free right here — no account needed.", href: "/learn", link: "Free lessons" },
   { q: "I don't know what to learn.", a: "Answer four quick questions and the learning advisor suggests the track that fits your goal and your time.", href: "/advisor", link: "Find your path" },
-  { q: "When can I get the apps?", a: "The four Swipe apps are made for iPhone and coming to the App Store soon. One account works in all of them.", href: "/apps", link: "About the apps" },
-  { q: "What happens with my data?", a: "We don't use your data for advertising and never sell it. You can delete your account at any time in the app's settings.", href: "/privacy-policy-apps", link: "Privacy policy" },
+  { q: "When can I get the apps?", a: "The four Swipe apps are made for iPhone and coming to the App Store soon.", href: "/apps", link: "About the apps" },
+  { q: "What happens with my data?", a: "The website needs no account, and we never sell your data.", href: "/privacy-policy", link: "Privacy policy" },
 ];
 
 function MailIcon({ className }: { className?: string }) {

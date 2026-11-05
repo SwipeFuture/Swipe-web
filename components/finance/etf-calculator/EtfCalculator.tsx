@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { DEFAULT_INPUTS, calculateGrowth, type CalculatorInputs } from "./calculations";
 import { DEFAULT_CURRENCY, type Currency } from "../shared/currency";
 import InputsCard from "./InputsCard";
+import AdviceNote from "@/components/learn/AdviceNote";
 import ResultsDashboard from "./ResultsDashboard";
 import GrowthChart from "./GrowthChart";
 import YearlyTable from "./YearlyTable";
@@ -199,7 +200,7 @@ export default function EtfCalculator() {
 
           <p className="mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-2xl mx-auto">
             Estimate how your ETF portfolio could grow over time using
-            realistic investment assumptions. Adjust your investment,
+            your own assumptions, before fund fees and taxes. Adjust your investment,
             monthly savings, expected return and investment duration to
             instantly visualize your financial future.
           </p>
@@ -226,6 +227,8 @@ export default function EtfCalculator() {
           <GrowthChart years={result.years} currency={currency} />
 
           <YearlyTable years={result.years} currency={currency} />
+
+          <AdviceNote area="finance" />
 
         </div>
 

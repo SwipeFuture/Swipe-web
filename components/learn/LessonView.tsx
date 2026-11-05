@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { THEMES } from "@/components/tools/themes";
 import JsonLd from "@/components/seo/JsonLd";
+import AdviceNote from "@/components/learn/AdviceNote";
 import { SITE_UPDATED, SITE_UPDATED_LABEL, SITE_URL } from "@/lib/site";
 import { TOOL_AREAS } from "@/lib/tools-catalog";
 import type { Block, Chapter, Highlight, LearnApp, Lesson, Track } from "@/lib/learn";
@@ -184,6 +185,8 @@ export default function LessonView({
           </div>
         )}
 
+        {(app.theme === "finance" || app.theme === "growth") && <AdviceNote area={app.theme} className="mt-10" />}
+
         <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {prev ? (
             <Link href={`${base}/${prev.slug}`} className="rounded-[22px] border border-white/70 bg-white/70 p-5 shadow-sm backdrop-blur-xl transition-all hover:shadow-lg">
@@ -226,15 +229,6 @@ export default function LessonView({
           );
         })()}
 
-        <div className={`mt-14 rounded-[28px] border p-6 text-center sm:p-8 ${t.softCard}`}>
-          <h2 className="text-lg font-bold text-black sm:text-xl">Keep your streak going in {app.name}</h2>
-          <p className="mx-auto mt-2 max-w-lg text-sm leading-6 text-stone-600">
-            Swipe through every level of {track.track} on your iPhone — with XP, stars, streaks, a personal advisor and the full track beyond these free levels.
-          </p>
-          <Link href="/apps" className={`mt-5 inline-flex rounded-full px-6 py-3 text-sm font-semibold shadow-lg transition-all hover:scale-105 ${t.button}`}>
-            Get the Swipe apps →
-          </Link>
-        </div>
       </div>
     </article>
   );

@@ -105,11 +105,13 @@ const SECTIONS: {
     title: "Where Your Data Is Stored",
     blocks: [
       "Your data is stored with Supabase, the third-party backend provider that hosts our database, authentication, and file storage, on servers in the European Union (Ireland).",
-      "Password-reset and recovery-email confirmation emails are sent through Brevo, a third-party email delivery provider. Brevo only receives the address the email is sent to and the email itself, solely to deliver it.",
+      "Password-reset and recovery-email confirmation emails are sent through Brevo, a third-party email delivery provider. Brevo receives the address the email is sent to and the email itself, and may record delivery, opens and link clicks for these emails as part of its service.",
       "Subscription purchase records are processed by RevenueCat, as described in \"Subscriptions & Payment\" above.",
+      "App updates are delivered by Expo (650 Industries, Inc., USA). When an app checks for an update, Expo may receive your IP address, your device's operating system and a random update token.",
+      "To prevent abuse of password-reset and recovery emails, we store scrambled (hashed) versions of email addresses and IP addresses for about a day.",
       "If you sign in with Apple, Apple handles that sign-in under its own privacy policy; when you delete your account, we ask Apple to revoke the Swipe apps' access to your Apple ID.",
-      "Some of these providers (for example RevenueCat) may process data outside Switzerland and the European Union, such as in the United States. Where that happens, it is covered by the providers' standard data-protection safeguards (such as the EU Standard Contractual Clauses).",
-      "We do not share your data with any other third party.",
+      "Some of these providers (for example RevenueCat and Expo) may process data outside Switzerland and the European Union, such as in the United States. Where that happens, it is covered by the providers' standard data-protection safeguards (such as the EU Standard Contractual Clauses).",
+      "We share data with these providers only to run the apps, and they must give your data the same or equal protection as described in this policy. We do not share your data with any other third party.",
     ],
   },
   {
@@ -117,6 +119,18 @@ const SECTIONS: {
     blocks: [
       "We keep your data for as long as your account exists. When you delete your account (Settings → Delete Account), your profile, learning progress, usage statistics, survey answers, and profile photo are permanently deleted, and you disappear from the leaderboard and search immediately.",
       "Reports you made about other users, or that others made about you, are deleted together with the account they belong to.",
+    ],
+  },
+  {
+    title: "Legal Bases (EU and EEA Users)",
+    blocks: [
+      "If the EU General Data Protection Regulation applies to you, we rely on these legal bases:",
+      [
+        "Contract: running your account, your learning progress and your plan.",
+        "Consent: optional profile details and survey answers, and streak reminders. You can withdraw consent at any time by removing the details or turning reminders off in the app.",
+        "Legitimate interests: keeping the apps secure, preventing abuse, moderating reports, and understanding usage in aggregated form.",
+        "Legal obligations: where the law requires us to keep or disclose data.",
+      ],
     ],
   },
   {
@@ -158,7 +172,7 @@ const SECTIONS: {
   },
   {
     title: "Contact",
-    blocks: ["Questions about this policy? Email us at swipefuture@icloud.com or reach out via swipefuture.dev."],
+    blocks: ["Questions about this policy? Email us at swipefuture@icloud.com or reach out via swipefuture.dev. If something seems wrong or you're worried about your data, just write to us. We're open to feedback and happy to look into it."],
     link: { label: "Get in touch", href: "/contact" },
   },
 ];
@@ -349,7 +363,7 @@ export default function PrivacyPolicyApps() {
           </h1>
 
           <p className="mt-5 text-sm sm:text-base text-gray-400">
-            Last updated: October 5, 2026
+            Last updated: November 5, 2026
           </p>
 
           <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-2xl mx-auto">

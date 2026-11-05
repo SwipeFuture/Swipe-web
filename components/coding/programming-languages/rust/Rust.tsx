@@ -1002,7 +1002,7 @@ export default function Rust() {
                     {[
                       { label: "First Released", value: "2010" },
                       { label: "Created By", value: "Graydon Hoare (Mozilla)" },
-                      { label: "Latest Version", value: "Rust 1.89" },
+                      { label: "Latest (Nov 2026)", value: "Rust 1.99" },
                       { label: "Typing", value: "Static, Strong" },
                       { label: "Paradigm", value: "Multi-Paradigm (Systems, Functional, Concurrent)" },
                       { label: "Primary Use", value: "Systems Programming, Backend Development & Performance-Critical Software" },

@@ -52,7 +52,7 @@ const PILLARS: Pillar[] = [
       "Projects",
       "Portfolio",
       "Open Source",
-      "Job Ready",
+      "Job Applications",
     ],
   },
   {

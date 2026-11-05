@@ -1014,7 +1014,7 @@ export default function Java() {
                     {[
                       { label: "First Released", value: "1995" },
                       { label: "Created By", value: "James Gosling (Sun Microsystems)" },
-                      { label: "Latest Version", value: "Java 24" },
+                      { label: "Latest (Nov 2026)", value: "Java 27" },
                       { label: "Typing", value: "Static" },
                       { label: "Paradigm", value: "Object-Oriented, Class-Based" },
                       { label: "Primary Use", value: "Enterprise Software, Backend, Android" },

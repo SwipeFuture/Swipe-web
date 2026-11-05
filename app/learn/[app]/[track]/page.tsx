@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/seo/JsonLd";
 import { THEMES } from "@/components/tools/themes";
-import { LEARN_APPS, appByUrl, flatLessons, getTrack, laterLevels, lessonDescription, tracksOf } from "@/lib/learn";
+import { LEARN_APPS, appByUrl, flatLessons, getTrack, lessonDescription, tracksOf } from "@/lib/learn";
 import { SITE_URL } from "@/lib/site";
 
 type Params = { app: string; track: string };
@@ -34,7 +34,6 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
   if (!app || !track) notFound();
   const t = THEMES[app.theme];
   const lessons = flatLessons(track);
-  const later = laterLevels(app, track.track);
   const base = `/learn/${app.url}/${track.slug}`;
   const first = lessons[0]?.lesson;
   let n = 0;
@@ -120,28 +119,6 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
           ))}
         </div>
 
-        {later.length > 0 && (
-          <div className="mt-16">
-            <h2 className="text-xl font-black tracking-tight text-stone-900 sm:text-2xl">Continue in the app: levels 3–{later[later.length - 1].number}</h2>
-            <p className="mt-2 text-sm text-stone-500">The full {track.track} track goes much further. Here&apos;s what comes next:</p>
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {later.map((lv) => (
-                <div key={lv.number} className="rounded-[22px] border border-white/60 bg-white/50 p-5 backdrop-blur-xl">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-bold text-stone-800">Level {lv.number}</span>
-                    <span className="text-xs font-semibold text-stone-400">🔒 in the app</span>
-                  </div>
-                  <p className="mt-2 text-xs leading-5 text-stone-500">{lv.chapters.map((c) => c.title).join(" · ")}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Link href="/apps" className={`inline-flex rounded-full px-7 py-3.5 text-sm font-semibold shadow-lg transition-all hover:scale-105 ${t.button}`}>
-                Get {app.name} →
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
