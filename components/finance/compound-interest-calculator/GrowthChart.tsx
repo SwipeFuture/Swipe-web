@@ -106,11 +106,11 @@ export default function GrowthChart({ years, currency }: { years: YearPoint[]; c
   return (
     <div className="relative">
 
-      <div className="absolute -inset-px rounded-[32px] sm:rounded-[36px] bg-gradient-to-br from-amber-500/0 via-amber-500/40 to-orange-400/0 blur-md opacity-60 -z-10" />
+      
 
-      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-white/70 bg-white/60 backdrop-blur-xl p-6 sm:p-9 lg:p-10 shadow-xl">
+      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-[#ececea] bg-white p-6 sm:p-9 lg:p-10">
 
-        <div className="pointer-events-none absolute inset-0 rounded-[32px] sm:rounded-[36px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
+        
 
         <div className="relative flex items-center justify-between flex-wrap gap-3">
           <h3 className="text-lg sm:text-xl font-bold tracking-tight text-stone-800">Balance Growth</h3>
@@ -242,7 +242,7 @@ export default function GrowthChart({ years, currency }: { years: YearPoint[]; c
           {/* Tooltip */}
           {hovered && (
             <div
-              className="pointer-events-none absolute top-2 z-10 rounded-2xl border border-white/80 bg-white/95 backdrop-blur-xl px-4 py-3 shadow-xl transition-[left] duration-100 ease-out"
+              className="pointer-events-none absolute top-2 z-10 rounded-2xl border border-[#ececea] bg-white/95 px-4 py-3 transition-[left] duration-100 ease-out"
               style={{
                 left: `${tooltipLeftPct}%`,
                 transform: tooltipAlign === "left" ? "translateX(0%)" : tooltipAlign === "right" ? "translateX(-100%)" : "translateX(-50%)",

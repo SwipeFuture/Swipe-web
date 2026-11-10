@@ -131,7 +131,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
     <button
       type="button"
       onClick={onClick}
-      className="rounded-[22px] border border-stone-200 bg-white/80 px-5 py-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-lg"
+      className="rounded-[22px] border border-stone-200 bg-white px-5 py-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-lg"
     >
       <div className="text-sm font-bold text-stone-800 sm:text-base">{label}</div>
       {sub && <div className="mt-1 text-xs text-stone-500">{sub}</div>}
@@ -182,9 +182,8 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
                     key={a.key}
                     type="button"
                     onClick={() => setArea(a)}
-                    className="rounded-[24px] border border-stone-200 bg-white/80 p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="rounded-[24px] border border-stone-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <div className="text-4xl">{a.emoji}</div>
                     <div className="mt-3 font-bold text-stone-800">{a.label}</div>
                   </button>
                 ))}
@@ -233,15 +232,15 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
               For “{goal.label.toLowerCase()}”, {main.track} is the best place to start. {LEVELS[level ?? 0].note}
             </p>
             <div className="mx-auto mt-6 grid max-w-2xl grid-cols-3 gap-3">
-              <div className="rounded-2xl bg-white/80 p-4">
+              <div className="rounded-2xl bg-white p-4">
                 <div className="text-2xl font-black text-stone-900">{main.lessons}</div>
                 <div className="text-xs text-stone-500">free lessons</div>
               </div>
-              <div className="rounded-2xl bg-white/80 p-4">
+              <div className="rounded-2xl bg-white p-4">
                 <div className="text-2xl font-black text-stone-900">{minutes === 60 ? "60+" : minutes}</div>
                 <div className="text-xs text-stone-500">min per day</div>
               </div>
-              <div className="rounded-2xl bg-white/80 p-4">
+              <div className="rounded-2xl bg-white p-4">
                 <div className="text-2xl font-black text-stone-900">~{days}</div>
                 <div className="text-xs text-stone-500">{days === 1 ? "day" : "days"} for levels 1–2</div>
               </div>
@@ -250,7 +249,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
               <Link href={`/learn/${main.url}/${main.slug}${main.first ? `/${main.first}` : ""}`} className={`rounded-full px-7 py-3.5 text-sm font-semibold shadow-lg transition-all hover:scale-105 ${t.button}`}>
                 Start the first lesson →
               </Link>
-              <Link href={`/learn/${main.url}/${main.slug}`} className="rounded-full border border-stone-200 bg-white/70 px-7 py-3.5 text-sm font-semibold text-stone-700">
+              <Link href={`/learn/${main.url}/${main.slug}`} className="rounded-full border border-stone-200 bg-white px-7 py-3.5 text-sm font-semibold text-stone-700">
                 See the full track
               </Link>
             </div>
@@ -271,7 +270,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
               <h3 className="text-base font-bold text-stone-800">Also a great fit</h3>
               <div className="mt-4 space-y-2">
                 {alternatives.map((a) => (
-                  <Link key={a.slug} href={`/learn/${a.url}/${a.slug}`} className="flex items-center justify-between rounded-2xl bg-white/80 px-4 py-3 text-sm font-semibold text-stone-700 hover:bg-white">
+                  <Link key={a.slug} href={`/learn/${a.url}/${a.slug}`} className="flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-stone-700 hover:bg-white">
                     {a.track}
                     <span className="text-xs text-stone-400">{a.lessons} lessons →</span>
                   </Link>

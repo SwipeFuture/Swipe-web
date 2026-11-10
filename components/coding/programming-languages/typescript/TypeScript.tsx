@@ -167,7 +167,7 @@ function renderProse(raw: string): ReactNode[] {
       blocks.push(
         <div
           key={blocks.length}
-          className="h-px w-full bg-gradient-to-r from-transparent via-green-200 to-transparent"
+          className="h-px w-full bg-white "
         />
       );
       continue;
@@ -812,36 +812,21 @@ export default function TypeScript() {
 
       {/* ================= Background — identical language to the Coding page ================= */}
 
-      <div
-        className="absolute inset-0 -z-50"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #ffffff 0%, #ecfdf5 16%, #bbf7d0 42%, #d1fae5 66%, #f0fdf4 85%, #ffffff 100%)",
-        }}
-      />
+      
 
-      <div
-        className="absolute inset-0 -z-40 opacity-[0.05]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right,#14532d 1px,transparent 1px),
-            linear-gradient(to bottom,#14532d 1px,transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-        }}
-      />
+      
 
-      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 w-px h-full bg-gradient-to-b from-transparent via-green-300/40 to-transparent blur-[1px]" />
+      
 
       <div
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax}px)` }}
       >
-        <div className="absolute -top-20 -left-20 w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] lg:w-[750px] lg:h-[750px] rounded-full bg-green-900 blur-[110px] sm:blur-[150px] lg:blur-[190px] opacity-[0.3] animate-pulse" />
-        <div className="hidden sm:block absolute top-1/4 right-0 w-[320px] h-[320px] lg:w-[600px] lg:h-[600px] rounded-full bg-emerald-600 blur-[120px] lg:blur-[180px] opacity-[0.3] -z-30 animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute bottom-1/4 left-0 w-[420px] h-[420px] rounded-full bg-green-700 blur-[160px] opacity-[0.28] -z-30 animate-[pulse_10s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute -bottom-20 -right-20 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-green-800 to-emerald-800 blur-[200px] opacity-[0.24] -z-30 animate-[pulse_11s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-emerald-500 blur-[180px] opacity-[0.18] -z-30 animate-[pulse_9s_ease-in-out_infinite]" />
+        
+        
+        
+        
+        
       </div>
 
       {/* Decorative Circles */}
@@ -849,9 +834,9 @@ export default function TypeScript() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${-parallax * 0.6}px)` }}
       >
-        <div className="hidden md:block absolute -right-40 top-40 w-[500px] h-[500px] lg:-right-72 lg:w-[900px] lg:h-[900px] rounded-full border border-green-400/50" />
-        <div className="hidden lg:block absolute left-16 bottom-32 w-[380px] h-[380px] rounded-full border border-green-400/60" />
-        <div className="hidden lg:block absolute right-1/4 top-16 w-[240px] h-[240px] rounded-full border border-emerald-300/70" />
+        
+        
+        
       </div>
 
       {/* Floating Glass Squares */}
@@ -859,41 +844,21 @@ export default function TypeScript() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax * 0.4}px)` }}
       >
-        <div className="hidden lg:block absolute top-24 right-1/4 w-24 h-24 rounded-[28px] bg-white/50 backdrop-blur-xl border border-white rotate-12 shadow-xl" />
-        <div className="hidden lg:block absolute bottom-32 left-1/5 w-16 h-16 rounded-[20px] bg-white/40 backdrop-blur-xl border border-white -rotate-12 shadow-lg" />
-        <div className="hidden md:block absolute top-1/2 left-10 w-14 h-14 rounded-2xl bg-green-100/70 backdrop-blur-xl border border-white/70 -rotate-6 shadow-lg" />
+        
+        
+        
       </div>
 
       {/* Floating Dots */}
-      <div className="hidden sm:block absolute top-32 left-10 w-3 h-3 rounded-full bg-green-800 shadow-xl animate-bounce" />
-      <div className="hidden sm:block absolute top-2/3 right-16 w-2 h-2 rounded-full bg-black/40" />
-      <div className="hidden lg:block absolute top-1/2 left-1/3 w-2 h-2 rounded-full bg-green-800 animate-pulse" />
-      <div className="hidden lg:block absolute bottom-24 right-1/4 w-3 h-3 rounded-full bg-emerald-600 animate-ping" />
+      
+      
 
       {/* Noise */}
-      <div
-        className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle,#000 1px,transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
+      
 
       {/* Top / Bottom Fade */}
-      <div
-        className="absolute top-0 left-0 z-10 w-full h-24 sm:h-32 lg:h-44 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.12) 85%, transparent 100%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 z-10 w-full h-24 sm:h-32 lg:h-44 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #fff 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.12) 85%, transparent 100%)",
-        }}
-      />
+      
+      
 
       {/* ================= Content ================= */}
 
@@ -901,7 +866,7 @@ export default function TypeScript() {
 
         <Link
           href="/coding/programming-languages"
-          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/70 bg-white/60 backdrop-blur-xl px-5 py-2.5 text-sm font-semibold text-stone-700 shadow-lg transition-all duration-300 hover:-translate-x-0.5 hover:shadow-xl"
+          className="group inline-flex items-center gap-2 text-[15px] font-bold text-[#3a3a38] hover:text-[#121212]"
         >
           <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
           Back to Programming Languages
@@ -912,19 +877,19 @@ export default function TypeScript() {
         <div
           ref={heroRef}
           className={`mt-10 sm:mt-14 grid lg:grid-cols-2 items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${
-            heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            heroVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-left order-2 lg:order-1">
 
-            <span className="group relative inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 sm:px-5 text-xs sm:text-sm font-semibold text-green-900 overflow-hidden">
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-green-100 to-transparent" />
+            <span className="relative inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#E7FAF0", color: "#127D4D" }}>
+              
               <span className="relative">Coding · Programming Language</span>
             </span>
 
             <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95]">
-              <span className="bg-gradient-to-r from-black via-green-900 to-emerald-700 bg-clip-text text-transparent">
+              <span className="" style={{ color: "#127D4D" }}>
                 {NAME}
               </span>
             </h1>
@@ -933,7 +898,7 @@ export default function TypeScript() {
               {TAGLINE}
             </p>
 
-            <p className="mt-6 text-sm sm:text-base leading-6 sm:leading-7 text-gray-500 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-6 text-sm sm:text-base leading-6 sm:leading-7 text-gray-500 max-w-xl">
               {SUMMARY}
             </p>
 
@@ -941,12 +906,12 @@ export default function TypeScript() {
 
           <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
-            <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
+            
 
             <img
               src={LOGO}
               alt={`${NAME} logo`}
-              className="relative w-[220px] sm:w-[300px] lg:w-[380px] aspect-square rounded-[32px] sm:rounded-[40px] object-cover shadow-[0_35px_80px_rgba(20,83,45,0.25)] transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
+              className="relative w-[220px] sm:w-[300px] lg:w-[380px] aspect-square rounded-[32px] sm:rounded-[40px] object-cover transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
             />
 
           </div>
@@ -968,18 +933,18 @@ export default function TypeScript() {
         <FloatingLearn href={learnTrackUrl("coding", "typescript") ?? "/learn#coding"} label={`Learn ${NAME} free`} />
 
         {/* Divider */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-white " />
 
         {/* ============ Table of Contents ============ */}
 
         <div className="sticky top-20 sm:top-24 z-30 mt-10 sm:mt-14 flex justify-center">
-          <nav className="w-full max-w-4xl overflow-x-auto rounded-full border border-white/70 bg-white/70 backdrop-blur-xl shadow-lg px-2 py-2">
+          <nav className="w-full max-w-4xl overflow-x-auto rounded-2xl border-2 border-[#ececea] bg-white px-2 py-2">
             <div className="flex items-center justify-center gap-1 sm:gap-1.5 min-w-max mx-auto">
               {SECTIONS.map((section) => (
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="whitespace-nowrap rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold text-stone-600 transition-all duration-300 hover:bg-green-50 hover:text-green-900"
+                  className="whitespace-nowrap rounded-xl px-3.5 py-2 text-[14px] font-semibold text-[#3a3a38] transition-colors hover:bg-[#F6F6F4] hover:text-[#121212]"
                 >
                   {section.title}
                   
@@ -996,7 +961,7 @@ export default function TypeScript() {
           {SECTIONS.map((section, i) => (
             <div key={section.id}>
               {i > 0 && (
-                <div className="mb-20 sm:mb-24 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+                <div className="mb-20 sm:mb-24 h-px w-full bg-white " />
               )}
 
               <DetailSection
@@ -1021,7 +986,7 @@ export default function TypeScript() {
                       { label: "Used By", value: "Microsoft, Google, OpenAI, Slack, Shopify, Airbnb" },
                     ].map((fact) => (
                       <div key={fact.label}>
-                        <div className="text-xs font-semibold uppercase tracking-wide text-green-700">
+                        <div className="text-xs font-semibold  text-green-700">
                           {fact.label}
                         </div>
                         <div className="mt-1.5 text-sm sm:text-base text-gray-700">
@@ -1052,7 +1017,7 @@ export default function TypeScript() {
                             {lvl.learn.map((topic) => (
                               <span
                                 key={topic}
-                                className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-medium text-green-800"
+                                className="inline-flex items-center rounded-lg px-2.5 py-1 text-[13px] font-semibold" style={{ background: "#E7FAF0", color: "#127D4D" }}
                               >
                                 {topic}
                               </span>
@@ -1070,7 +1035,7 @@ export default function TypeScript() {
                                 {lvl.finalProjects.map((p) => (
                                   <span
                                     key={p}
-                                    className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-medium text-green-800"
+                                    className="inline-flex items-center rounded-lg px-2.5 py-1 text-[13px] font-semibold" style={{ background: "#E7FAF0", color: "#127D4D" }}
                                   >
                                     {p}
                                   </span>
@@ -1086,14 +1051,14 @@ export default function TypeScript() {
                   <div className="max-w-2xl space-y-4">
                     {renderProse(WHAT_IS_INTRO)}
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-green-700">JavaScript</span>
+                      <span className="text-xs font-semibold  text-green-700">JavaScript</span>
                       <pre className="mt-2 rounded-2xl bg-green-950 text-green-100 text-xs sm:text-sm leading-6 p-4 sm:p-5 overflow-x-auto shadow-lg">
                         <code>{WHAT_IS_JS_CODE}</code>
                       </pre>
                     </div>
                     {renderProse(WHAT_IS_MIDDLE)}
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-green-700">TypeScript</span>
+                      <span className="text-xs font-semibold  text-green-700">TypeScript</span>
                       <pre className="mt-2 rounded-2xl bg-green-950 text-green-100 text-xs sm:text-sm leading-6 p-4 sm:p-5 overflow-x-auto shadow-lg">
                         <code>{WHAT_IS_TS_CODE}</code>
                       </pre>

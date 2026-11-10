@@ -41,7 +41,7 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
       <div className={`absolute inset-0 -z-50 ${t.pageBg}`} />
-      <div className={`absolute -right-24 -top-24 -z-40 h-[520px] w-[520px] rounded-full ${t.blobA} opacity-20 blur-[150px]`} />
+      
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -95,7 +95,7 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
               <h2 className="text-xl font-black tracking-tight text-stone-900 sm:text-2xl">Level {lv.number}</h2>
               <div className="mt-5 space-y-5">
                 {lv.chapters.map((ch) => (
-                  <div key={ch.title} className="rounded-[28px] border border-white/70 bg-white/70 p-6 shadow-lg backdrop-blur-xl sm:p-8">
+                  <div key={ch.title} className="rounded-[28px] border border-[#ececea] bg-white p-6 shadow-lg sm:p-8">
                     <h3 className="text-base font-bold text-stone-800 sm:text-lg">{ch.title}</h3>
                     <ol className="mt-4 space-y-2">
                       {ch.lessons.map((l) => {

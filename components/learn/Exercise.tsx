@@ -17,8 +17,8 @@ function Option({ label, state, onClick, disabled }: { label: string; state: "id
       : state === "wrong"
         ? "border-rose-300 bg-rose-50 text-rose-700"
         : state === "dim"
-          ? "border-stone-200 bg-white/60 text-stone-400"
-          : "border-stone-200 bg-white/80 text-stone-700 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md";
+          ? "border-stone-200 bg-white text-stone-400"
+          : "border-stone-200 bg-white text-stone-700 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md";
   return (
     <button type="button" disabled={disabled} onClick={onClick} className={`w-full rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-all duration-300 sm:text-base ${cls}`}>
       {label}
@@ -45,8 +45,8 @@ export function PracticeCard({ block, onDone, compact }: { block: Practice; onDo
   };
 
   return (
-    <div className={`rounded-[28px] border border-white/70 bg-white/70 shadow-lg backdrop-blur-xl ${compact ? "p-5 sm:p-6" : "p-6 sm:p-8"}`}>
-      <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-stone-400">
+    <div className={`rounded-[28px] border border-[#ececea] bg-white shadow-lg ${compact ? "p-5 sm:p-6" : "p-6 sm:p-8"}`}>
+      <span className="text-[11px] font-bold  text-stone-400">
         {block.type === "fill-blank" ? "Fill in the blank" : block.type === "true-false" ? "True or false" : "Quick check"}
       </span>
       <p className="mt-3 text-base font-bold leading-7 text-stone-900 sm:text-lg">
@@ -93,8 +93,8 @@ export function ChapterQuiz({ title, questions }: { title: string; questions: Pr
   const [key, setKey] = useState(0);
   const pct = questions.length ? Math.round((score / questions.length) * 100) : 0;
   return (
-    <div className="rounded-[32px] border border-stone-200 bg-gradient-to-br from-white to-stone-50 p-6 shadow-xl sm:p-10">
-      <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Chapter quiz</span>
+    <div className="rounded-[32px] border border-stone-200 bg-white p-6 sm:p-10">
+      <span className="text-xs font-bold  text-stone-400">Chapter quiz</span>
       <h2 className="mt-2 text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">{title.replace(/^Chapter Quiz — /, "")}</h2>
       <p className="mt-2 text-sm text-stone-500">{questions.length} questions · pass with 60%.</p>
       <div key={key} className="mt-8 space-y-5">

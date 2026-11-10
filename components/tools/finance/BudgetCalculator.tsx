@@ -67,7 +67,7 @@ export default function BudgetCalculator() {
         </div>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {parts.map((p) => (
-            <div key={p.label} className="rounded-[22px] border border-white/70 bg-white/70 p-5">
+            <div key={p.label} className="rounded-[22px] border border-[#ececea] bg-white p-5">
               <div className="flex items-center gap-2 text-sm font-bold text-stone-800">
                 <span className={`h-3 w-3 rounded-full ${p.color}`} />
                 {p.label} · {p.pct}%

@@ -1,0 +1,22 @@
+/* Homepage-only motion: Swipeys floating at different speeds and a little wave on hover. */
+.float { animation: float 6s ease-in-out infinite; }
+.floatSlow { animation: float 8s ease-in-out -2s infinite; }
+.floatFast { animation: float 4.5s ease-in-out -1s infinite; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-12px) rotate(calc(var(--r, 0deg) + 3deg)); }
+}
+
+.wave { transition: transform 0.35s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.tile:hover .wave { transform: translateY(-10px) rotate(-8deg); }
+
+/* chunky "press me" buttons, like a real key */
+.press {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.press:active { transform: translateY(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .float, .floatSlow, .floatFast { animation: none; }
+  .wave, .press { transition: none; }
+}

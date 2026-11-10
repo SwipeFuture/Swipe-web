@@ -61,7 +61,7 @@ export default function FrequencySelect({
         onClick={() => (open ? setOpen(false) : openDropdown())}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="mt-2 flex w-full items-center justify-between gap-2 rounded-2xl border border-amber-200/70 bg-white/70 backdrop-blur-sm px-4 py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 hover:border-amber-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+        className="mt-2 flex w-full items-center justify-between gap-2 rounded-2xl border border-amber-200/70 bg-white px-4 py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 hover:border-amber-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
       >
         <span>{selected.label}</span>
         <span className={`text-stone-400 transition-transform duration-300 ${open ? "rotate-180" : ""}`}>▾</span>
@@ -71,7 +71,7 @@ export default function FrequencySelect({
         <div
           role="listbox"
           style={{ position: "fixed", top: coords.top, left: coords.left, width: coords.width }}
-          className="z-50 origin-top rounded-2xl border border-white/70 bg-white/95 backdrop-blur-xl shadow-2xl"
+          className="z-50 origin-top rounded-2xl border border-[#ececea] bg-white/95"
         >
           <div className="p-1.5">
             {COMPOUNDING_FREQUENCIES.map((f) => (

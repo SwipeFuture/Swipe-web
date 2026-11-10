@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Hero from "@/components/hero-section/Hero";
-import WhatIsSwipe from "@/components/what-is-swipe/WhatIsSwipe";
-import WhySwipe from "@/components/why-swipe/why-swipe";
-import SwipeTools from "@/components/swipe.tools/swipe-tools";
-import Motivation from "@/components/motivation/motivation";
-import SwipeAppsSection from "@/components/swipe-apps-section/SwipeAppsSection";
+import Home from "@/components/home/Home";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
@@ -38,16 +33,11 @@ const STRUCTURED_DATA = [
   },
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <JsonLd data={STRUCTURED_DATA} />
-      <Hero />
-      <WhatIsSwipe />
-      <WhySwipe />
-      <SwipeTools />
-      <SwipeAppsSection />
-      <Motivation />
+      <Home />
     </>
   );
 }

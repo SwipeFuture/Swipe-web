@@ -105,7 +105,7 @@ export default function Quiz({ data }: { data: QuizData }) {
                 key={o.label}
                 type="button"
                 onClick={() => answer(o.scores)}
-                className="rounded-[22px] border border-stone-200 bg-white/80 px-5 py-4 text-left text-sm font-semibold text-stone-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-lg sm:text-base"
+                className="rounded-[22px] border border-stone-200 bg-white px-5 py-4 text-left text-sm font-semibold text-stone-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-lg sm:text-base"
               >
                 {o.label}
               </button>
@@ -121,9 +121,9 @@ export default function Quiz({ data }: { data: QuizData }) {
           <h2 className="text-xl font-black tracking-tight text-stone-900 sm:text-2xl">The {ranked.length} possible results</h2>
           <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {Object.values(data.results).map((r) => (
-              <div key={r.title} className="rounded-[22px] border border-stone-100 bg-white/70 p-5">
+              <div key={r.title} className="rounded-[22px] border border-stone-100 bg-white p-5">
                 <p className="text-base font-bold text-stone-900">
-                  <span aria-hidden>{r.emoji}</span> {r.title}
+                  {r.title}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-stone-500">{r.summary}</p>
               </div>
@@ -135,10 +135,9 @@ export default function Quiz({ data }: { data: QuizData }) {
         <>
           <Card className="text-center">
             <span className={`inline-flex items-center rounded-full border px-3.5 py-1.5 text-xs font-semibold tracking-wide ${t.chip}`}>Your result</span>
-            <div className="mt-5 text-6xl">{winner.emoji}</div>
             <h2 className={`mt-3 text-4xl font-black tracking-tight sm:text-5xl ${t.gradientText} bg-clip-text text-transparent`}>{winner.title}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base">{winner.summary}</p>
-            {runnerUp && <p className="mt-4 text-xs text-stone-400">Close second: {runnerUp.emoji} {runnerUp.title}</p>}
+            {runnerUp && <p className="mt-4 text-xs text-stone-400">Close second: {runnerUp.title}</p>}
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <button
                 type="button"
@@ -155,7 +154,7 @@ export default function Quiz({ data }: { data: QuizData }) {
               >
                 {copied ? "Copied ✓" : "Share my result"}
               </button>
-              <button type="button" onClick={restart} className="rounded-full border border-stone-200 bg-white/70 px-6 py-3 text-sm font-semibold text-stone-700">
+              <button type="button" onClick={restart} className="rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-semibold text-stone-700">
                 Take it again ↻
               </button>
             </div>

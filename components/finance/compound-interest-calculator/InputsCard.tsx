@@ -64,7 +64,7 @@ function NumberField({
             if (!Number.isFinite(n)) return;
             onChange(clamp(n, min, max));
           }}
-          className={`w-full rounded-2xl border border-amber-200/70 bg-white/70 backdrop-blur-sm py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none disabled:opacity-40 disabled:cursor-not-allowed ${
+          className={`w-full rounded-2xl border border-amber-200/70 bg-white py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none disabled:opacity-40 disabled:cursor-not-allowed ${
             prefix ? "pl-11" : "pl-4"
           } ${suffix ? "pr-14" : "pr-4"}`}
         />
@@ -86,7 +86,7 @@ function Chip({ label, active, onClick }: { label: string; active: boolean; onCl
       className={`rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-300 ${
         active
           ? "bg-amber-600 text-white shadow-md shadow-amber-600/30"
-          : "border border-amber-200 bg-white/60 text-amber-700 hover:bg-amber-50"
+          : "border border-amber-200 bg-white text-amber-700 hover:bg-amber-50"
       }`}
     >
       {label}
@@ -123,11 +123,11 @@ export default function InputsCard({
 
   return (
     <div className="group relative">
-      <div className="absolute -inset-px rounded-[32px] sm:rounded-[36px] bg-gradient-to-br from-amber-500/0 via-amber-500/40 to-orange-400/0 blur-md opacity-60 -z-10" />
+      
 
-      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-white/70 bg-white/60 backdrop-blur-xl p-6 sm:p-9 lg:p-10 shadow-xl">
+      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-[#ececea] bg-white p-6 sm:p-9 lg:p-10">
 
-        <div className="pointer-events-none absolute inset-0 rounded-[32px] sm:rounded-[36px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
+        
 
         <div className="relative grid sm:grid-cols-2 gap-6 sm:gap-7">
 

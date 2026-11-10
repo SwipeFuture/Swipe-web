@@ -14,7 +14,7 @@ function Reveal({ children, className = "", id }: { children: ReactNode; classNa
     return () => o.disconnect();
   }, []);
   return (
-    <div id={id} ref={ref} className={`scroll-mt-28 transition-all duration-1000 ease-out ${shown ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} ${className}`}>
+    <div id={id} ref={ref} className={`scroll-mt-28 transition-all duration-1000 ease-out ${shown ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"} ${className}`}>
       {children}
     </div>
   );
@@ -178,12 +178,12 @@ export default function AboutStory() {
     <div className="mt-16 space-y-20 sm:mt-20 sm:space-y-24">
       {/* Colin's founder story (his own words, approved 2026-10-27; he goes by "Colin" only) */}
       <Reveal id="story">
-        <div className="relative overflow-hidden rounded-[32px] border border-gray-200 bg-white p-7 shadow-xl sm:p-12">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-green-200 opacity-40 blur-[100px]" />
-          <span className="relative text-xs font-bold uppercase tracking-[0.2em] text-green-700">A note from the founder</span>
+        <div className="relative overflow-hidden rounded-[32px] border border-gray-200 bg-white p-7 sm:p-12">
+          
+          <span className="relative text-xs font-bold  text-green-700">A note from the founder</span>
           <h2 className="relative mt-3 text-3xl font-black tracking-tight text-black sm:text-5xl">
             Swipe to the{" "}
-            <span className="bg-gradient-to-r from-black via-green-700 to-emerald-500 bg-clip-text text-transparent">Future.</span>
+            <span>Future.</span>
           </h2>
           <div className="relative mt-8 space-y-12 text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
             {STORY.map((s) => (
@@ -201,11 +201,11 @@ export default function AboutStory() {
 
       {/* Numbers */}
       <Reveal>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 border-t-2 border-[#ececea] pt-8 sm:grid-cols-4">
           {NUMBERS.map((n) => (
-            <div key={n.label} className="rounded-[24px] border border-gray-200 bg-white p-6 text-center shadow-sm">
-              <div className="bg-gradient-to-r from-black via-green-700 to-emerald-500 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl">{n.value}</div>
-              <div className="mt-1 text-sm font-semibold text-gray-500">{n.label}</div>
+            <div key={n.label}>
+              <div className="text-4xl font-extrabold tracking-tight sm:text-5xl" style={{ fontStretch: "125%" }}>{n.value}</div>
+              <div className="mt-2 text-[15px] font-semibold text-[#5c5c58]">{n.label}</div>
             </div>
           ))}
         </div>
@@ -213,16 +213,16 @@ export default function AboutStory() {
 
       {/* How Swipe started */}
       <Reveal id="how-it-started">
-        <div className="text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-green-700">How it started</span>
+        <div>
+          <span className="text-xs font-bold  text-green-700">How it started</span>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">From a sketchbook to four apps</h2>
         </div>
         <ol className="relative mx-auto mt-12 max-w-3xl">
-          <div className="absolute bottom-2 left-[15px] top-2 w-px bg-gradient-to-b from-green-300 via-emerald-300 to-transparent sm:left-1/2" />
+          <div className="absolute bottom-2 left-[15px] top-2 w-px bg-white sm:left-1/2" />
           {TIMELINE.map((step, i) => (
             <li key={step.title} className={`relative mb-10 pl-12 sm:mb-14 sm:w-1/2 sm:pl-0 ${i % 2 ? "sm:ml-auto sm:pl-12" : "sm:pr-12 sm:text-right"}`}>
               <span className={`absolute left-[7px] top-1.5 h-4 w-4 rounded-full border-4 border-white bg-green-500 shadow ${i % 2 ? "sm:-left-2" : "sm:left-auto sm:-right-2"}`} />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-green-700">{step.when}</span>
+              <span className="text-xs font-bold  text-green-700">{step.when}</span>
               <h3 className="mt-1 text-xl font-black tracking-tight text-black">{step.title}</h3>
               <p className="mt-2 text-sm leading-7 text-gray-500 sm:text-base">{step.text}</p>
             </li>
@@ -232,8 +232,8 @@ export default function AboutStory() {
 
       {/* How we make lessons */}
       <Reveal id="how-we-make-lessons">
-        <div className="text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-green-700">How we make lessons</span>
+        <div>
+          <span className="text-xs font-bold  text-green-700">How we make lessons</span>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">Five steps behind every lesson</h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">Short doesn&apos;t mean shallow. This is how a Swipe track goes from idea to the lesson on your screen.</p>
         </div>

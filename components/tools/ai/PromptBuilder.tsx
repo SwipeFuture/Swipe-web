@@ -39,9 +39,9 @@ export default function PromptBuilder() {
     <label className="block">
       <span className="text-xs font-semibold text-stone-600 sm:text-sm">{label}</span>
       {area ? (
-        <textarea value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder} rows={2} className={`mt-2 w-full rounded-2xl border bg-white/70 px-4 py-3 text-sm text-stone-800 shadow-sm outline-none focus:ring-4 sm:text-base ${t.ring}`} />
+        <textarea value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder} rows={2} className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm text-stone-800 shadow-sm outline-none focus:ring-4 sm:text-base ${t.ring}`} />
       ) : (
-        <input value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder} className={`mt-2 w-full rounded-2xl border bg-white/70 px-4 py-3 text-sm text-stone-800 shadow-sm outline-none focus:ring-4 sm:text-base ${t.ring}`} />
+        <input value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder} className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm text-stone-800 shadow-sm outline-none focus:ring-4 sm:text-base ${t.ring}`} />
       )}
     </label>
   );

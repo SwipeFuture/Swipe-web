@@ -61,7 +61,7 @@ export default function SleepCalculator() {
                 type="time"
                 value={wake}
                 onChange={(e) => e.target.value && setWake(e.target.value)}
-                className={`mt-2 w-full rounded-2xl border bg-white/70 px-4 py-3 text-lg font-semibold text-stone-800 shadow-sm outline-none focus:ring-4 sm:w-60 ${t.ring}`}
+                className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-lg font-semibold text-stone-800 shadow-sm outline-none focus:ring-4 sm:w-60 ${t.ring}`}
               />
             </label>
           )}
@@ -74,7 +74,7 @@ export default function SleepCalculator() {
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {times.map(({ c, time }) => (
-            <div key={c} className={`rounded-[24px] border p-5 text-center ${c === 6 || c === 5 ? "border-orange-300 bg-orange-50" : "border-stone-200 bg-white/70"}`}>
+            <div key={c} className={`rounded-[24px] border p-5 text-center ${c === 6 || c === 5 ? "border-orange-300 bg-orange-50" : "border-stone-200 bg-white"}`}>
               <div className="text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">{fmt(time)}</div>
               <div className="mt-1 text-xs font-semibold text-stone-500">
                 {c} cycles · {(c * 1.5).toFixed(1)} h

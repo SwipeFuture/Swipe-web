@@ -23,7 +23,7 @@ export default function CurrencySelect({
   // Positioned in page coordinates (rect + scroll offset) and rendered through a portal
   // into <body>, so the panel scrolls naturally with the page instead of needing scroll/
   // viewport listeners to stay anchored — it also escapes the input card's `overflow-hidden`
-  // (kept there so the card's backdrop-blur respects its rounded corners), which was
+  // (kept there so the card's respects its rounded corners), which was
   // otherwise silently clipping the bottom of this list.
   const openDropdown = () => {
     const rect = triggerRef.current?.getBoundingClientRect();
@@ -76,7 +76,7 @@ export default function CurrencySelect({
         onClick={() => (open ? setOpen(false) : openDropdown())}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="mt-2 flex w-full items-center justify-between gap-2 rounded-2xl border border-amber-200/70 bg-white/70 backdrop-blur-sm px-4 py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 hover:border-amber-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+        className="mt-2 flex w-full items-center justify-between gap-2 rounded-2xl border border-amber-200/70 bg-white px-4 py-3 text-base font-semibold text-stone-800 shadow-sm outline-none transition-all duration-300 hover:border-amber-300 focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
       >
         <span className="flex items-center gap-2">
           <span className="inline-flex w-8 justify-center text-amber-600">
@@ -95,7 +95,7 @@ export default function CurrencySelect({
             ref={panelRef}
             role="listbox"
             style={{ position: "absolute", top: coords.top, left: coords.left, width: coords.width }}
-            className="z-50 origin-top rounded-2xl border border-white/70 bg-white/95 backdrop-blur-xl shadow-2xl shadow-amber-900/10"
+            className="z-50 origin-top rounded-2xl border border-[#ececea] bg-white/95 shadow-amber-900/10"
           >
             <div className="max-h-72 overflow-y-auto p-1.5">
               {CURRENCIES.map((c) => (

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import AreaArt from "@/components/home/AreaArt";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { LessonKey, Lesson } from "./lessons/types";
 import { discipline } from "./lessons/01-discipline";
@@ -127,7 +128,7 @@ function renderLessonText(raw: string): ReactNode[] {
       blocks.push(
         <div
           key={blocks.length}
-          className="h-px w-full bg-gradient-to-r from-transparent via-orange-200 to-transparent"
+          className="h-px w-full bg-white "
         />
       );
       continue;
@@ -181,19 +182,15 @@ function ChapterCard({
     >
 
       {/* Glowing border halo */}
-      <div
-        className={`absolute -inset-px rounded-[32px] sm:rounded-[36px] bg-gradient-to-br from-orange-400/0 via-orange-400/50 to-orange-300/0 blur-md transition-opacity duration-500 -z-10 ${
-          isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-        }`}
-      />
+      
 
       <div
-        className={`relative h-full flex flex-col overflow-hidden rounded-[32px] sm:rounded-[36px] border border-white/70 bg-white/60 backdrop-blur-xl shadow-xl transition-all duration-500 ease-out ${
-          isOpen ? "shadow-[0_40px_100px_-20px_rgba(234,88,12,0.3)]" : "hover:-translate-y-1.5"
+        className={`relative h-full flex flex-col overflow-hidden rounded-[32px] sm:rounded-[36px] border border-[#ececea] bg-white transition-all duration-500 ease-out ${
+          isOpen ? "" : "hover:-translate-y-1.5"
         }`}
       >
 
-        <div className="pointer-events-none absolute inset-0 rounded-[32px] sm:rounded-[36px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
+        
 
         <button
           type="button"
@@ -205,11 +202,6 @@ function ChapterCard({
           <div className="flex items-start justify-between gap-4">
 
             <div className="flex items-center gap-4">
-
-              <div className="relative inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-[22px] bg-gradient-to-br from-orange-100 to-orange-50 border border-white shadow-md text-2xl sm:text-3xl transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:rotate-6">
-                <div className="absolute inset-0 rounded-[22px] bg-orange-300 blur-lg opacity-40 -z-10" />
-                <span>{chapter.icon}</span>
-              </div>
 
               <div>
                 <span className="text-xs font-semibold tracking-wide text-orange-500">
@@ -247,7 +239,7 @@ function ChapterCard({
           <div className="overflow-hidden">
             <div className="relative px-6 sm:px-8 pb-8 pt-2">
 
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-orange-200 to-transparent mb-6" />
+              <div className="h-px w-full bg-white mb-6" />
 
               {chapter.lesson && Object.values(chapter.lesson).some(Boolean) ? (
                 // Real lesson copy — read as a stacked document, one section after another.
@@ -368,30 +360,21 @@ export default function PersonalGrowth() {
 
       {/* ================= Background — same premium language as the Hero, in electric orange ================= */}
 
-      <div className="absolute inset-0 -z-50 bg-gradient-to-b from-white via-orange-50 to-orange-100" />
+      <div className="absolute inset-0 -z-50 bg-white " />
 
-      <div
-        className="absolute inset-0 -z-40 opacity-[0.05]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right,#ea580c 1px,transparent 1px),
-            linear-gradient(to bottom,#ea580c 1px,transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-        }}
-      />
+      
 
-      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 w-px h-full bg-gradient-to-b from-transparent via-orange-300/40 to-transparent blur-[1px]" />
+      
 
       <div
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax}px)` }}
       >
-        <div className="absolute -top-20 -left-20 w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] lg:w-[750px] lg:h-[750px] rounded-full bg-orange-500 blur-[110px] sm:blur-[150px] lg:blur-[190px] opacity-[0.3] animate-pulse" />
-        <div className="hidden sm:block absolute top-1/4 right-0 w-[320px] h-[320px] lg:w-[600px] lg:h-[600px] rounded-full bg-orange-300 blur-[120px] lg:blur-[180px] opacity-[0.3] -z-30 animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute bottom-1/4 left-0 w-[420px] h-[420px] rounded-full bg-orange-400 blur-[160px] opacity-[0.3] -z-30 animate-[pulse_10s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute -bottom-20 -right-20 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-orange-400 to-orange-600 blur-[200px] opacity-[0.28] -z-30 animate-[pulse_11s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-orange-600 blur-[180px] opacity-[0.15] -z-30 animate-[pulse_9s_ease-in-out_infinite]" />
+        
+        
+        
+        
+        
       </div>
 
       {/* Decorative Circles */}
@@ -399,9 +382,9 @@ export default function PersonalGrowth() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${-parallax * 0.6}px)` }}
       >
-        <div className="hidden md:block absolute -right-40 top-40 w-[500px] h-[500px] lg:-right-72 lg:w-[900px] lg:h-[900px] rounded-full border border-orange-300/40" />
-        <div className="hidden lg:block absolute left-16 bottom-32 w-[380px] h-[380px] rounded-full border border-orange-300/50" />
-        <div className="hidden lg:block absolute right-1/4 top-16 w-[240px] h-[240px] rounded-full border border-orange-200/60" />
+        
+        
+        
       </div>
 
       {/* Floating Glass Squares */}
@@ -409,41 +392,21 @@ export default function PersonalGrowth() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax * 0.4}px)` }}
       >
-        <div className="hidden lg:block absolute top-24 right-1/4 w-24 h-24 rounded-[28px] bg-white/50 backdrop-blur-xl border border-white rotate-12 shadow-xl" />
-        <div className="hidden lg:block absolute bottom-32 left-1/5 w-16 h-16 rounded-[20px] bg-white/40 backdrop-blur-xl border border-white -rotate-12 shadow-lg" />
-        <div className="hidden md:block absolute top-1/2 left-10 w-14 h-14 rounded-2xl bg-orange-100/70 backdrop-blur-xl border border-white/70 -rotate-6 shadow-lg" />
+        
+        
+        
       </div>
 
       {/* Floating Dots */}
-      <div className="hidden sm:block absolute top-32 left-10 w-3 h-3 rounded-full bg-orange-500 shadow-xl animate-bounce" />
-      <div className="hidden sm:block absolute top-2/3 right-16 w-2 h-2 rounded-full bg-black/40" />
-      <div className="hidden lg:block absolute top-1/2 left-1/3 w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-      <div className="hidden lg:block absolute bottom-24 right-1/4 w-3 h-3 rounded-full bg-orange-400 animate-ping" />
+      
+      
 
       {/* Noise */}
-      <div
-        className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle,#000 1px,transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
+      
 
       {/* Top / Bottom Fade */}
-      <div
-        className="absolute top-0 left-0 z-10 w-full h-10 sm:h-14 lg:h-20 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.45) 60%, rgba(255,255,255,0.15) 85%, transparent 100%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 z-10 w-full h-10 sm:h-14 lg:h-20 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #fff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.45) 60%, rgba(255,255,255,0.15) 85%, transparent 100%)",
-        }}
-      />
+      
+      
 
       {/* ================= Content ================= */}
 
@@ -454,20 +417,20 @@ export default function PersonalGrowth() {
         <div
           ref={heroRef}
           className={`grid lg:grid-cols-2 items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${
-            heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            heroVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-left order-2 lg:order-1">
 
             <span className="group relative inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-2 sm:px-5 text-xs sm:text-sm font-semibold text-orange-700 overflow-hidden">
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-orange-100 to-transparent" />
+              
               <span className="relative">12 Chapters</span>
             </span>
 
             <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] text-black">
               Personal{" "}
-              <span className="bg-gradient-to-r from-black via-orange-600 to-orange-400 bg-clip-text text-transparent">
+              <span className="" style={{ color: "#C2410C" }}>
                 Growth
               </span>
             </h1>
@@ -476,7 +439,7 @@ export default function PersonalGrowth() {
               Become the person your future needs.
             </p>
 
-            <div className="mt-6 space-y-3 max-w-xl mx-auto lg:mx-0">
+            <div className="mt-6 space-y-3 max-w-xl">
               <p className="text-base sm:text-lg leading-7 sm:leading-8 text-gray-500">
                 Everything you want to achieve begins long before anyone
                 notices it.
@@ -494,13 +457,12 @@ export default function PersonalGrowth() {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Link href="/learn#personal-growth" className="group relative inline-flex justify-center items-center gap-2 overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-9 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(234,88,12,0.5)]">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-400 opacity-0 group-hover:opacity-20 transition-all" />
+            <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start">
+              <Link href="/learn#personal-growth" className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-[#121212] px-7 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]">
               <span className="relative">Start a free lesson</span>
               <span className="relative transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
-              <a href="#chapters" className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white/80 px-7 py-4 sm:px-8 sm:py-5 font-semibold text-gray-800 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">Explore topics ↓</a>
+              <a href="#chapters" className="inline-flex items-center justify-center rounded-xl border-2 border-[#ececea] bg-white px-7 py-4 text-[17px] font-bold text-[#121212] transition-colors hover:border-[#121212]">Explore topics ↓</a>
             </div>
 
           </div>
@@ -508,62 +470,54 @@ export default function PersonalGrowth() {
           {/* Placeholder image — swap for the final orange liquid-glass illustration later */}
           <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
-            <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-orange-500 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
+            
 
-            <img
-              src="/liquid-glass-sechs.webp"
-              alt="Personal Growth preview"
-              className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(120,40,0,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
-            />
+            <AreaArt area="growth" className="w-[240px] sm:w-[340px] lg:w-[420px]" />
 
           </div>
 
         </div>
 
         {/* Divider */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-white " />
 
         {/* ============ About ============ */}
 
         <div
           ref={aboutRef}
           className={`mt-16 sm:mt-24 lg:mt-28 grid lg:grid-cols-2 items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${
-            aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            aboutVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
           <div className="max-lg:hidden relative flex justify-center order-1">
 
-            <div className="absolute w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full bg-orange-400 blur-[100px] sm:blur-[130px] opacity-40" />
+            
 
-            <img
-              src="/liquid-glass-zehn.webp"
-              alt="Why personal growth matters"
-              className="relative w-[220px] sm:w-[300px] lg:w-[360px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(120,40,0,0.18)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:-rotate-2 hover:scale-[1.03] rotate-2"
-            />
+            <AreaArt area="growth" className="w-[220px] sm:w-[300px] lg:w-[360px]" />
 
           </div>
 
-          <div className="text-center lg:text-left order-2">
+          <div className="text-left order-2">
 
-            <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-orange-700">
+            <span className="inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#FFEEDF", color: "#C2410C" }}>
               Why Personal Growth
             </span>
 
             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
               Habits{" "}
-              <span className="bg-gradient-to-r from-black via-orange-600 to-orange-400 bg-clip-text text-transparent">
+              <span>
                 nobody taught you
               </span>
             </h2>
 
-            <p className="mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">
               Discipline, focus, resilience and mindset shape everything you
               achieve — yet almost no one is ever taught how to build them on
               purpose. Swipe Personal Growth closes that gap.
             </p>
 
-            <p className="mt-4 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-4 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">
               Growth isn&apos;t about a single breakthrough moment. It&apos;s
               the small, repeatable habits and decisions that quietly
               compound into the person you become over months and years.
@@ -579,7 +533,7 @@ export default function PersonalGrowth() {
                   key={item.label}
                   className="flex items-center gap-3 rounded-2xl border border-orange-100 bg-orange-50/50 px-4 py-3 text-left"
                 >
-                  <span className="text-xl shrink-0">{item.icon}</span>
+                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-current opacity-50" aria-hidden />
                   <span className="text-xs sm:text-sm font-semibold text-gray-700">{item.label}</span>
                 </div>
               ))}
@@ -590,19 +544,19 @@ export default function PersonalGrowth() {
         </div>
 
         {/* Divider */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-white " />
 
         {/* ============ Chapters ============ */}
 
         <div id="chapters" className="relative mt-16 sm:mt-20 lg:mt-24 scroll-mt-24">
 
-          <div className="text-center max-w-2xl mx-auto">
-            <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-orange-700">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#FFEEDF", color: "#C2410C" }}>
               Learning Chapters
             </span>
             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
               Twelve{" "}
-              <span className="bg-gradient-to-r from-black via-orange-600 to-orange-400 bg-clip-text text-transparent">
+              <span>
                 Chapters
               </span>
             </h2>
@@ -621,7 +575,7 @@ export default function PersonalGrowth() {
                 chapter={chapter}
                 isOpen={openIndex === i}
                 onToggle={() => setOpenIndex((prev) => (prev === i ? null : i))}
-                revealClass={gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+                revealClass={gridVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"}
               />
             ))}
           </div>
@@ -633,38 +587,36 @@ export default function PersonalGrowth() {
         <div
           ref={ctaRef}
           className={`relative mt-16 sm:mt-24 lg:mt-28 transition-all duration-1000 ease-out ${
-            ctaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            ctaVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
-          <div className="absolute -inset-px rounded-[36px] sm:rounded-[48px] bg-gradient-to-br from-orange-400/0 via-orange-400/50 to-orange-300/0 opacity-60 blur-lg -z-10" />
+          
 
-          <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px] border border-white/70 bg-white/60 backdrop-blur-xl p-10 sm:p-16 lg:p-20 shadow-2xl text-center">
+          <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px] border border-[#ececea] bg-white p-8 sm:p-12 lg:p-16 text-left">
 
-            <div className="pointer-events-none absolute inset-0 rounded-[36px] sm:rounded-[48px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
+            
 
-            <div className="hidden sm:block absolute -right-16 -top-16 w-72 h-72 rounded-full bg-orange-300 blur-[110px] opacity-40 -z-10" />
-            <div className="hidden lg:block absolute -left-10 -bottom-16 w-64 h-64 rounded-full bg-orange-200 blur-[100px] opacity-40 -z-10" />
+            
+            
 
             <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
-              Your growth{" "}
-              <span className="bg-gradient-to-r from-black via-orange-600 to-orange-400 bg-clip-text text-transparent">
-                starts today
+              Start with{" "}
+              <span>
+                one small habit.
               </span>
             </h2>
 
-            <p className="relative mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-2xl mx-auto">
-              Every meaningful change starts with a single small decision.
-              Keep building your habits with Swipe and turn what you learn
-              into the person you&apos;re becoming.
+            <p className="relative mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-2xl">
+              Habits, focus, sleep and stress in short lessons you can try
+              the same day. Free, and no account needed.
             </p>
 
-            <div className="relative mt-8 sm:mt-10 flex justify-center">
+            <div className="relative mt-8 sm:mt-10 flex justify-start">
               <Link
                 href="/#learning-paths"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-8 py-4 sm:px-10 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(234,88,12,0.5)]"
+                className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-[#121212] px-7 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-400 opacity-0 group-hover:opacity-20 transition-all" />
                 <span className="relative">Explore More Paths</span>
                 <span className="relative transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>

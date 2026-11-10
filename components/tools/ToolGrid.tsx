@@ -10,10 +10,9 @@ export function ToolCards({ area }: { area: ToolArea }) {
         <Link
           key={tool.href}
           href={tool.href}
-          className="group rounded-[26px] border border-white/70 bg-white/70 p-6 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          className="group rounded-[26px] border border-[#ececea] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1"
         >
           <div className="flex items-center justify-between">
-            <span className="text-3xl">{tool.emoji}</span>
             <span className={`rounded-full border px-3 py-1 text-[11px] font-semibold ${t.chip}`}>{tool.kind}</span>
           </div>
           <h3 className="mt-4 text-lg font-bold text-stone-900">{tool.title}</h3>
@@ -33,8 +32,8 @@ export function AreaTools({ area }: { area: ToolArea["key"] }) {
     <section className="relative overflow-hidden py-20 sm:py-28">
       <div className={`absolute inset-0 -z-10 ${t.pageBg}`} />
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="text-center">
-          <span className={`text-xs font-bold uppercase tracking-[0.2em] ${t.accentText}`}>Free & no account needed</span>
+        <div>
+          <span className={`text-xs font-bold  ${t.accentText}`}>Free & no account needed</span>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 sm:text-5xl">{a.label} tools & lessons</h2>
         </div>
         <div className="mt-10">
@@ -44,7 +43,7 @@ export function AreaTools({ area }: { area: ToolArea["key"] }) {
           <Link href={a.learn} className={`rounded-full px-7 py-3.5 text-sm font-semibold shadow-lg transition-all hover:scale-105 ${t.button}`}>
             Free {a.label.toLowerCase()} lessons →
           </Link>
-          <Link href="/advisor" className="rounded-full border border-stone-200 bg-white/70 px-7 py-3.5 text-sm font-semibold text-stone-700">
+          <Link href="/advisor" className="rounded-full border border-stone-200 bg-white px-7 py-3.5 text-sm font-semibold text-stone-700">
             Find your learning path
           </Link>
         </div>

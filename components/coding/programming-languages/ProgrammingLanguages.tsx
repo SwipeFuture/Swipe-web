@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import AreaArt from "@/components/home/AreaArt";
 import { useEffect, useRef, useState } from "react";
 import { LANGUAGES, type Language } from "./languages";
 import LearnBanner from "@/components/learn/LearnBanner";
@@ -45,8 +46,8 @@ function LanguageSection({
           alignRight ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        <div className="relative w-full aspect-square rounded-[32px] overflow-hidden shadow-xl">
-          <div className="absolute inset-0 rounded-[32px] bg-green-600 blur-2xl opacity-20 -z-10" />
+        <div className="relative w-full aspect-square rounded-[32px] overflow-hidden">
+          
           {language.logo ? (
             <img
               src={language.logo}
@@ -83,7 +84,7 @@ function LanguageSection({
         <div className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-wide text-green-700">
+            <div className="text-xs font-semibold  text-green-700">
               Best For
             </div>
             <div className="mt-1.5 text-sm sm:text-base text-gray-700 max-w-xs">
@@ -92,7 +93,7 @@ function LanguageSection({
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-wide text-green-700">
+            <div className="text-xs font-semibold  text-green-700">
               Difficulty
             </div>
             <div className="mt-1.5 text-sm sm:text-base text-gray-700">
@@ -186,36 +187,21 @@ export default function ProgrammingLanguages() {
 
       {/* ================= Background — identical language to the Coding page ================= */}
 
-      <div
-        className="absolute inset-0 -z-50"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #ffffff 0%, #ecfdf5 16%, #bbf7d0 42%, #d1fae5 66%, #f0fdf4 85%, #ffffff 100%)",
-        }}
-      />
+      
 
-      <div
-        className="absolute inset-0 -z-40 opacity-[0.05]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right,#14532d 1px,transparent 1px),
-            linear-gradient(to bottom,#14532d 1px,transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-        }}
-      />
+      
 
-      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 w-px h-full bg-gradient-to-b from-transparent via-green-300/40 to-transparent blur-[1px]" />
+      
 
       <div
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax}px)` }}
       >
-        <div className="absolute -top-20 -left-20 w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] lg:w-[750px] lg:h-[750px] rounded-full bg-green-900 blur-[110px] sm:blur-[150px] lg:blur-[190px] opacity-[0.3] animate-pulse" />
-        <div className="hidden sm:block absolute top-1/4 right-0 w-[320px] h-[320px] lg:w-[600px] lg:h-[600px] rounded-full bg-emerald-600 blur-[120px] lg:blur-[180px] opacity-[0.3] -z-30 animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute bottom-1/4 left-0 w-[420px] h-[420px] rounded-full bg-green-700 blur-[160px] opacity-[0.28] -z-30 animate-[pulse_10s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute -bottom-20 -right-20 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-green-800 to-emerald-800 blur-[200px] opacity-[0.24] -z-30 animate-[pulse_11s_ease-in-out_infinite]" />
-        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-emerald-500 blur-[180px] opacity-[0.18] -z-30 animate-[pulse_9s_ease-in-out_infinite]" />
+        
+        
+        
+        
+        
       </div>
 
       {/* Decorative Circles */}
@@ -223,9 +209,9 @@ export default function ProgrammingLanguages() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${-parallax * 0.6}px)` }}
       >
-        <div className="hidden md:block absolute -right-40 top-40 w-[500px] h-[500px] lg:-right-72 lg:w-[900px] lg:h-[900px] rounded-full border border-green-400/50" />
-        <div className="hidden lg:block absolute left-16 bottom-32 w-[380px] h-[380px] rounded-full border border-green-400/60" />
-        <div className="hidden lg:block absolute right-1/4 top-16 w-[240px] h-[240px] rounded-full border border-emerald-300/70" />
+        
+        
+        
       </div>
 
       {/* Floating Glass Squares */}
@@ -233,41 +219,21 @@ export default function ProgrammingLanguages() {
         className="absolute inset-0 transition-transform duration-100 ease-out"
         style={{ transform: `translateY(${parallax * 0.4}px)` }}
       >
-        <div className="hidden lg:block absolute top-24 right-1/4 w-24 h-24 rounded-[28px] bg-white/50 backdrop-blur-xl border border-white rotate-12 shadow-xl" />
-        <div className="hidden lg:block absolute bottom-32 left-1/5 w-16 h-16 rounded-[20px] bg-white/40 backdrop-blur-xl border border-white -rotate-12 shadow-lg" />
-        <div className="hidden md:block absolute top-1/2 left-10 w-14 h-14 rounded-2xl bg-green-100/70 backdrop-blur-xl border border-white/70 -rotate-6 shadow-lg" />
+        
+        
+        
       </div>
 
       {/* Floating Dots */}
-      <div className="hidden sm:block absolute top-32 left-10 w-3 h-3 rounded-full bg-green-800 shadow-xl animate-bounce" />
-      <div className="hidden sm:block absolute top-2/3 right-16 w-2 h-2 rounded-full bg-black/40" />
-      <div className="hidden lg:block absolute top-1/2 left-1/3 w-2 h-2 rounded-full bg-green-800 animate-pulse" />
-      <div className="hidden lg:block absolute bottom-24 right-1/4 w-3 h-3 rounded-full bg-emerald-600 animate-ping" />
+      
+      
 
       {/* Noise */}
-      <div
-        className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle,#000 1px,transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
+      
 
       {/* Top / Bottom Fade */}
-      <div
-        className="absolute top-0 left-0 z-10 w-full h-24 sm:h-32 lg:h-44 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.12) 85%, transparent 100%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 z-10 w-full h-24 sm:h-32 lg:h-44 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #fff 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.12) 85%, transparent 100%)",
-        }}
-      />
+      
+      
 
       {/* ================= Content ================= */}
 
@@ -275,7 +241,7 @@ export default function ProgrammingLanguages() {
 
         <Link
           href="/coding"
-          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/70 bg-white/60 backdrop-blur-xl px-5 py-2.5 text-sm font-semibold text-stone-700 shadow-lg transition-all duration-300 hover:-translate-x-0.5 hover:shadow-xl"
+          className="group inline-flex items-center gap-2 text-[15px] font-bold text-[#3a3a38] hover:text-[#121212]"
         >
           <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
           Back to Coding
@@ -286,38 +252,37 @@ export default function ProgrammingLanguages() {
         <div
           ref={heroRef}
           className={`mt-10 sm:mt-14 grid lg:grid-cols-2 items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${
-            heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            heroVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-left order-2 lg:order-1">
 
-            <span className="group relative inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 sm:px-5 text-xs sm:text-sm font-semibold text-green-900 overflow-hidden">
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-green-100 to-transparent" />
+            <span className="relative inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#E7FAF0", color: "#127D4D" }}>
+              
               <span className="relative">Coding · Learning Area</span>
             </span>
 
             <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] text-black">
               Programming{" "}
-              <span className="bg-gradient-to-r from-black via-green-900 to-emerald-700 bg-clip-text text-transparent">
+              <span className="" style={{ color: "#127D4D" }}>
                 Languages
               </span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-xl">
               This section introduces the world&apos;s most popular
               programming languages — what they&apos;re used for, who
               they&apos;re best suited for and how to choose the right one
               before diving into detailed lessons.
             </p>
 
-            <div className="mt-10 flex justify-center lg:justify-start">
+            <div className="mt-10 flex justify-start">
 
               <a
                 href="#languages"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-9 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(20,83,45,0.5)]"
+                className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-[#121212] px-7 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-emerald-600 opacity-0 group-hover:opacity-20 transition-all" />
                 <span className="relative">Start</span>
                 <span className="relative transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
@@ -328,13 +293,9 @@ export default function ProgrammingLanguages() {
 
           <div className="max-lg:hidden relative order-1 lg:order-2 flex justify-center">
 
-            <div className="absolute w-[260px] h-[260px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] rounded-full bg-green-800 blur-[100px] sm:blur-[150px] opacity-50 animate-pulse" />
+            
 
-            <img
-              src="/liquid-glass-computer-green.webp"
-              alt="Programming Languages preview"
-              className="relative w-[240px] sm:w-[340px] lg:w-[420px] rounded-[32px] sm:rounded-[40px] border border-white/70 shadow-[0_35px_80px_rgba(20,83,45,0.2)] backdrop-blur-xl bg-white/40 transition-transform duration-700 hover:rotate-2 hover:scale-[1.03] rotate-[-2deg]"
-            />
+            <AreaArt area="coding" className="w-[240px] sm:w-[340px] lg:w-[420px]" />
 
           </div>
 
@@ -354,18 +315,18 @@ export default function ProgrammingLanguages() {
         />
 
         {/* Divider */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+        <div className="mt-16 sm:mt-24 lg:mt-28 h-px w-full bg-white " />
 
         {/* ============ Table of Contents ============ */}
 
         <div className="sticky top-20 sm:top-24 z-30 mt-10 sm:mt-14 flex justify-center">
-          <nav className="w-full max-w-4xl overflow-x-auto rounded-full border border-white/70 bg-white/70 backdrop-blur-xl shadow-lg px-2 py-2">
+          <nav className="w-full max-w-4xl overflow-x-auto rounded-2xl border-2 border-[#ececea] bg-white px-2 py-2">
             <div className="flex items-center justify-center gap-1 sm:gap-1.5 min-w-max mx-auto">
               {LANGUAGES.map((language) => (
                 <a
                   key={language.slug}
                   href={`#${language.slug}`}
-                  className="whitespace-nowrap rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold text-stone-600 transition-all duration-300 hover:bg-green-50 hover:text-green-900"
+                  className="whitespace-nowrap rounded-xl px-3.5 py-2 text-[14px] font-semibold text-[#3a3a38] transition-colors hover:bg-[#F6F6F4] hover:text-[#121212]"
                 >
                   {language.name}
                 </a>
@@ -380,13 +341,13 @@ export default function ProgrammingLanguages() {
           id="languages"
           ref={listRef}
           className={`relative mt-20 sm:mt-24 lg:mt-28 scroll-mt-36 flex flex-col transition-all duration-1000 ease-out ${
-            listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            listVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
           {LANGUAGES.map((language, i) => (
             <div key={language.slug}>
               {i > 0 && (
-                <div className="mt-20 sm:mt-24 lg:mt-28 mb-20 sm:mb-24 lg:mb-28 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+                <div className="mt-20 sm:mt-24 lg:mt-28 mb-20 sm:mb-24 lg:mb-28 h-px w-full bg-white " />
               )}
               <LanguageSection language={language} index={i} />
             </div>
@@ -398,40 +359,40 @@ export default function ProgrammingLanguages() {
         <div
           ref={promoRef}
           className={`group relative mt-24 sm:mt-28 lg:mt-32 transition-all duration-1000 ease-out ${
-            promoVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            promoVisible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
 
-          <div className="absolute -inset-px rounded-[36px] sm:rounded-[48px] bg-gradient-to-br from-green-500/0 via-green-500/50 to-emerald-400/0 opacity-60 blur-lg -z-10" />
+          
 
-          <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px] border border-white/10 bg-gradient-to-br from-green-950 via-green-900 to-emerald-950 p-8 sm:p-12 lg:p-16 shadow-2xl text-center">
+          <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px] border border-white/10 bg-white p-8 sm:p-12 lg:p-16 text-center">
 
-            <div className="pointer-events-none absolute inset-0 rounded-[36px] sm:rounded-[48px] bg-gradient-to-b from-white/10 via-transparent to-transparent" />
+            
 
-            <div className="hidden sm:block absolute -right-20 -top-20 w-80 h-80 rounded-full bg-green-500 blur-[130px] opacity-30 -z-10" />
-            <div className="hidden lg:block absolute -left-16 -bottom-20 w-72 h-72 rounded-full bg-emerald-400 blur-[120px] opacity-20 -z-10" />
+            
+            
 
             <div className="relative flex flex-col items-center">
 
-              <span className="relative order-1 inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-400/10 backdrop-blur-sm px-5 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold tracking-wide text-green-300">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="relative order-1 inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-400/10 px-5 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold tracking-wide text-green-300">
+                <span className="w-2 h-2 rounded-full bg-green-400" />
                 Coming Soon
               </span>
 
               <div className="relative order-2 mt-10 sm:mt-12 flex items-center justify-center w-56 h-36 sm:w-72 sm:h-44">
 
-                <div className="absolute inset-0 rounded-[40px] bg-green-400 blur-3xl opacity-20 -z-10" />
+                
 
                 <img
                   src="/logo-coding-black.png"
                   alt="Swipe Coding"
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover shadow-2xl -rotate-6 transition-transform duration-500 ease-out group-hover:-rotate-12 group-hover:-translate-x-2"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover -rotate-6 transition-transform duration-500 ease-out group-hover:-rotate-12 group-hover:-translate-x-2"
                 />
 
                 <img
                   src="/logo-coding-white.png"
                   alt="Swipe Coding"
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover shadow-2xl rotate-6 transition-transform duration-500 ease-out group-hover:rotate-12 group-hover:translate-x-2"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover rotate-6 transition-transform duration-500 ease-out group-hover:rotate-12 group-hover:translate-x-2"
                 />
 
               </div>
@@ -440,7 +401,7 @@ export default function ProgrammingLanguages() {
 
             <h3 className="relative mt-8 sm:mt-10 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
               Want to learn to code?{" "}
-              <span className="bg-gradient-to-r from-green-300 via-emerald-300 to-green-200 bg-clip-text text-transparent">
+              <span className="" style={{ color: "#127D4D" }}>
                 Do it with Swipe.
               </span>
             </h3>

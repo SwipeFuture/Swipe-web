@@ -25,11 +25,11 @@ export default function YearlyTable({ years, currency }: { years: YearPoint[]; c
   return (
     <div className="relative">
 
-      <div className="absolute -inset-px rounded-[32px] sm:rounded-[36px] bg-gradient-to-br from-amber-500/0 via-amber-500/40 to-orange-400/0 blur-md opacity-60 -z-10" />
+      
 
-      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-white/70 bg-white/60 backdrop-blur-xl p-6 sm:p-9 lg:p-10 shadow-xl">
+      <div className="relative overflow-hidden rounded-[32px] sm:rounded-[36px] border border-[#ececea] bg-white p-6 sm:p-9 lg:p-10">
 
-        <div className="pointer-events-none absolute inset-0 rounded-[32px] sm:rounded-[36px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
+        
 
         <h3 className="relative text-lg sm:text-xl font-bold tracking-tight text-stone-800">Year-by-Year Breakdown</h3>
 
@@ -39,7 +39,7 @@ export default function YearlyTable({ years, currency }: { years: YearPoint[]; c
           }`}
         >
           <table className="w-full min-w-[640px] border-collapse text-sm">
-            <thead className="sticky top-0 z-10 bg-amber-50/95 backdrop-blur-sm">
+            <thead className="sticky top-0 z-10 bg-amber-50/95">
               <tr>
                 {["Year", "Starting Balance", "Total Invested", "Interest Earned", "Ending Portfolio Value"].map((label, i) => (
                   <th
@@ -58,7 +58,7 @@ export default function YearlyTable({ years, currency }: { years: YearPoint[]; c
                 <tr
                   key={y.year}
                   className={`transition-colors duration-200 hover:bg-amber-100/50 ${
-                    i % 2 === 0 ? "bg-white/40" : "bg-amber-50/30"
+                    i % 2 === 0 ? "bg-white" : "bg-amber-50/30"
                   }`}
                 >
                   <td className="px-4 py-2.5 text-left font-semibold text-stone-700 [font-variant-numeric:tabular-nums]">

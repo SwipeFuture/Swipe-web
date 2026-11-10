@@ -40,25 +40,25 @@ export default function SwipeAppsSection() {
 
   return (
     <section id="apps" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 scroll-mt-24">
-      <div className="hidden sm:block absolute -left-32 top-24 w-96 h-96 rounded-full bg-amber-100 blur-[140px] opacity-60" />
-      <div className="hidden sm:block absolute -right-32 bottom-10 w-96 h-96 rounded-full bg-violet-100 blur-[140px] opacity-60" />
+      
+      
 
       <div
         ref={ref}
         className={`relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 transition-all duration-1000 ease-out ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+          visible ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
         }`}
       >
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-stone-600">
-              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-amber-500" />
               Swipe Apps · Coming soon
             </span>
 
             <h2 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em] text-stone-800">
               Also coming{" "}
-              <span className="bg-gradient-to-r from-stone-800 via-amber-700 to-amber-500 bg-clip-text text-transparent">
+              <span className="" style={{ color: "#B45309" }}>
                 to iPhone.
               </span>
             </h2>
@@ -72,10 +72,10 @@ export default function SwipeAppsSection() {
                 <Link
                   key={app.slug}
                   href="/apps"
-                  className="group relative flex flex-col items-center rounded-[26px] border border-stone-200/80 bg-white/70 backdrop-blur-xl px-3 py-5 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl"
+                  className="group relative flex flex-col items-center rounded-[26px] border border-stone-200/80 bg-white px-3 py-5 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1.5"
                 >
                   <div className="relative">
-                    <div className={`absolute inset-0 rounded-[20px] ${app.glow} blur-xl opacity-30 transition-opacity duration-500 group-hover:opacity-60`} />
+                    
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`/logo-${app.slug}-black.png`}
@@ -94,7 +94,7 @@ export default function SwipeAppsSection() {
 
             <Link
               href="/apps"
-              className="group relative mt-10 inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-8 py-4 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+              className="group relative mt-10 inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-8 py-4 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
             >
               <span className="relative">About the apps</span>
               <span className="relative transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -105,13 +105,13 @@ export default function SwipeAppsSection() {
 
         {/* Free on the web — compact row instead of its own section */}
         <div className="mt-20 sm:mt-24">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Start free on the web — no app needed</p>
+          <p className="text-center text-xs font-bold  text-stone-400">Start free on the web — no app needed</p>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
             {FREE.map((f) => (
               <Link
                 key={f.href}
                 href={f.href}
-                className="group flex items-start gap-4 rounded-[24px] border border-stone-200/80 bg-white/70 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group flex items-start gap-4 rounded-[24px] border border-stone-200/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1"
               >
                 <span className="text-3xl">{f.emoji}</span>
                 <span>

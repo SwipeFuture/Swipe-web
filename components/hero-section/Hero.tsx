@@ -17,39 +17,30 @@ export default function Hero() {
       {/* ================= Background ================= */}
 
       {/* Mesh Gradient — vertical, so top and bottom edges are a flat, predictable color across the full width */}
-      <div className="absolute inset-0 -z-50 bg-gradient-to-b from-white via-gray-50 to-green-50" />
+      <div className="absolute inset-0 -z-50 bg-white " />
 
       {/* Grid */}
-      <div
-        className="absolute inset-0 -z-40 opacity-[0.04]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right,#000 1px,transparent 1px),
-            linear-gradient(to bottom,#000 1px,transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-        }}
-      />
+      
 
       {/* Glow 1 — pulled well down from the corner so its own blur fades out naturally before reaching the top edge, instead of a pinned overlay faking the transition */}
-      <div className="absolute top-24 -left-20 w-[350px] h-[350px] sm:top-32 sm:w-[500px] sm:h-[500px] lg:top-48 lg:-left-40 lg:w-[700px] lg:h-[700px] rounded-full bg-green-300 blur-[100px] sm:blur-[140px] lg:blur-[170px] opacity-20 animate-pulse" />
+      
 
       {/* Glow 2 */}
-      <div className="absolute top-16 right-0 w-[280px] h-[280px] sm:w-[420px] sm:h-[420px] lg:top-32 lg:w-[600px] lg:h-[600px] rounded-full bg-emerald-200 blur-[100px] sm:blur-[140px] lg:blur-[180px] opacity-25" />
+      
 
       {/* Glow 3 */}
-      <div className="absolute bottom-0 left-1/2 w-[240px] h-[240px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] rounded-full bg-gray-200 blur-[90px] sm:blur-[120px] lg:blur-[160px] opacity-40" />
+      
 
       {/* Big Circle */}
-      <div className="hidden md:block absolute -right-40 top-24 w-[500px] h-[500px] lg:-right-72 lg:w-[900px] lg:h-[900px] rounded-full border border-gray-200/50" />
+      
 
-      <div className="hidden md:block absolute -right-32 top-40 w-[380px] h-[380px] lg:-right-56 lg:w-[650px] lg:h-[650px] rounded-full border border-gray-200/40" />
+      
 
-      <div className="hidden md:block absolute right-0 top-56 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] rounded-full border border-gray-200/40" />
+      
 
       {/* Floating Dots */}
 
-      <div className="hidden sm:block absolute top-24 left-8 lg:top-32 lg:left-40 w-3 h-3 rounded-full bg-green-500 shadow-xl animate-bounce" />
+      
 
       <div className="hidden sm:block absolute top-60 right-16 lg:top-80 lg:right-80 w-2 h-2 rounded-full bg-black/40" />
 
@@ -72,9 +63,9 @@ export default function Hero() {
 
             <div className="group relative inline-flex items-center gap-3 bg-white border border-gray-200 rounded-full px-4 py-2 sm:px-5 shadow-lg overflow-hidden">
 
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-green-100 to-transparent" />
+              
 
-              <div className="relative w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <div className="relative w-2 h-2 rounded-full bg-green-500" />
 
               <span className="relative text-xs sm:text-sm font-semibold tracking-wide text-gray-600">
                 {TOTAL_LESSONS} free lessons · no sign-up
@@ -87,11 +78,11 @@ export default function Hero() {
               Build
               <br />
 
-              <span className="relative inline-block bg-gradient-to-r from-black via-green-700 to-emerald-500 bg-clip-text text-transparent">
+              <span className="relative inline-block " style={{ color: "#127D4D" }}>
 
                 Your Future
 
-                <div className="absolute -bottom-2 lg:-bottom-3 left-2 w-32 sm:w-44 lg:w-52 h-3 lg:h-4 bg-green-300/50 blur-sm rounded-full" />
+                
 
               </span>
 
@@ -108,10 +99,10 @@ export default function Hero() {
 
               <Link
                 href="/learn"
-                className="group relative overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-8 text-center font-semibold shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(34,197,94,0.5)]"
+                className="group relative overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-8 text-center font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-1"
               >
 
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-400 opacity-0 group-hover:opacity-20 transition-all" />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-all" />
 
                 <span className="relative">
                   Start a free lesson →
@@ -121,7 +112,7 @@ export default function Hero() {
 
               <Link
                 href="/advisor"
-                className="rounded-full border border-gray-200 bg-white/80 px-7 py-4 sm:px-8 text-center font-semibold text-gray-800 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="rounded-full border border-gray-200 bg-white px-7 py-4 sm:px-8 text-center font-semibold text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 Not sure? Find your path
               </Link>
@@ -140,22 +131,22 @@ export default function Hero() {
 
             {/* Main Glow */}
 
-            <div className="absolute w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] lg:w-[480px] lg:h-[480px] rounded-full bg-green-300 blur-[90px] sm:blur-[110px] lg:blur-[140px] opacity-40" />
+            
 
             {/* Spinning Accent Ring */}
 
-            <div className="hidden sm:block absolute w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] md:w-[430px] md:h-[430px] lg:w-[540px] lg:h-[540px] rounded-full border border-dashed border-green-400/30 animate-[spin_30s_linear_infinite]" />
+            
 
             {/* Glass Ring */}
 
-            <div className="absolute w-[230px] h-[230px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] lg:w-[510px] lg:h-[510px] rounded-full border border-white/70 backdrop-blur-xl shadow-2xl" />
+            <div className="absolute w-[230px] h-[230px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] lg:w-[510px] lg:h-[510px] rounded-full border border-[#ececea]" />
 
             {/* Logo */}
 
             <img
               src="/logo.png"
               alt="Swipe"
-              className="relative w-[150px] sm:w-[210px] md:w-[260px] lg:w-[280px] rounded-[36px] sm:rounded-[50px] lg:rounded-[64px] drop-shadow-[0_40px_70px_rgba(0,0,0,0.18)] hover:scale-105 hover:-rotate-6 transition-all duration-700 cursor-pointer"
+              className="relative w-[150px] sm:w-[210px] md:w-[260px] lg:w-[280px] rounded-[36px] sm:rounded-[50px] lg:rounded-[64px] drop- hover:scale-105 hover:-rotate-6 transition-all duration-700 cursor-pointer"
             />
 
           </div>
@@ -168,12 +159,12 @@ export default function Hero() {
 
           {/* Header row: label left, overview button right (stacked and centred on phones) */}
           <div className="mb-4 flex flex-col items-center gap-3 lg:flex-row lg:justify-between">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">
+            <p className="text-xs font-bold  text-gray-400">
               Pick an area to start
             </p>
             <a
               href="#learning-paths"
-              className="rounded-full border border-dashed border-gray-300 bg-white/40 px-6 py-2.5 text-center text-sm font-semibold text-gray-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-400 hover:text-black"
+              className="rounded-full border border-dashed border-gray-300 bg-white px-6 py-2.5 text-center text-sm font-semibold text-gray-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-400 hover:text-black"
             >
               See all learning paths ↓
             </a>
@@ -184,7 +175,7 @@ export default function Hero() {
               <Link
                 key={a.app}
                 href={learnAppUrl(a.app)}
-                className="group rounded-3xl border border-white/80 bg-white/75 p-4 sm:p-6 text-left shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group rounded-3xl border border-[#ececea] bg-white p-4 sm:p-6 text-left transition-all duration-300 hover:-translate-y-1"
               >
                 <span className="text-2xl sm:text-3xl" aria-hidden>{a.emoji}</span>
                 <span className="mt-2 sm:mt-3 block text-base sm:text-xl font-black tracking-tight text-black">{a.name}</span>
@@ -204,11 +195,11 @@ export default function Hero() {
 
       {/* Floating Shapes */}
 
-      <div className="hidden lg:block absolute -top-8 right-32 w-24 h-24 rounded-[35px] border border-gray-200 bg-white/60 backdrop-blur-xl rotate-12 shadow-xl"></div>
+      <div className="hidden lg:block absolute -top-8 right-32 w-24 h-24 rounded-[35px] border border-gray-200 bg-white rotate-12"></div>
 
-      <div className="hidden lg:block absolute bottom-0 right-40 w-16 h-16 rounded-full bg-gradient-to-br from-green-300 to-green-500 blur-sm opacity-70"></div>
+      <div className="hidden lg:block absolute bottom-0 right-40 w-16 h-16 rounded-full bg-white blur-sm opacity-70"></div>
 
-      <div className="hidden sm:block absolute top-64 left-8 lg:left-24 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-green-500 animate-ping"></div>
+      <div className="hidden sm:block absolute top-64 left-8 lg:left-24 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-green-500"></div>
 
       <div className="hidden sm:block absolute bottom-40 right-8 lg:right-24 w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-black/40"></div>
 
@@ -216,9 +207,9 @@ export default function Hero() {
 
       {/* Connection Lines */}
 
-      <div className="hidden lg:block absolute top-28 left-48 w-40 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent rotate-12"></div>
+      <div className="hidden lg:block absolute top-28 left-48 w-40 h-px bg-white rotate-12"></div>
 
-      <div className="hidden lg:block absolute bottom-36 right-32 w-36 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent -rotate-12"></div>
+      <div className="hidden lg:block absolute bottom-36 right-32 w-36 h-px bg-white -rotate-12"></div>
 
       {/* Top Wave */}
       <svg
@@ -234,10 +225,10 @@ export default function Hero() {
       </svg>
 
       {/* Giant Blur Blob */}
-      <div className="absolute -left-60 top-52 w-[500px] h-[500px] sm:-left-80 sm:w-[700px] sm:h-[700px] lg:-left-96 lg:w-[900px] lg:h-[900px] rounded-full bg-gradient-to-br from-green-200 to-emerald-400 blur-[120px] sm:blur-[170px] lg:blur-[220px] opacity-20 -z-30" />
+      
 
       {/* Right Blur */}
-      <div className="hidden md:block absolute -right-40 bottom-20 w-[400px] h-[400px] lg:-right-72 lg:w-[700px] lg:h-[700px] rounded-full bg-gradient-to-br from-blue-100 to-white blur-[110px] lg:blur-[180px] opacity-40 -z-30" />
+      
 
       {/* Mesh Lines */}
 
@@ -277,30 +268,23 @@ export default function Hero() {
 
       {/* Noise Effect */}
 
-      <div
-        className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle,#000 1px,transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
+      
 
       {/* Floating Glass Squares */}
 
-      <div className="hidden lg:block absolute top-24 right-1/4 w-24 h-24 rounded-[28px] bg-white/50 backdrop-blur-xl border border-white rotate-12 shadow-xl" />
+      
 
-      <div className="hidden lg:block absolute bottom-32 left-1/4 w-16 h-16 rounded-[20px] bg-white/40 backdrop-blur-xl border border-white -rotate-12 shadow-lg" />
+      
 
-      <div className="hidden sm:block absolute top-1/2 left-4 lg:left-10 w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-green-400 animate-pulse" />
+      
 
-      <div className="hidden sm:block absolute top-1/3 right-4 lg:right-10 w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-black/20 animate-bounce" />
+      
 
-      <div className="hidden lg:block absolute bottom-24 right-1/3 w-5 h-5 rounded-full bg-green-300 animate-ping" />
+      
 
       {/* Vertical Glow */}
 
-      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 w-[2px] h-full bg-gradient-to-b from-transparent via-green-300/30 to-transparent blur-sm"></div>
+      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 w-[2px] h-full bg-white blur-sm"></div>
 
       {/* Bottom Fade — only the sliver right at the edge is pure white, eased out softly rather than a hard linear cut */}
 

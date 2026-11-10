@@ -88,7 +88,7 @@ export default function TypingTest() {
       <Card>
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Chips theme="coding" options={Object.keys(SNIPPETS)} value={lang} onChange={(l) => { setLang(l); setRound(0); }} />
-          <button type="button" onClick={() => setRound((r) => r + 1)} className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 text-sm font-semibold text-stone-600">
+          <button type="button" onClick={() => setRound((r) => r + 1)} className="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-600">
             New snippet ↻
           </button>
         </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-// Small pill in the bottom-right corner that appears once you scroll past the hero:
+// Small black button in the bottom-right corner that appears once you scroll past the hero:
 // a constant shortcut from a reference page to the matching free lessons.
 export default function FloatingLearn({ href, label }: { href: string; label: string }) {
   const [show, setShow] = useState(false);
@@ -16,11 +16,10 @@ export default function FloatingLearn({ href, label }: { href: string; label: st
   return (
     <Link
       href={href}
-      className={`fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-black px-5 py-3.5 text-sm font-bold text-white shadow-[0_15px_40px_-10px_rgba(0,0,0,0.6)] transition-all duration-500 hover:scale-105 sm:bottom-8 sm:right-8 ${
+      className={`fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-xl bg-[#121212] px-5 py-3.5 text-[15px] font-bold text-white transition-all duration-500 hover:bg-[#2a2a2a] sm:bottom-8 sm:right-8 ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
     >
-      <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
       {label} →
     </Link>
   );

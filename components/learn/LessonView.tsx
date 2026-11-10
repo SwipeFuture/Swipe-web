@@ -69,7 +69,7 @@ function CodeBox({ code, caption }: { code: string; caption?: string }) {
 function BlockView({ block }: { block: Block }) {
   if (block.type === "text") {
     return (
-      <div className="rounded-[28px] border border-white/70 bg-white/70 p-6 shadow-lg backdrop-blur-xl sm:p-8">
+      <div className="rounded-[28px] border border-[#ececea] bg-white p-6 shadow-lg sm:p-8">
         {block.robotComment && <Swipey text={block.robotComment} />}
         <p className="text-base leading-8 text-stone-700 sm:text-lg sm:leading-9">{withHighlights(block.body, block.highlights)}</p>
         {block.code && <CodeBox code={block.code.code} caption={block.code.caption} />}
@@ -78,7 +78,7 @@ function BlockView({ block }: { block: Block }) {
   }
   if (block.type === "code") {
     return (
-      <div className="rounded-[28px] border border-white/70 bg-white/70 p-6 shadow-lg backdrop-blur-xl sm:p-8">
+      <div className="rounded-[28px] border border-[#ececea] bg-white p-6 shadow-lg sm:p-8">
         {block.robotComment && <Swipey text={block.robotComment} />}
         <CodeBox code={block.code} caption={block.caption} />
       </div>
@@ -116,7 +116,7 @@ export default function LessonView({
   return (
     <article className="relative overflow-hidden py-24 sm:py-32">
       <div className={`absolute inset-0 -z-50 ${t.pageBg}`} />
-      <div className={`absolute -left-24 -top-24 -z-40 h-[460px] w-[460px] rounded-full ${t.blobA} opacity-20 blur-[140px]`} />
+      
       <JsonLd
         data={[
           {
@@ -168,7 +168,7 @@ export default function LessonView({
               how we make lessons
             </Link>
           </p>
-          <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/70">
+          <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white">
             <div className={`h-full rounded-full ${t.bar}`} style={{ width: `${(position / total) * 100}%` }} />
           </div>
         </header>
@@ -189,7 +189,7 @@ export default function LessonView({
 
         <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {prev ? (
-            <Link href={`${base}/${prev.slug}`} className="rounded-[22px] border border-white/70 bg-white/70 p-5 shadow-sm backdrop-blur-xl transition-all hover:shadow-lg">
+            <Link href={`${base}/${prev.slug}`} className="rounded-[22px] border border-[#ececea] bg-white p-5 shadow-sm transition-all hover:shadow-lg">
               <span className="text-xs font-semibold text-stone-400">← Previous</span>
               <div className="mt-1 font-bold text-stone-800">{prev.title}</div>
             </Link>
@@ -214,14 +214,14 @@ export default function LessonView({
           if (!area) return null;
           return (
             <div className="mt-14">
-              <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-stone-400">Free {area.label.toLowerCase()} tools</h2>
+              <h2 className="text-sm font-bold  text-stone-400">Free {area.label.toLowerCase()} tools</h2>
               <div className="mt-4 flex flex-wrap gap-2.5">
                 {area.tools.slice(0, 5).map((tool) => (
-                  <Link key={tool.href} href={tool.href} className="rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:shadow-md">
-                    {tool.emoji} {tool.title}
+                  <Link key={tool.href} href={tool.href} className="rounded-full border border-[#ececea] bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+                    {tool.title}
                   </Link>
                 ))}
-                <Link href="/advisor" className="rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm backdrop-blur-xl">
+                <Link href="/advisor" className="rounded-full border border-[#ececea] bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm">
                   🧭 Learning Advisor
                 </Link>
               </div>

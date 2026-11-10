@@ -51,6 +51,7 @@ export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   // Watch whether every link still fits on one line. As soon as one would be
   // cut off, the whole link row is hidden (logo + menu button stay) instead
@@ -97,6 +98,7 @@ export default function Navbar() {
           });
 
           setIsDark(overDark);
+          setScrolled(window.scrollY > 8);
         }
         ticking = false;
       });
@@ -145,241 +147,150 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Flat white bar (2026-11-10 redesign, see DESIGN-REGELN.md):
+          no glass, blur or glow. It gets a hairline once the page scrolls, and flips to ink over
+          sections marked data-nav-theme="dark". */}
       <header
         ref={headerRef}
-        className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-full px-4 sm:px-6"
+        className={`fixed inset-x-0 top-0 z-50 font-[family-name:var(--font-archivo)] transition-colors duration-300 ${
+          isDark ? "bg-[#121212] text-white" : "bg-white text-[#121212]"
+        } ${scrolled ? (isDark ? "border-b border-white/10" : "border-b border-[#ececea]") : "border-b border-transparent"}`}
       >
-        <div
-          className={`
-            relative
-            mx-auto
-            max-w-7xl
-            flex
-            items-center
-            justify-between
-            gap-3
-
-            rounded-full
-
-            border
-            ${isDark ? "border-white/15" : "border-white/30"}
-
-            ${isDark ? "bg-black/30" : "bg-white/20"}
-
-            backdrop-blur-3xl
-
-            shadow-[0_12px_40px_rgba(0,0,0,0.08)]
-
-            transition-colors duration-500
-
-            px-4
-            py-3
-            sm:px-6
-            sm:py-3.5
-            lg:px-8
-            lg:py-4
-
-            overflow-hidden
-          `}
-        >
-          {/* Glass Reflection */}
-          <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
-
-            <div
-              className={`absolute top-0 left-0 h-1/2 w-full bg-gradient-to-b transition-opacity duration-500 ${
-                isDark ? "from-white/10 via-white/5 to-transparent" : "from-white/50 via-white/20 to-transparent"
-              }`}
-            />
-
-            <div className="absolute -left-20 top-0 h-full w-40 rotate-12 bg-white/10 blur-3xl" />
-
-            <div className="absolute right-0 bottom-0 h-20 w-40 rounded-full bg-green-300/10 blur-3xl" />
-
-          </div>
-
-          {/* Logo */}
-          <div className="relative flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0">
-
-            <img
-              src="/logo.png"
-              alt="Swipe"
-              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl"
-            />
-
-            <span
-              className={`hidden sm:block text-lg sm:text-xl lg:text-2xl font-bold tracking-tight transition-colors duration-500 ${
-                isDark ? "text-white" : "text-black"
-              }`}
-            >
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-6 sm:h-[72px] sm:px-8">
+          <a href="/" className="flex shrink-0 items-center gap-2.5" aria-label="Swipe home">
+            <img src="/logo.png" alt="" className="h-8 w-8 rounded-[9px] sm:h-9 sm:w-9" />
+            <span className="text-[19px] font-extrabold tracking-[-0.01em] sm:text-[21px]" style={{ fontStretch: "125%" }}>
               Swipe
             </span>
+          </a>
 
-          </div>
-
-          {/* Navigation — all links on one line, or none at all (see the overflow effect above) */}
-          <div className="relative flex-1 min-w-0 flex flex-col items-center mx-2">
-
+          {/* All links on one line, or none at all (see the overflow effect above) */}
+          <div className="mx-2 flex min-w-0 flex-1 justify-center">
             <nav
               ref={navRef}
               aria-hidden={isOverflowing}
-              className={`
-                relative
-                w-full
-                flex
-                items-center
-                justify-center
-                gap-6
-                lg:gap-10
-                overflow-hidden
-                whitespace-nowrap
-                ${isOverflowing ? "invisible" : ""}
-              `}
+              className={`flex w-full items-center justify-center gap-5 overflow-hidden whitespace-nowrap xl:gap-7 ${isOverflowing ? "invisible" : ""}`}
             >
-
               {LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`text-sm sm:text-base font-medium transition-all duration-300 lg:hover:scale-105 shrink-0 ${
-                    isDark ? "text-gray-300 hover:text-white" : "text-gray-700 hover:text-black"
+                  className={`shrink-0 text-[15px] font-semibold underline-offset-[6px] decoration-2 hover:underline ${
+                    isDark ? "text-white/80 hover:text-white" : "text-[#3a3a38] hover:text-[#121212]"
                   }`}
                 >
                   {link.label}
                 </a>
               ))}
-
             </nav>
-
           </div>
 
-          {/* Menu button — three bars, now part of the pill instead of a separate floating circle */}
-          <button
-            ref={menuButtonRef}
-            type="button"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-haspopup="true"
-            aria-expanded={menuOpen}
-            aria-label="Open navigation"
-            className={`relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full transition-colors duration-300 ${
-              isDark ? "text-white hover:bg-white/10" : "text-stone-700 hover:bg-black/5"
-            }`}
-          >
-            <span className="flex flex-col items-center gap-[5px]">
-              <span
-                className={`h-[1.5px] w-5 rounded-full bg-current transition-transform duration-300 ${
-                  menuOpen ? "translate-y-[6.5px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`h-[1.5px] w-5 rounded-full bg-current transition-opacity duration-300 ${
-                  menuOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`h-[1.5px] w-5 rounded-full bg-current transition-transform duration-300 ${
-                  menuOpen ? "-translate-y-[6.5px] -rotate-45" : ""
-                }`}
-              />
-            </span>
-          </button>
-
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+            <a
+              href="/learn"
+              className="hidden rounded-xl bg-[#22E08A] px-4 py-2.5 text-[15px] font-bold text-[#121212] shadow-[0_3px_0_#127D4D] transition-transform active:translate-y-[2px] active:shadow-none sm:inline-block"
+            >
+              Start a lesson
+            </a>
+            <button
+              ref={menuButtonRef}
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={menuOpen}
+              aria-label="Open navigation"
+              className={`flex h-10 w-10 items-center justify-center rounded-xl border ${
+                isDark ? "border-white/20 hover:bg-white/10" : "border-[#e2e2df] hover:bg-[#F2F2F0]"
+              }`}
+            >
+              <span className="flex flex-col items-center gap-[5px]">
+                <span className={`h-[2px] w-[18px] rounded-full bg-current transition-transform duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`} />
+                <span className={`h-[2px] w-[18px] rounded-full bg-current transition-opacity duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`} />
+                <span className={`h-[2px] w-[18px] rounded-full bg-current transition-transform duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`} />
+              </span>
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-40 bg-black/30 backdrop-blur-sm transition-opacity duration-500 ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-40 bg-[#121212]/40 transition-opacity duration-300 ${
+          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
 
       {/* Panel — slides in from the right */}
       <div
         ref={panelRef}
-        className={`fixed inset-y-0 right-0 z-50 w-[82%] max-w-xs sm:max-w-sm border-l border-stone-200/70 bg-white/90 backdrop-blur-2xl shadow-[0_0_80px_rgba(0,0,0,0.25)] transition-transform duration-500 ease-out ${
+        className={`fixed inset-y-0 right-0 z-50 w-[85%] max-w-sm border-l border-[#ececea] bg-white font-[family-name:var(--font-archivo)] text-[#121212] transition-transform duration-300 ease-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-
-        {/* Ambient warm glow, matching the site's beige/amber language */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-amber-200 blur-[100px] opacity-40 -z-10 pointer-events-none" />
-
-        <div className="relative h-full overflow-y-auto px-6 sm:px-8 py-8 sm:py-10">
-
+        <div className="h-full overflow-y-auto px-7 py-8">
           <div className="flex items-center gap-2.5">
-            <img src="/logo.png" alt="Swipe" className="w-8 h-8 rounded-xl" />
-            <span className="text-lg font-bold tracking-tight text-stone-800">Swipe</span>
+            <img src="/logo.png" alt="" className="h-8 w-8 rounded-[9px]" />
+            <span className="text-[19px] font-extrabold" style={{ fontStretch: "125%" }}>Swipe</span>
           </div>
+
+          <a
+            href="/learn"
+            onClick={() => setMenuOpen(false)}
+            className="mt-8 block rounded-2xl bg-[#22E08A] px-5 py-3.5 text-center text-[16px] font-bold text-[#121212] shadow-[0_4px_0_#127D4D]"
+          >
+            Start a free lesson
+          </a>
 
           <a
             href={APPS_LINK.href}
             onClick={() => setMenuOpen(false)}
-            className="mt-8 flex items-center gap-3 rounded-xl px-3 py-2.5 text-base font-semibold text-stone-800 transition-colors duration-200 hover:bg-amber-50 hover:text-amber-700"
+            className="mt-6 flex items-center gap-3 rounded-xl px-2 py-2.5 text-[17px] font-semibold hover:bg-[#F2F2F0]"
           >
             <span className="flex -space-x-2">
               {["coding", "finance", "growth", "ai"].map((slug) => (
-                <img key={slug} src={`/logo-${slug}-black.png`} alt="" loading="lazy" width={24} height={24} className="w-6 h-6 rounded-md border border-white object-cover" />
+                <img key={slug} src={`/logo-${slug}-black.png`} alt="" loading="lazy" width={24} height={24} className="h-6 w-6 rounded-md border border-white object-cover" />
               ))}
             </span>
             {APPS_LINK.label}
           </a>
 
-          <div className="my-5 h-px w-full bg-stone-200/70" />
-
-          <p className="px-1 text-[11px] font-semibold tracking-wide text-stone-400 uppercase">
-            Paths
-          </p>
-
-          <div className="mt-2 flex flex-col">
+          <p className="mt-7 px-2 text-[14px] text-[#8a8a86]">Paths</p>
+          <div className="mt-1 flex flex-col">
             {PATH_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-base font-medium text-stone-700 transition-colors duration-200 hover:bg-amber-50 hover:text-amber-700"
+                className="flex items-center justify-between gap-2 rounded-xl px-2 py-2.5 text-[17px] font-medium hover:bg-[#F2F2F0]"
               >
                 {link.label}
-                {link.comingSoon && (
-                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-stone-500">
-                    <span className="w-1 h-1 rounded-full bg-stone-400" />
-                    Coming Soon
-                  </span>
-                )}
+                {link.comingSoon && <span className="text-[13px] text-[#8a8a86]">Coming soon</span>}
               </a>
             ))}
           </div>
 
-          <div className="my-5 h-px w-full bg-stone-200/70" />
-
           <a
             href={MOTIVATION_LINK.href}
             onClick={() => setMenuOpen(false)}
-            className="block rounded-xl px-3 py-2.5 text-base font-medium text-stone-700 transition-colors duration-200 hover:bg-emerald-50 hover:text-emerald-700"
+            className="mt-5 block rounded-xl px-2 py-2.5 text-[17px] font-medium hover:bg-[#F2F2F0]"
           >
             {MOTIVATION_LINK.label}
           </a>
 
-          <div className="my-5 h-px w-full bg-stone-200/70" />
-
-          <p className="px-1 text-[11px] font-semibold tracking-wide text-stone-400 uppercase">
-            Information
-          </p>
-
-          <div className="mt-2 flex flex-col">
+          <p className="mt-7 px-2 text-[14px] text-[#8a8a86]">Information</p>
+          <div className="mt-1 flex flex-col">
             {INFO_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-xl px-3 py-2.5 text-base font-medium text-stone-700 transition-colors duration-200 hover:bg-amber-50 hover:text-amber-700"
+                className="rounded-xl px-2 py-2.5 text-[17px] font-medium hover:bg-[#F2F2F0]"
               >
                 {link.label}
               </a>
             ))}
           </div>
-
         </div>
-
       </div>
     </>
   );

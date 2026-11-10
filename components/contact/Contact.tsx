@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 
 const EMAIL = "SwipeFuture@icloud.com";
 
@@ -22,213 +19,41 @@ function MailIcon({ className }: { className?: string }) {
 }
 
 export default function Contact() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const contentRef = useRef<HTMLDivElement | null>(null);
-
-  const [parallax, setParallax] = useState(0);
-  const [contentVisible, setContentVisible] = useState(false);
-
-  // Parallax on the background glows, tied to scroll position — same recipe as the rest of the site
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (ticking) return;
-      ticking = true;
-
-      requestAnimationFrame(() => {
-        if (sectionRef.current) {
-          const rect = sectionRef.current.getBoundingClientRect();
-          const viewportCenter = window.innerHeight / 2;
-          const sectionCenter = rect.top + rect.height / 2;
-          const distance = viewportCenter - sectionCenter;
-          setParallax(distance * 0.06);
-        }
-        ticking = false;
-      });
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setContentVisible(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-
-    if (contentRef.current) observer.observe(contentRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      id="contact"
-      ref={sectionRef}
-      className="relative overflow-hidden bg-white py-28 sm:py-36 lg:py-44 scroll-mt-24"
-    >
-
-      {/* ================= Background — same premium green language as the Hero ================= */}
-
-      <div className="absolute inset-0 -z-50 bg-gradient-to-b from-white via-gray-50 to-green-50" />
-
-      <div
-        className="absolute inset-0 -z-40 opacity-[0.04]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right,#000 1px,transparent 1px),
-            linear-gradient(to bottom,#000 1px,transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      <div
-        className="absolute inset-0 transition-transform duration-100 ease-out"
-        style={{ transform: `translateY(${parallax}px)` }}
-      >
-
-        <div className="absolute -top-10 -right-20 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px] rounded-full bg-green-300 blur-[110px] sm:blur-[150px] lg:blur-[190px] opacity-[0.16] animate-pulse" />
-
-        <div className="hidden sm:block absolute top-1/3 left-0 w-[280px] h-[280px] lg:w-[500px] lg:h-[500px] rounded-full bg-emerald-200 blur-[110px] lg:blur-[170px] opacity-[0.16] -z-30 animate-[pulse_8s_ease-in-out_infinite]" />
-
-        <div className="hidden lg:block absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-gray-200 blur-[160px] opacity-20 -z-30 animate-[pulse_10s_ease-in-out_infinite]" />
-
-      </div>
-
-      <div
-        className="absolute inset-0 transition-transform duration-100 ease-out"
-        style={{ transform: `translateY(${-parallax * 0.6}px)` }}
-      >
-
-        <div className="hidden md:block absolute -left-40 top-24 w-[500px] h-[500px] lg:-left-72 lg:w-[900px] lg:h-[900px] rounded-full border border-gray-200/50" />
-
-        <div className="hidden lg:block absolute right-10 bottom-20 w-[380px] h-[380px] rounded-full border border-green-200/50" />
-
-      </div>
-
-      <div className="hidden sm:block absolute top-24 right-8 lg:top-32 lg:right-40 w-3 h-3 rounded-full bg-green-500 shadow-xl animate-bounce" />
-
-      <div className="hidden sm:block absolute bottom-40 left-16 w-2 h-2 rounded-full bg-black/40" />
-
-      <div className="hidden lg:block absolute top-1/2 left-1/4 w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-
-      <div
-        className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle,#000 1px,transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
-
-      {/* Top / Bottom Fade — thin white sliver at each edge, matching the Navbar above and Footer below */}
-      <div
-        className="absolute top-0 left-0 z-10 w-full h-10 sm:h-14 lg:h-20 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.45) 60%, rgba(255,255,255,0.15) 85%, transparent 100%)",
-        }}
-      />
-
-      <div
-        className="absolute bottom-0 left-0 z-10 w-full h-10 sm:h-14 lg:h-20 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #fff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.45) 60%, rgba(255,255,255,0.15) 85%, transparent 100%)",
-        }}
-      />
-
-      {/* ================= Content ================= */}
-
-      <div
-        ref={contentRef}
-        className={`relative z-20 max-w-2xl mx-auto px-6 sm:px-8 lg:px-10 text-center transition-all duration-1000 ease-out ${
-          contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-        }`}
-      >
-
-        <div className="group relative inline-flex items-center gap-3 bg-white border border-gray-200 rounded-full px-4 py-2 sm:px-5 shadow-lg overflow-hidden">
-
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-green-100 to-transparent" />
-
-          <div className="relative w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-
-          <span className="relative text-xs sm:text-sm font-semibold tracking-wide text-gray-600">
-            Get in Touch
-          </span>
-
+    <main className="bg-white px-6 pb-24 pt-28 text-[#121212] sm:px-10 sm:pt-36">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <span className="inline-flex rounded-lg bg-[#E7FAF0] px-2.5 py-1 text-[14px] font-bold text-[#127D4D]">Contact</span>
+          <h1 className="mt-5 text-[38px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[56px]">Write to us.</h1>
+          <p className="mt-6 text-[18px] leading-8 text-[#3a3a38]">
+            Questions about Swipe, feedback, a mistake in a lesson, or just want to say hi? Send an email and we&apos;ll get back to you as
+            soon as we can.
+          </p>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-[#121212] px-6 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]"
+          >
+            <MailIcon className="h-5 w-5" />
+            {EMAIL}
+          </a>
         </div>
 
-        <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.05] text-black">
-          Contact{" "}
-          <span className="bg-gradient-to-r from-black via-green-700 to-emerald-500 bg-clip-text text-transparent">
-            Us
-          </span>
-        </h1>
-
-        <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-xl mx-auto">
-          Questions about Swipe, feedback, or just want to say hi? Send us an
-          email and we&apos;ll get back to you as soon as we can.
-        </p>
-
-        {/* Email Card */}
-
-        <div className="relative mt-12 sm:mt-14">
-
-          <div className="absolute -inset-px rounded-[32px] sm:rounded-[40px] bg-gradient-to-br from-green-400/0 via-green-400/40 to-emerald-400/0 opacity-0 hover:opacity-100 blur-md transition-opacity duration-500 -z-10" />
-
-          <div className="relative rounded-[32px] sm:rounded-[40px] border border-white/70 bg-white/60 backdrop-blur-xl p-8 sm:p-12 shadow-2xl">
-
-            <div className="pointer-events-none absolute inset-0 rounded-[32px] sm:rounded-[40px] bg-gradient-to-b from-white/60 via-white/10 to-transparent" />
-
-            <div className="relative inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-[24px] bg-gradient-to-br from-green-100 to-emerald-50 border border-white shadow-lg text-green-700">
-              <div className="absolute inset-0 rounded-[24px] bg-green-300 blur-xl opacity-30 -z-10" />
-              <MailIcon className="w-7 h-7 sm:w-8 sm:h-8" />
+        <h2 className="mt-20 text-[28px] font-extrabold leading-tight sm:text-[36px]">Quick answers</h2>
+        <p className="mt-3 text-[17px] text-[#5c5c58]">Maybe your question is already answered here.</p>
+        <dl className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+          {QUICK_ANSWERS.map((item) => (
+            <div key={item.q} className="border-t-2 border-[#ececea] pt-5">
+              <dt className="text-[19px] font-extrabold">{item.q}</dt>
+              <dd className="mt-2 text-[16px] leading-7 text-[#3a3a38]">{item.a}</dd>
+              <dd className="mt-3">
+                <Link href={item.href} className="text-[16px] font-bold underline decoration-2 underline-offset-4 hover:decoration-[#22E08A]">
+                  {item.link} →
+                </Link>
+              </dd>
             </div>
-
-            <h2 className="relative mt-6 text-lg sm:text-xl font-bold tracking-tight text-black">
-              Email Us
-            </h2>
-
-            <a
-              href={`mailto:${EMAIL}`}
-              className="group/btn relative mt-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-black text-white px-7 py-4 sm:px-9 sm:py-5 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(34,197,94,0.5)]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-400 opacity-0 group-hover/btn:opacity-20 transition-all" />
-              <span className="relative">{EMAIL}</span>
-              <span className="relative transition-transform duration-300 group-hover/btn:translate-x-1">
-                →
-              </span>
-            </a>
-
-
-          </div>
-
-        </div>
-
-        {/* Quick answers: most questions are answered on the site already */}
-
-        <div className="mt-16 sm:mt-20 text-left">
-          <h2 className="text-center text-2xl sm:text-3xl font-black tracking-tight text-black">Quick answers</h2>
-          <p className="mt-3 text-center text-sm sm:text-base text-gray-500">Maybe your question is already answered here.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {QUICK_ANSWERS.map((x) => (
-              <Link key={x.q} href={x.href} className="group rounded-[28px] border border-white/70 bg-white/70 p-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <h3 className="text-base font-bold text-black">{x.q}</h3>
-                <p className="mt-2 text-sm leading-6 text-gray-500">{x.a}</p>
-                <span className="mt-3 inline-block text-sm font-semibold text-green-700">
-                  {x.link} <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
+          ))}
+        </dl>
       </div>
-
-    </section>
+    </main>
   );
 }

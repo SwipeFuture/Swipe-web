@@ -67,11 +67,11 @@ export default function EmergencyFundCalculator() {
           <span>{pct.toFixed(0)}%</span>
         </div>
         <div className="mt-3 h-4 overflow-hidden rounded-full bg-amber-100">
-          <div className="h-full rounded-full bg-gradient-to-r from-amber-500 to-orange-400 transition-all duration-700" style={{ width: `${pct}%` }} />
+          <div className="h-full rounded-full bg-white transition-all duration-700" style={{ width: `${pct}%` }} />
         </div>
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {MONTHS.map((m) => (
-            <div key={m} className={`rounded-2xl border p-4 text-center ${current >= expenses * m ? "border-amber-300 bg-amber-50" : "border-stone-200 bg-white/70"}`}>
+            <div key={m} className={`rounded-2xl border p-4 text-center ${current >= expenses * m ? "border-amber-300 bg-amber-50" : "border-stone-200 bg-white"}`}>
               <div className="text-xs font-semibold text-stone-500">{m} months</div>
               <div className="mt-1 text-base font-bold text-stone-800">{f(expenses * m)}</div>
               <div className="mt-1 text-xs">{current >= expenses * m ? "✅ covered" : "not yet"}</div>
