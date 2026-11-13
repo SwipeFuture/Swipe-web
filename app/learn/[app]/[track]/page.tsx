@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const n = flatLessons(track).length;
   return {
     alternates: { canonical: `/learn/${app.url}/${track.slug}` },
-    title: [`Learn ${track.track} — ${n} Free Beginner Lessons | ${app.name}`, `Learn ${track.track} — ${n} Free Lessons | Swipe`, `${track.track} — Free Lessons | Swipe`].find((v) => v.length <= 60) ?? `${track.track} | Swipe`,
+    title: [`Learn ${track.track} — ${n} Free Beginner Lessons | ${app.name}`, `Learn ${track.track} — ${n} Free Lessons | SwipeFuture`, `${track.track} — Free Lessons | SwipeFuture`].find((v) => v.length <= 60) ?? `${track.track} | SwipeFuture`,
     description: `Learn ${track.track} for free: ${n} short beginner lessons with real examples, practice questions and a quiz after every chapter.`,
   };
 }
@@ -58,11 +58,11 @@ export default async function TrackPage({ params }: { params: Promise<Params> })
           "@type": "Course",
           "@id": `${SITE_URL}${base}#course`,
           name: `${track.track} for Beginners`,
-          description: first ? lessonDescription(first, track) : `Learn ${track.track} with Swipe.`,
+          description: first ? lessonDescription(first, track) : `Learn ${track.track} with SwipeFuture.`,
           url: `${SITE_URL}${base}`,
           isAccessibleForFree: true,
           inLanguage: "en",
-          provider: { "@type": "Organization", name: "Swipe", url: SITE_URL },
+          provider: { "@type": "Organization", name: "SwipeFuture", url: SITE_URL },
           hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", courseWorkload: `PT${Math.max(1, Math.round(lessons.length * 5))}M` },
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD", category: "Free" },
         }}

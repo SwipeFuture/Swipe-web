@@ -3,7 +3,7 @@ import InflationCalculator from "@/components/tools/finance/InflationCalculator"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance/inflation-calculator" },
-  title: "Inflation Calculator — What's Your Money Worth? | Swipe",
+  title: "Inflation Calculator — What's Your Money Worth? | SwipeFuture",
   description:
     "Free inflation calculator: see how inflation erodes purchasing power and what today's prices will cost in 10, 20 or 30 years.",
 };

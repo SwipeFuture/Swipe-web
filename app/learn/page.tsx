@@ -5,9 +5,9 @@ import { LEARN_APPS, tracksOf } from "@/lib/learn";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/learn" },
-  title: "Free Lessons — Coding, Finance, Growth & AI | Swipe",
+  title: "Free Lessons — Coding, Finance, Growth & AI | SwipeFuture",
   description:
-    "Hundreds of free beginner lessons from the Swipe apps — Python, JavaScript, investing, habits, focus, AI prompting and more, with quizzes.",
+    "Hundreds of free beginner lessons from the SwipeFuture app — Python, JavaScript, investing, habits, focus, AI prompting and more, with quizzes.",
 };
 
 export default function LearnPage() {
@@ -24,10 +24,10 @@ export default function LearnPage() {
           </span>
           <h1 className="mt-5 text-[40px] font-extrabold leading-[1] tracking-[-0.025em] text-[#121212] sm:text-[60px]">
             Learn something{" "}
-            <span className="" style={{ color: "#127D4D" }}>today.</span>
+            <span className="" style={{ color: "#0057C2" }}>today.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-[18px] leading-8 text-[#3a3a38]">
-            The first two levels of every Swipe track, free on the web: short lessons, real examples, quick checks and a quiz after every chapter. Pick a track and start.
+            The first two levels of every SwipeFuture track, free on the web: short lessons, real examples, quick checks and a quiz after every chapter. Pick a track and start.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/advisor" className="rounded-xl bg-[#121212] px-7 py-3.5 text-[16px] font-bold text-white transition-colors hover:bg-[#2a2a2a]">

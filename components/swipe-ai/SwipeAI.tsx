@@ -437,7 +437,7 @@ export default function SwipeAI() {
 
             <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-xl">
               Artificial intelligence is one of the most important
-              technologies of our generation. Swipe helps you understand it
+              technologies of our generation. SwipeFuture helps you understand it
               from the fundamentals to practical, everyday applications —
               no confusing jargon, just a clear path from curious to
               confident.
@@ -491,7 +491,7 @@ export default function SwipeAI() {
           <div className="text-left order-2">
 
             <span className="inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#F0EAFE", color: "#6D28D9" }}>
-              Why Swipe AI
+              Why SwipeFuture
             </span>
 
             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
@@ -505,7 +505,7 @@ export default function SwipeAI() {
               Most people use AI every day without understanding how it
               actually works — what it&apos;s good at, where it fails and
               how to get real value out of it instead of just playing with
-              it. Swipe AI closes that gap.
+              it. SwipeFuture closes that gap.
             </p>
 
             <p className="mt-4 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">

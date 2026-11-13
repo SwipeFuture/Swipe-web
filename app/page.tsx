@@ -4,7 +4,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Swipe — Free Lessons & Tools: Coding, Finance, Growth & AI",
+  title: "SwipeFuture — Free Lessons & Tools: Coding, Finance, Growth & AI",
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
 };

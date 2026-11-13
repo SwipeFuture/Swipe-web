@@ -18,10 +18,10 @@ export default function About() {
     <main className="bg-white px-6 pb-24 pt-28 text-[#121212] sm:px-10 sm:pt-36">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <span className="inline-flex rounded-lg bg-[#E7FAF0] px-2.5 py-1 text-[14px] font-bold text-[#127D4D]">About</span>
-          <h1 className="mt-5 text-[40px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[60px]">About Swipe</h1>
+          <span className="inline-flex rounded-lg bg-[#E6F0FF] px-2.5 py-1 text-[14px] font-bold text-[#0057C2]">About</span>
+          <h1 className="mt-5 text-[40px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[60px]">About SwipeFuture</h1>
           <p className="mt-6 text-[19px] leading-8 text-[#3a3a38]">
-            Swipe makes short lessons and free tools for coding, money, personal growth and AI. One idea per lesson, a quick check
+            SwipeFuture makes short lessons and free tools for coding, money, personal growth and AI. One idea per lesson, a quick check
             after it, and nothing to sign up for on the website.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function About() {
           <p className="mt-4 text-[18px] leading-8 text-[#3a3a38]">It takes about five minutes. If it isn&apos;t for you, nothing is lost.</p>
           <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">
             <Link href="/learn" className="inline-block rounded-xl bg-[#121212] px-7 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]">Start a free lesson</Link>
-            <Link href="/advisor" className="text-[17px] font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[#22E08A]">Find my path</Link>
+            <Link href="/advisor" className="text-[17px] font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[#0072FE]">Find my path</Link>
           </div>
         </section>
       </div>

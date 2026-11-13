@@ -462,7 +462,7 @@ export default function WebDevelopment() {
           accent="coding"
           className="mt-14 sm:mt-20"
           title="Build your first web page like in the app"
-          text="Start with HTML, then make it interactive with JavaScript — free lessons from Swipe Coding with real code and quick checks."
+          text="Start with HTML, then make it interactive with JavaScript — free lessons from the SwipeFuture app with real code and quick checks."
           primary={{ href: learnTrackUrl("coding", "html") ?? "/learn#coding", label: "Start free HTML lessons" }}
           secondary={[
             { href: learnTrackUrl("coding", "javascript") ?? "/learn#coding", label: "Free JavaScript lessons" },

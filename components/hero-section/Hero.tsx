@@ -145,7 +145,7 @@ export default function Hero() {
 
             <img
               src="/logo.png"
-              alt="Swipe"
+              alt="SwipeFuture"
               className="relative w-[150px] sm:w-[210px] md:w-[260px] lg:w-[280px] rounded-[36px] sm:rounded-[50px] lg:rounded-[64px] drop- hover:scale-105 hover:-rotate-6 transition-all duration-700 cursor-pointer"
             />
 

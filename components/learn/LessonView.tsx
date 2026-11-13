@@ -131,8 +131,8 @@ export default function LessonView({
             url: `${SITE_URL}${base}/${lesson.slug}`,
             // reference the full Course on the track page (it carries description + provider)
             isPartOf: { "@id": `${SITE_URL}${base}#course` },
-            provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
-            author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
+            provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "SwipeFuture", url: SITE_URL },
+            author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "SwipeFuture", url: SITE_URL },
           },
           {
             "@context": "https://schema.org",
@@ -163,7 +163,7 @@ export default function LessonView({
             A free lesson from {app.name} · {track.track}, level {level} · updated {SITE_UPDATED_LABEL}
           </p>
           <p className="mt-1 text-xs text-stone-400">
-            By the Swipe team, founded by Colin ·{" "}
+            By the SwipeFuture team, founded by Colin ·{" "}
             <Link href="/about#how-we-make-lessons" className="underline-offset-2 hover:underline">
               how we make lessons
             </Link>

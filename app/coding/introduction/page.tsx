@@ -3,7 +3,7 @@ import Introduction from "@/components/coding/introduction/Introduction";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coding/introduction" },
-  title: "Introduction to Programming | Swipe Coding",
+  title: "Introduction to Programming | SwipeFuture",
   description: "Learn what programming is, how computers and the internet work, how to think like a developer and how to choose your first language.",
 };
 

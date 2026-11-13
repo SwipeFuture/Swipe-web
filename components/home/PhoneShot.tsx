@@ -1,4 +1,4 @@
-// A real screenshot from one of the Swipe apps in a simple flat phone frame (no glass, no glare).
+// A real screenshot from one of the SwipeFuture apps in a simple flat phone frame (no glass, no glare).
 // Screens live in public/app-screens/<app>/0X.webp (640×1385, from the App Store screenshots).
 export default function PhoneShot({ src, alt, className = "", style }: { src: string; alt: string; className?: string; style?: React.CSSProperties }) {
   return (

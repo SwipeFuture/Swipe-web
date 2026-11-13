@@ -3,8 +3,8 @@ import { SITE_DESCRIPTION } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Swipe — Learn Coding, Finance, Personal Growth & AI",
-    short_name: "Swipe",
+    name: "SwipeFuture — Learn Coding, Finance, Personal Growth & AI",
+    short_name: "SwipeFuture",
     description: SITE_DESCRIPTION,
     start_url: "/",
     display: "standalone",

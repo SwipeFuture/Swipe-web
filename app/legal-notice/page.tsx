@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/legal-notice" },
-  title: "Legal Notice | Swipe",
+  title: "Legal Notice | SwipeFuture",
   description: "Who operates swipefuture.dev and how to contact us.",
 };
 

@@ -462,7 +462,7 @@ export default function DeveloperTools() {
           accent="coding"
           className="mt-14 sm:mt-20"
           title="Ship a real project, step by step"
-          text="The Ship It track in Swipe Coding takes you from idea to a live project — editor, terminal, Git and deployment in short lessons."
+          text="The Ship It track in the SwipeFuture app takes you from idea to a live project — editor, terminal, Git and deployment in short lessons."
           primary={{ href: learnTrackUrl("coding", "ship-it") ?? "/learn#coding", label: "Start the free Ship It lessons" }}
           secondary={[
             { href: "/coding/typing-speed-test", label: "Code typing speed test" },

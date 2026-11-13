@@ -238,18 +238,18 @@ const textRef = useRef<HTMLDivElement | null>(null);
 
             <span className="group relative inline-flex items-center rounded-full border border-amber-200/70 bg-amber-50/60 px-4 py-2 sm:px-5 text-xs sm:text-sm font-semibold text-amber-800/90 overflow-hidden">
               
-              <span className="relative">About Swipe</span>
+              <span className="relative">About SwipeFuture</span>
             </span>
 
             <h2 className="mt-6 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-stone-800">
               What is{" "}
               <span className="" style={{ color: "#B45309" }}>
-                Swipe?
+                SwipeFuture?
               </span>
             </h2>
 
             <p className="mt-6 sm:mt-8 text-base sm:text-lg lg:text-xl leading-7 sm:leading-9 lg:leading-10 text-stone-500 max-w-xl mx-auto lg:mx-0">
-              Swipe helps people build a strong foundation of knowledge in coding,
+              SwipeFuture helps people build a strong foundation of knowledge in coding,
               artificial intelligence, finance and personal growth. Instead of
               promising quick success or overnight wealth, our goal is to provide
               practical skills that create opportunities for the future.
@@ -257,7 +257,7 @@ const textRef = useRef<HTMLDivElement | null>(null);
 
             <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl leading-7 sm:leading-9 lg:leading-10 text-stone-500 max-w-xl mx-auto lg:mx-0">
               We believe that real success comes from understanding, consistency and
-              continuous learning. Swipe gives you the tools, guidance and structure
+              continuous learning. SwipeFuture gives you the tools, guidance and structure
               to learn with confidence and build skills that last a lifetime.
             </p>
 

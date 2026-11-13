@@ -920,7 +920,7 @@ export default function Python() {
           accent="coding"
           className="mt-14 sm:mt-20"
           title={`Want to learn ${NAME} like in the app?`}
-          text={`Try ${trackLessons("coding", "python")} free ${NAME} lessons from Swipe Coding — short cards, real code, a quick check after every idea and a quiz after every chapter.`}
+          text={`Try ${trackLessons("coding", "python")} free ${NAME} lessons from the SwipeFuture app — short cards, real code, a quick check after every idea and a quiz after every chapter.`}
           primary={{ href: learnTrackUrl("coding", "python") ?? "/learn#coding", label: `Start free ${NAME} lessons` }}
           secondary={[
             { href: "/quiz/programming-language", label: "Is it the right language for me?" },

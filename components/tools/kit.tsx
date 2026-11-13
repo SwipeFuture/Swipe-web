@@ -9,7 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { useAnimatedNumber } from "@/components/finance/shared/useAnimatedNumber";
 import { THEMES, type ToolTheme } from "./themes";
 
-// Shared building blocks for every Swipe tool page (calculators, quizzes, advisor):
+// Shared building blocks for every SwipeFuture tool page (calculators, quizzes, advisor):
 // one themed page shell per learning area, inputs, result cards, a bar chart and an
 // FAQ that is also emitted as FAQPage structured data. Colours live in ./themes.ts.
 
@@ -64,7 +64,7 @@ export function ToolShell({
             isAccessibleForFree: true,
             dateModified: SITE_UPDATED,
             inLanguage: "en",
-            publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
+            publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "SwipeFuture", url: SITE_URL },
           },
           {
             "@context": "https://schema.org",

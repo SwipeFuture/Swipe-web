@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy-policy-apps" },
   // Opened from inside the apps and App Store Connect; not part of the website itself.
   robots: { index: false, follow: false },
-  title: "Privacy Policy – Apps | Swipe",
+  title: "Privacy Policy – App | SwipeFuture",
   description:
-    "How the Swipe Coding, Swipe Finance, Swipe Personal Growth, and Swipe AI apps collect, use, and protect your information.",
+    "How the SwipeFuture app (Coding, Finance, Personal Growth and AI) collects, uses, and protects your information.",
 };
 
 export default function PrivacyPolicyAppsPage() {

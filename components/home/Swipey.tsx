@@ -1,4 +1,4 @@
-// Swipey, the robot from the Swipe apps — same geometry as the apps' Robot.js (viewBox 200×280),
+// Swipey, the robot from the SwipeFuture apps — same geometry as the apps' Robot.js (viewBox 200×280),
 // drawn flat. `body` is the robot's colour, `accent` the app colour (antenna, chest dot, flame).
 type Props = {
   body?: string;

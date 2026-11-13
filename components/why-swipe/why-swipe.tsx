@@ -6,13 +6,13 @@ const STORY_BLOCKS = [
   {
     icon: "🚀",
     title: "Built for the Future",
-    text: "Technology is changing rapidly. Swipe helps people stay ahead by learning the skills that matter most.",
+    text: "Technology is changing rapidly. SwipeFuture helps people stay ahead by learning the skills that matter most.",
     delay: "",
   },
   {
     icon: "🎯",
     title: "Real Knowledge Over Hype",
-    text: "Instead of chasing trends or unrealistic promises, Swipe focuses on practical knowledge that creates long-term value.",
+    text: "Instead of chasing trends or unrealistic promises, SwipeFuture focuses on practical knowledge that creates long-term value.",
     delay: "delay-150",
   },
   {
@@ -206,7 +206,7 @@ export default function WhySwipe() {
             <div className="relative w-2 h-2 rounded-full bg-green-500" />
 
             <span className="relative text-xs sm:text-sm font-semibold tracking-wide text-gray-600">
-              Why Swipe
+              Why SwipeFuture
             </span>
 
           </div>
@@ -214,7 +214,7 @@ export default function WhySwipe() {
           <h2 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-[-0.04em] lg:tracking-[-0.05em] text-black">
             Why{" "}
             <span className="" style={{ color: "#127D4D" }}>
-              Swipe?
+              SwipeFuture?
             </span>
           </h2>
 

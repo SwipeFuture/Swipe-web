@@ -354,7 +354,7 @@ export default function ProgrammingLanguages() {
           ))}
         </div>
 
-        {/* ============ Swipe Coding — promo banner (no waitlist here) ============ */}
+        {/* ============ SwipeFuture Coding — promo banner (no waitlist here) ============ */}
 
         <div
           ref={promoRef}
@@ -384,15 +384,9 @@ export default function ProgrammingLanguages() {
                 
 
                 <img
-                  src="/logo-coding-black.png"
-                  alt="Swipe Coding"
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover -rotate-6 transition-transform duration-500 ease-out group-hover:-rotate-12 group-hover:-translate-x-2"
-                />
-
-                <img
-                  src="/logo-coding-white.png"
-                  alt="Swipe Coding"
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover rotate-6 transition-transform duration-500 ease-out group-hover:rotate-12 group-hover:translate-x-2"
+                  src="/logo.png"
+                  alt="SwipeFuture app icon"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-[28px] object-cover transition-transform duration-500 ease-out group-hover:-rotate-6"
                 />
 
               </div>
@@ -402,12 +396,12 @@ export default function ProgrammingLanguages() {
             <h3 className="relative mt-8 sm:mt-10 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
               Want to learn to code?{" "}
               <span className="" style={{ color: "#127D4D" }}>
-                Do it with Swipe.
+                Do it with SwipeFuture.
               </span>
             </h3>
 
             <p className="relative mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-green-100/70 max-w-2xl mx-auto">
-              Swipe Coding is our upcoming iPhone app for learning to program.
+              SwipeFuture is our upcoming iPhone app for learning to program, plus money, personal growth and AI.
             </p>
 
           </div>

@@ -4,8 +4,8 @@ import Blueprint from "@/components/blueprint/Blueprint";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blueprint" },
-  title: "The Blueprint | Swipe",
-  description: "The Swipe Blueprint: the full roadmap of skills in coding, money, personal growth and AI — and how they build on each other.",
+  title: "The Blueprint | SwipeFuture",
+  description: "The SwipeFuture Blueprint: the full roadmap of skills in coding, money, personal growth and AI — and how they build on each other.",
 };
 
 export default function BlueprintPage() {
@@ -17,7 +17,7 @@ export default function BlueprintPage() {
           accent="growth"
           eyebrow="Put the blueprint into practice"
           title="Start building the skills — for free"
-          text="Find the path that fits your goal in four questions, then start with free lessons from the Swipe apps: coding, money, personal growth and AI."
+          text="Find the path that fits your goal in four questions, then start with free lessons from SwipeFuture: coding, money, personal growth and AI."
           primary={{ href: "/advisor", label: "Find my learning path" }}
           secondary={[
             { href: "/learn", label: "Browse 384 free lessons" },

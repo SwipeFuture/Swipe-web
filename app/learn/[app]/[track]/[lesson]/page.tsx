@@ -34,10 +34,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     alternates: { canonical: `/learn/${app.url}/${track.slug}/${lesson.slug}` },
     title: pickTitle([
       `${lesson.title} — Free ${track.track} Lesson | ${app.name}`,
-      `${lesson.title} — ${track.track} | Swipe`,
+      `${lesson.title} — ${track.track} | SwipeFuture`,
       // short generic titles ("The Shape of This Track") exist in several tracks — keep the track name so titles stay unique
       ...(lesson.title.length < 30 ? [`${lesson.title} — ${track.track}`] : []),
-      `${lesson.title} | Swipe`,
+      `${lesson.title} | SwipeFuture`,
       lesson.title,
     ]),
     description: lessonDescription(lesson, track),

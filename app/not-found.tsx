@@ -6,7 +6,7 @@ export default function NotFound() {
     { href: "/learn", label: "Free lessons" },
     { href: "/tools", label: "Free tools & quizzes" },
     { href: "/advisor", label: "Learning advisor" },
-    { href: "/apps", label: "The Swipe apps" },
+    { href: "/apps", label: "The SwipeFuture app" },
   ];
   return (
     <section className="flex min-h-[70vh] flex-col items-center justify-center px-6 py-32 text-center">

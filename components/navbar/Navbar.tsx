@@ -31,7 +31,7 @@ const PATH_LINKS: { label: string; href: string; comingSoon?: boolean }[] = [
   { label: "Learning Advisor", href: "/advisor" },
 ];
 
-const APPS_LINK = { label: "Swipe Apps", href: "/apps" };
+const APPS_LINK = { label: "The SwipeFuture app", href: "/apps" };
 
 const MOTIVATION_LINK = { label: "Motivation", href: "/motivation-experience" };
 
@@ -157,10 +157,10 @@ export default function Navbar() {
         } ${scrolled ? (isDark ? "border-b border-white/10" : "border-b border-[#ececea]") : "border-b border-transparent"}`}
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-6 sm:h-[72px] sm:px-8">
-          <a href="/" className="flex shrink-0 items-center gap-2.5" aria-label="Swipe home">
+          <a href="/" className="flex shrink-0 items-center gap-2.5" aria-label="SwipeFuture home">
             <img src="/logo.png" alt="" className="h-8 w-8 rounded-[9px] sm:h-9 sm:w-9" />
             <span className="text-[19px] font-extrabold tracking-[-0.01em] sm:text-[21px]" style={{ fontStretch: "125%" }}>
-              Swipe
+              SwipeFuture
             </span>
           </a>
 
@@ -188,7 +188,7 @@ export default function Navbar() {
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <a
               href="/learn"
-              className="hidden rounded-xl bg-[#22E08A] px-4 py-2.5 text-[15px] font-bold text-[#121212] shadow-[0_3px_0_#127D4D] transition-transform active:translate-y-[2px] active:shadow-none sm:inline-block"
+              className="hidden rounded-xl bg-[#0072FE] px-4 py-2.5 text-[15px] font-bold text-white shadow-[0_3px_0_#0057C2] transition-transform active:translate-y-[2px] active:shadow-none sm:inline-block"
             >
               Start a lesson
             </a>
@@ -230,13 +230,13 @@ export default function Navbar() {
         <div className="h-full overflow-y-auto px-7 py-8">
           <div className="flex items-center gap-2.5">
             <img src="/logo.png" alt="" className="h-8 w-8 rounded-[9px]" />
-            <span className="text-[19px] font-extrabold" style={{ fontStretch: "125%" }}>Swipe</span>
+            <span className="text-[19px] font-extrabold" style={{ fontStretch: "125%" }}>SwipeFuture</span>
           </div>
 
           <a
             href="/learn"
             onClick={() => setMenuOpen(false)}
-            className="mt-8 block rounded-2xl bg-[#22E08A] px-5 py-3.5 text-center text-[16px] font-bold text-[#121212] shadow-[0_4px_0_#127D4D]"
+            className="mt-8 block rounded-2xl bg-[#0072FE] px-5 py-3.5 text-center text-[16px] font-bold text-white shadow-[0_4px_0_#0057C2]"
           >
             Start a free lesson
           </a>
@@ -246,11 +246,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             className="mt-6 flex items-center gap-3 rounded-xl px-2 py-2.5 text-[17px] font-semibold hover:bg-[#F2F2F0]"
           >
-            <span className="flex -space-x-2">
-              {["coding", "finance", "growth", "ai"].map((slug) => (
-                <img key={slug} src={`/logo-${slug}-black.png`} alt="" loading="lazy" width={24} height={24} className="h-6 w-6 rounded-md border border-white object-cover" />
-              ))}
-            </span>
+            <img src="/logo.png" alt="" loading="lazy" width={24} height={24} className="h-6 w-6 rounded-md object-cover" />
             {APPS_LINK.label}
           </a>
 

@@ -2,7 +2,7 @@ import type { Lesson } from "./types";
 
 export const howWebsitesWork: Lesson = {
   introduction: `
-Every website you visit follows the same basic process. Whether you're opening Google, YouTube, Amazon or Swipe, your browser communicates with a server to request information. The server processes the request and sends the necessary files back to your device, allowing the browser to display the website.
+Every website you visit follows the same basic process. Whether you're opening Google, YouTube, Amazon or SwipeFuture, your browser communicates with a server to request information. The server processes the request and sends the necessary files back to your device, allowing the browser to display the website.
 
 Although this happens in just a few milliseconds, several technologies work together behind the scenes. Understanding how websites work helps you see the bigger picture of web development before learning HTML, CSS and JavaScript.
 `,

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Swipe — Learn Coding, Finance, Personal Growth & AI in 5 Minutes a Day",
+    default: "SwipeFuture — Learn Coding, Finance, Personal Growth & AI in 5 Minutes a Day",
     template: "%s",
   },
   description: SITE_DESCRIPTION,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "habits",
     "learn AI",
     "learning app",
-    "Swipe",
+    "SwipeFuture",
     "SwipeFuture",
   ],
   openGraph: {

@@ -285,7 +285,7 @@ function ChapterCard({
                     Practice What You&apos;ve Learned
                   </h4>
                   <p className="mt-3 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600 max-w-xl mx-auto">
-                    Use the Swipe ETF Calculator to experiment with
+                    Use the SwipeFuture ETF Calculator to experiment with
                     different monthly investments, expected returns and
                     investment durations. Instantly see how long-term
                     investing and compound growth can affect your
@@ -546,7 +546,7 @@ export default function Finance() {
 
             <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500 max-w-xl">
               Learn the fundamentals of personal finance, investing, saving
-              and long-term wealth building. Swipe Finance teaches practical
+              and long-term wealth building. SwipeFuture teaches practical
               financial knowledge that helps people make smarter money
               decisions throughout life.
             </p>
@@ -598,7 +598,7 @@ export default function Finance() {
           <div className="text-left order-2">
 
             <span className="inline-flex items-center rounded-lg px-2.5 py-1 text-[14px] font-bold" style={{ background: "#FEF5DA", color: "#B45309" }}>
-              Why Swipe Finance
+              Why SwipeFuture
             </span>
 
             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black">
@@ -610,7 +610,7 @@ export default function Finance() {
 
             <p className="mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">
               Most schools teach algebra and history, but rarely explain how
-              interest, investing, credit or taxes actually work. Swipe
+              interest, investing, credit or taxes actually work. SwipeFuture
               Finance closes that gap — turning money from a source of
               confusion and stress into something you understand and
               control.

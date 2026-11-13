@@ -317,7 +317,7 @@ function Finale() {
         </p>
         <div className="relative mt-10 flex flex-col gap-4 sm:flex-row" style={{ opacity: ease(range(p, 0.42, 0.56)) }}>
           <Link href="/learn" className="rounded-full bg-emerald-400 px-9 py-4 font-semibold text-black transition-transform duration-300 hover:scale-105">
-            Learn with Swipe →
+            Learn with SwipeFuture →
           </Link>
           <Link href="/" className="rounded-full border border-white/15 px-9 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white/10">
             Back home

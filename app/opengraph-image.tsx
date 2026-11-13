@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 
 // The preview card shown when a swipefuture.dev link is shared (WhatsApp, X,
 // LinkedIn, iMessage, Discord …) and used by search engines as the page image.
-export const alt = "Swipe — learn coding, finance, personal growth and AI in five minutes a day";
+export const alt = "SwipeFuture — learn coding, finance, personal growth and AI in five minutes a day";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,7 +36,7 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logoSrc} width={112} height={112} style={{ borderRadius: 28 }} alt="" />
-          <div style={{ fontSize: 96, fontWeight: 800, letterSpacing: -4 }}>Swipe</div>
+          <div style={{ fontSize: 96, fontWeight: 800, letterSpacing: -4 }}>SwipeFuture</div>
         </div>
         <div style={{ marginTop: 34, fontSize: 54, fontWeight: 700, lineHeight: 1.12, letterSpacing: -1.5, maxWidth: 980 }}>
           Learn the skills school skips — five minutes a day.

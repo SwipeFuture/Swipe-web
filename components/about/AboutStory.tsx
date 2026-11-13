@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-// The personal part of the About page: a note from the founder, how Swipe
+// The personal part of the About page: a note from the founder, how SwipeFuture
 // started (sketches → website → four apps) and how lessons are made.
 
 function Reveal({ children, className = "", id }: { children: ReactNode; className?: string; id?: string }) {
@@ -151,12 +151,17 @@ const TIMELINE = [
   {
     when: "September 2026",
     title: "One app becomes four",
-    text: "Swipe Coding came first. Then Finance, Personal Growth and AI followed — four apps with one account and a personal advisor in each of them.",
+    text: "SwipeFuture Coding came first. Then Finance, Personal Growth and AI followed — four apps with one account and a personal advisor in each of them.",
   },
   {
     when: "October 2026",
     title: "App Store & free lessons",
     text: "All four apps were submitted to the App Store, and the first two levels of every track — 384 lessons — became free on the web, together with calculators, quizzes and a learning advisor.",
+  },
+  {
+    when: "November 2026",
+    title: "Setbacks — and one big decision",
+    text: "The App Store review sent the apps back more than once. Every time we fixed what was asked and tried again. In the end the lesson was clear: four separate apps were the wrong shape. So we made the big decision to switch to one app — SwipeFuture, with Coding, Finance, Personal Growth and AI as areas in the same app, one account and one plan.",
   },
   {
     when: "Next",
@@ -182,7 +187,7 @@ export default function AboutStory() {
           
           <span className="relative text-xs font-bold  text-green-700">A note from the founder</span>
           <h2 className="relative mt-3 text-3xl font-black tracking-tight text-black sm:text-5xl">
-            Swipe to the{" "}
+            SwipeFuture to the{" "}
             <span>Future.</span>
           </h2>
           <div className="relative mt-8 space-y-12 text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
@@ -211,11 +216,11 @@ export default function AboutStory() {
         </div>
       </Reveal>
 
-      {/* How Swipe started */}
+      {/* How SwipeFuture started */}
       <Reveal id="how-it-started">
         <div>
           <span className="text-xs font-bold  text-green-700">How it started</span>
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">From a sketchbook to four apps</h2>
+          <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">From a sketchbook to one app</h2>
         </div>
         <ol className="relative mx-auto mt-12 max-w-3xl">
           <div className="absolute bottom-2 left-[15px] top-2 w-px bg-white sm:left-1/2" />
@@ -235,7 +240,7 @@ export default function AboutStory() {
         <div>
           <span className="text-xs font-bold  text-green-700">How we make lessons</span>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">Five steps behind every lesson</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">Short doesn&apos;t mean shallow. This is how a Swipe track goes from idea to the lesson on your screen.</p>
+          <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">Short doesn&apos;t mean shallow. This is how a SwipeFuture track goes from idea to the lesson on your screen.</p>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {PROCESS.map((s, i) => (

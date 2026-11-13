@@ -5,7 +5,7 @@ import Finance from "@/components/finance/Finance";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance" },
-  title: "Swipe Finance — Learn Personal Finance & Investing | Swipe",
+  title: "Learn Personal Finance & Investing | SwipeFuture",
   description:
     "Twelve chapters on money: budgeting, saving, debt, credit, ETFs, compound interest and long-term investing — plain-English lessons and free calculators.",
 };

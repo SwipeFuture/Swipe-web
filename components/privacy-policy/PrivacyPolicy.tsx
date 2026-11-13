@@ -10,9 +10,9 @@ const SECTIONS: {
   {
     title: "Introduction",
     blocks: [
-      "Swipe (“we”, “our”, “us”) is a platform focused on helping people build knowledge in coding, artificial intelligence, finance and personal growth.",
+      "SwipeFuture (“we”, “our”, “us”) is a platform focused on helping people build knowledge in coding, artificial intelligence, finance and personal growth.",
       "We respect your privacy. This Privacy Policy explains what information may be collected when you visit this website and how it is used.",
-      "The Swipe apps have their own privacy policy, which is linked inside the apps.",
+      "The SwipeFuture app has its own privacy policy, which is linked inside the app.",
     ],
   },
   {
@@ -35,7 +35,7 @@ const SECTIONS: {
       [
         "keep the website running properly",
         "improve performance and user experience",
-        "maintain the security and stability of Swipe",
+        "maintain the security and stability of SwipeFuture",
       ],
       "We do not sell or share personal information for advertising purposes.",
     ],
@@ -89,7 +89,7 @@ const SECTIONS: {
   {
     title: "Changes to This Policy",
     blocks: [
-      "We may update this Privacy Policy from time to time as Swipe grows and new features become available. Any changes will be published on this page.",
+      "We may update this Privacy Policy from time to time as SwipeFuture grows and new features become available. Any changes will be published on this page.",
     ],
   },
   {

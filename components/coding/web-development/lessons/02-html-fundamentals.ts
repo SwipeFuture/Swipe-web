@@ -16,7 +16,7 @@ An HTML document is built from elements that describe different parts of a webpa
 
 Most HTML elements use an opening tag and a closing tag.
 
-Example: <h1>Welcome to Swipe</h1>
+Example: <h1>Welcome to SwipeFuture</h1>
 
 The opening tag tells the browser where the element begins, and the closing tag tells it where the element ends.
 

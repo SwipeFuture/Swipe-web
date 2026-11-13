@@ -11,12 +11,12 @@ export const TYPING_FAQ: FaqItem[] = [
 
 const SNIPPETS: Record<string, string[]> = {
   Python: [
-    'def greet(name):\n    return f"Hello, {name}!"\n\nprint(greet("Swipe"))',
+    'def greet(name):\n    return f"Hello, {name}!"\n\nprint(greet("SwipeFuture"))',
     "scores = [72, 88, 95]\naverage = sum(scores) / len(scores)\nprint(round(average, 1))",
     "for i in range(1, 6):\n    if i % 2 == 0:\n        print(i, \"is even\")",
   ],
   JavaScript: [
-    "const greet = (name) => `Hello, ${name}!`;\nconsole.log(greet(\"Swipe\"));",
+    "const greet = (name) => `Hello, ${name}!`;\nconsole.log(greet(\"SwipeFuture\"));",
     "const prices = [4, 8, 15];\nconst total = prices.reduce((sum, p) => sum + p, 0);\nconsole.log(total);",
     "for (let i = 1; i <= 5; i++) {\n  if (i % 2 === 0) console.log(i);\n}",
   ],

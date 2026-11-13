@@ -453,7 +453,7 @@ export default function PersonalGrowth() {
                 career, business and meaningful life.
               </p>
               <p className="text-base sm:text-lg leading-7 sm:leading-8 text-gray-500">
-                Swipe helps you build that foundation one skill at a time.
+                SwipeFuture helps you build that foundation one skill at a time.
               </p>
             </div>
 
@@ -514,7 +514,7 @@ export default function PersonalGrowth() {
             <p className="mt-5 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">
               Discipline, focus, resilience and mindset shape everything you
               achieve — yet almost no one is ever taught how to build them on
-              purpose. Swipe Personal Growth closes that gap.
+              purpose. SwipeFuture closes that gap.
             </p>
 
             <p className="mt-4 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">

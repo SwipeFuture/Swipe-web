@@ -5,7 +5,7 @@ import PersonalGrowth from "@/components/personal-growth/PersonalGrowth";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/personal-growth" },
-  title: "Swipe Personal Growth — Habits, Discipline & Mindset | Swipe",
+  title: "Habits, Discipline & Mindset | SwipeFuture",
   description:
     "Twelve chapters on discipline, habits, focus, mindset, confidence and productivity — practical lessons you can use today.",
 };

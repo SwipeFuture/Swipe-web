@@ -5,7 +5,7 @@ const EMAIL = "SwipeFuture@icloud.com";
 const QUICK_ANSWERS = [
   { q: "Where do I start learning?", a: "Hundreds of short lessons in coding, money, personal growth and AI are free right here — no account needed.", href: "/learn", link: "Free lessons" },
   { q: "I don't know what to learn.", a: "Answer four quick questions and the learning advisor suggests the track that fits your goal and your time.", href: "/advisor", link: "Find your path" },
-  { q: "When can I get the apps?", a: "The four Swipe apps are made for iPhone and coming to the App Store soon.", href: "/apps", link: "About the apps" },
+  { q: "When can I get the app?", a: "SwipeFuture is one iPhone app with four areas and is coming to the App Store soon.", href: "/apps", link: "About the app" },
   { q: "What happens with my data?", a: "The website needs no account, and we never sell your data.", href: "/privacy-policy", link: "Privacy policy" },
 ];
 
@@ -23,10 +23,10 @@ export default function Contact() {
     <main className="bg-white px-6 pb-24 pt-28 text-[#121212] sm:px-10 sm:pt-36">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <span className="inline-flex rounded-lg bg-[#E7FAF0] px-2.5 py-1 text-[14px] font-bold text-[#127D4D]">Contact</span>
+          <span className="inline-flex rounded-lg bg-[#E6F0FF] px-2.5 py-1 text-[14px] font-bold text-[#0057C2]">Contact</span>
           <h1 className="mt-5 text-[38px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[56px]">Write to us.</h1>
           <p className="mt-6 text-[18px] leading-8 text-[#3a3a38]">
-            Questions about Swipe, feedback, a mistake in a lesson, or just want to say hi? Send an email and we&apos;ll get back to you as
+            Questions about SwipeFuture, feedback, a mistake in a lesson, or just want to say hi? Send an email and we&apos;ll get back to you as
             soon as we can.
           </p>
           <a
@@ -46,7 +46,7 @@ export default function Contact() {
               <dt className="text-[19px] font-extrabold">{item.q}</dt>
               <dd className="mt-2 text-[16px] leading-7 text-[#3a3a38]">{item.a}</dd>
               <dd className="mt-3">
-                <Link href={item.href} className="text-[16px] font-bold underline decoration-2 underline-offset-4 hover:decoration-[#22E08A]">
+                <Link href={item.href} className="text-[16px] font-bold underline decoration-2 underline-offset-4 hover:decoration-[#0072FE]">
                   {item.link} →
                 </Link>
               </dd>

@@ -192,7 +192,7 @@ export default function SwipeTools() {
   const [featuredVisible, setFeaturedVisible] = useState(false);
   const [gridVisible, setGridVisible] = useState(false);
 
-  // Parallax on the background glows, tied to scroll position — same recipe as "What is Swipe"
+  // Parallax on the background glows, tied to scroll position — same recipe as "What is SwipeFuture"
   useEffect(() => {
     let ticking = false;
 
@@ -252,7 +252,7 @@ export default function SwipeTools() {
   return (
     <section id="learning-paths" ref={sectionRef} className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-28 scroll-mt-24">
 
-      {/* ================= Background — identical language to "What is Swipe" ================= */}
+      {/* ================= Background — identical language to "What is SwipeFuture" ================= */}
 
       {/* Mesh Gradient — plain white at the very top and bottom, the beige/amber tint only lives in the middle band */}
       

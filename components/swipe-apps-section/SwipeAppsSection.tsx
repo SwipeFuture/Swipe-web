@@ -3,15 +3,15 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-// Homepage section: a short note about the four Swipe apps, plus a compact
+// Homepage section: a short note about the four SwipeFuture apps, plus a compact
 // "free on the web" row (lessons, tools, advisor) — one section instead of three,
 // so the homepage stays short.
 
 const APPS = [
-  { slug: "coding", name: "Swipe Coding", tagline: "Programming", glow: "bg-green-400" },
-  { slug: "finance", name: "Swipe Finance", tagline: "Money", glow: "bg-amber-400" },
-  { slug: "growth", name: "Swipe Personal Growth", tagline: "Personal growth", glow: "bg-orange-400" },
-  { slug: "ai", name: "Swipe AI", tagline: "AI", glow: "bg-violet-400" },
+  { slug: "coding", name: "SwipeFuture Coding", tagline: "Programming", glow: "bg-green-400" },
+  { slug: "finance", name: "SwipeFuture Finance", tagline: "Money", glow: "bg-amber-400" },
+  { slug: "growth", name: "SwipeFuture Personal Growth", tagline: "Personal growth", glow: "bg-orange-400" },
+  { slug: "ai", name: "SwipeFuture AI", tagline: "AI", glow: "bg-violet-400" },
 ];
 
 const FREE = [
@@ -53,7 +53,7 @@ export default function SwipeAppsSection() {
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-stone-600">
               <span className="w-2 h-2 rounded-full bg-amber-500" />
-              Swipe Apps · Coming soon
+              SwipeFuture Apps · Coming soon
             </span>
 
             <h2 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em] text-stone-800">

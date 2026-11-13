@@ -461,7 +461,7 @@ export default function CoreProgrammingConcepts() {
           accent="coding"
           className="mt-14 sm:mt-20"
           title="Practise the basics like in the app"
-          text="Variables, conditions and loops click fastest with real code. Start with the free Python lessons from Swipe Coding — short cards and a quick check after every idea."
+          text="Variables, conditions and loops click fastest with real code. Start with the free Python lessons from the SwipeFuture app — short cards and a quick check after every idea."
           primary={{ href: learnTrackUrl("coding", "python") ?? "/learn#coding", label: "Start free Python lessons" }}
           secondary={[
             { href: "/quiz/programming-language", label: "Which language should I learn?" },

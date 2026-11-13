@@ -38,7 +38,7 @@ const COLUMNS = [
   },
   {
     heading: "Free",
-    links: [["Free Lessons", "/learn"], ["Free Tools", "/tools"], ["Learning Advisor", "/advisor"], ["Swipe Apps", "/apps"]],
+    links: [["Free Lessons", "/learn"], ["Free Tools", "/tools"], ["Learning Advisor", "/advisor"], ["The app", "/apps"]],
   },
   {
     heading: "Information",
@@ -65,7 +65,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.png" alt="" width={36} height={36} className="h-9 w-9 rounded-xl" />
-              <span className="text-[22px] font-extrabold" style={{ fontStretch: "125%" }}>Swipe</span>
+              <span className="text-[22px] font-extrabold" style={{ fontStretch: "125%" }}>SwipeFuture</span>
             </Link>
             <p className="mt-5 max-w-xs text-[15px] leading-7 text-[#5c5c58]">
               Short lessons and free tools for coding, money, personal growth and AI.
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-wrap items-end justify-between gap-6 border-t-2 border-[#ececea] pt-6">
-          <p className="text-[14px] text-[#5c5c58]">© 2026 Swipe</p>
+          <p className="text-[14px] text-[#5c5c58]">© 2026 SwipeFuture</p>
           <div className="flex items-end gap-2" aria-hidden>
             {SWIPEYS.map(([accent, light]) => (
               <Swipey key={accent} accent={accent} accentLight={light} className="w-7" />

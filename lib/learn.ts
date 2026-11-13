@@ -22,10 +22,10 @@ type DataApp = "coding" | "finance" | "growth" | "ai";
 
 // URL slug → data folder, display name, theme.
 export const LEARN_APPS = [
-  { url: "coding", data: "coding", name: "Swipe Coding", area: "Coding", theme: "coding", blurb: "Programming from your first line of code — 9 languages plus a shipping track." },
-  { url: "finance", data: "finance", name: "Swipe Finance", area: "Finance", theme: "finance", blurb: "Money, investing, credit, taxes and more — the money skills school skips." },
-  { url: "personal-growth", data: "growth", name: "Swipe Personal Growth", area: "Personal Growth", theme: "growth", blurb: "Habits, focus, mindset, sleep and relationships — practical lessons for real life." },
-  { url: "ai", data: "ai", name: "Swipe AI", area: "AI", theme: "ai", blurb: "How AI really works, how to prompt it well and how to build with it." },
+  { url: "coding", data: "coding", name: "Coding", area: "Coding", theme: "coding", blurb: "Programming from your first line of code — 9 languages plus a shipping track." },
+  { url: "finance", data: "finance", name: "Finance", area: "Finance", theme: "finance", blurb: "Money, investing, credit, taxes and more — the money skills school skips." },
+  { url: "personal-growth", data: "growth", name: "Personal Growth", area: "Personal Growth", theme: "growth", blurb: "Habits, focus, mindset, sleep and relationships — practical lessons for real life." },
+  { url: "ai", data: "ai", name: "AI", area: "AI", theme: "ai", blurb: "How AI really works, how to prompt it well and how to build with it." },
 ] as const satisfies readonly { url: string; data: DataApp; name: string; area: string; theme: ToolTheme; blurb: string }[];
 
 export type LearnApp = (typeof LEARN_APPS)[number];
@@ -75,7 +75,7 @@ export function laterLevels(app: LearnApp, trackName: string) {
 
 export function lessonDescription(lesson: Lesson, track: Track) {
   const first = lesson.blocks.find((b) => b.type === "text") as { body: string } | undefined;
-  const body = (first?.body ?? `${lesson.title} — a free ${track.track} lesson from Swipe.`).replace(/\s+/g, " ");
+  const body = (first?.body ?? `${lesson.title} — a free ${track.track} lesson from SwipeFuture.`).replace(/\s+/g, " ");
   return body.length > 155 ? body.slice(0, 152).replace(/\s+\S*$/, "") + "…" : body;
 }
 

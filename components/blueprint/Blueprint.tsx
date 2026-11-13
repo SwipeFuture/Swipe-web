@@ -96,10 +96,10 @@ export default function Blueprint() {
     <main className="bg-white px-6 pb-16 pt-28 text-[#121212] sm:px-10 sm:pt-36">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <span className="inline-flex rounded-lg bg-[#F0EAFE] px-2.5 py-1 text-[14px] font-bold text-[#6D28D9]">Roadmap</span>
+          <span className="inline-flex rounded-lg bg-[#E6F0FF] px-2.5 py-1 text-[14px] font-bold text-[#0057C2]">Roadmap</span>
           <h1 className="mt-5 text-[40px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[60px]">The Blueprint</h1>
           <p className="mt-6 text-[19px] leading-8 text-[#3a3a38]">
-            One roadmap for each of the four Swipe areas: what to learn, in which order, and what each step is for. Pick one area
+            One roadmap for each of the four SwipeFuture areas: what to learn, in which order, and what each step is for. Pick one area
             and start at step one. The areas work on their own, but they help each other.
           </p>
           <nav aria-label="Areas" className="mt-8 flex flex-wrap gap-2.5">

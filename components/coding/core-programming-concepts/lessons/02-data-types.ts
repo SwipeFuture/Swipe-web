@@ -14,7 +14,7 @@ Every program works with data. Whether you're building a website, a mobile app o
 
 A **String** stores text.
 
-Examples: *"Hello"*, *"Swipe"*, *"John Smith"*
+Examples: *"Hello"*, *"SwipeFuture"*, *"John Smith"*
 
 ---
 

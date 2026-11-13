@@ -461,7 +461,7 @@ export default function Introduction() {
           accent="coding"
           className="mt-14 sm:mt-20"
           title="Not sure where to start?"
-          text="Answer 7 quick questions to find your first programming language — then start its free lessons, just like in Swipe Coding."
+          text="Answer 7 quick questions to find your first programming language — then start its free lessons, just like in the SwipeFuture app."
           primary={{ href: "/quiz/programming-language", label: "Find my first language" }}
           secondary={[
             { href: "/advisor", label: "Ask the learning advisor" },

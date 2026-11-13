@@ -26,7 +26,7 @@ Think of a variable as a labeled box that stores information: Data Type + Variab
 
 **String** — stores text.
 
-Examples: *"Hello"*, *"Swipe"*, *"John Smith"*
+Examples: *"Hello"*, *"SwipeFuture"*, *"John Smith"*
 
 **Number** — stores numeric values.
 

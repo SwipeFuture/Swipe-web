@@ -8,15 +8,15 @@ export const dynamic = "force-static";
 
 export function GET() {
   const lines = [
-    "# Swipe",
+    "# SwipeFuture",
     "",
     `> ${SITE_DESCRIPTION}`,
     "",
-    "Swipe makes four learning apps for iPhone (Swipe Coding, Swipe Finance, Swipe Personal Growth, Swipe AI) with short, swipeable lessons. This website offers free lessons, calculators, quizzes and a learning advisor.",
+    "SwipeFuture is a learning app for iPhone with four areas (Coding, Finance, Personal Growth, AI) and short, swipeable lessons. This website offers free lessons, calculators, quizzes and a learning advisor.",
     "",
     "## Main pages",
-    `- [The Swipe apps](${SITE_URL}/apps): the four iPhone apps, coming soon`,
-    `- [Free lessons](${SITE_URL}/learn): levels 1–2 of every Swipe track`,
+    `- [The SwipeFuture app](${SITE_URL}/apps): one iPhone app with four areas, coming soon`,
+    `- [Free lessons](${SITE_URL}/learn): levels 1–2 of every SwipeFuture track`,
     `- [Free tools](${SITE_URL}/tools): calculators, quizzes and helpers`,
     `- [Learning advisor](${SITE_URL}/advisor): personal learning path in four questions`,
     "",

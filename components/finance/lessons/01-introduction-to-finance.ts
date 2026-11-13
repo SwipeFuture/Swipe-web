@@ -8,7 +8,7 @@ Every decision you make with money, from buying a coffee to choosing a retiremen
 
 Most people are never formally taught how money actually works. Schools teach algebra and history, but rarely explain interest rates, taxes, credit or investing.
 
-That gap is exactly what Swipe Finance is here to close — not with jargon, but with clear, practical knowledge you can use for the rest of your life.
+That gap is exactly what SwipeFuture is here to close — not with jargon, but with clear, practical knowledge you can use for the rest of your life.
 `,
   whyItMatters: `
 Financial literacy is one of the highest-leverage skills you can develop.

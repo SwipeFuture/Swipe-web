@@ -142,7 +142,7 @@ export default function Quiz({ data }: { data: QuizData }) {
               <button
                 type="button"
                 onClick={() => {
-                  const text = `I got "${winner.title}" ${winner.emoji} in the Swipe ${data.title} ${data.highlight} — ${window.location.href}`;
+                  const text = `I got "${winner.title}" ${winner.emoji} in the SwipeFuture ${data.title} ${data.highlight} — ${window.location.href}`;
                   if (navigator.share) navigator.share({ text }).catch(() => {});
                   else
                     navigator.clipboard?.writeText(text).then(() => {

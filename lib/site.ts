@@ -1,9 +1,9 @@
 // One place for the site's identity — used by metadata, the sitemap,
 // robots.txt, the social preview image and the JSON-LD structured data.
 export const SITE_URL = "https://swipefuture.dev";
-export const SITE_NAME = "Swipe";
+export const SITE_NAME = "SwipeFuture";
 export const SITE_DESCRIPTION =
-  "Free short lessons, guides and calculators for coding, personal finance, personal growth and AI from Swipe.";
+  "Free short lessons, guides and calculators for coding, personal finance, personal growth and AI from SwipeFuture.";
 // Date of the last real content update — used as lastModified in the sitemap and as the
 // visible "Updated" date. Bump it when content changes (not on every deploy), so search
 // engines can trust it.

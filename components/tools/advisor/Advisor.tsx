@@ -7,15 +7,15 @@ import { Card, ToolShell, THEMES, type FaqItem, type ToolTheme } from "../kit";
 const ADVISOR_FAQ: FaqItem[] = [
   {
     q: "How does the learning advisor work?",
-    a: "You pick an area (coding, money, personal growth or AI), your goal, how much you already know and how many minutes a day you have. The advisor matches that to the Swipe track that fits best, links the first free lesson and estimates how many days the free levels take at your pace.",
+    a: "You pick an area (coding, money, personal growth or AI), your goal, how much you already know and how many minutes a day you have. The advisor matches that to the SwipeFuture track that fits best, links the first free lesson and estimates how many days the free levels take at your pace.",
   },
   {
     q: "Is it really free?",
-    a: "Yes. The advisor and every lesson it recommends are free on this website — no account, no email and no payment. The first two levels of every Swipe track are open to everyone.",
+    a: "Yes. The advisor and every lesson it recommends are free on this website — no account, no email and no payment. The first two levels of every SwipeFuture track are open to everyone.",
   },
   {
     q: "I'm a complete beginner. Where should I start?",
-    a: "Pick \"Total beginner\" in step three. Every Swipe track starts from zero, so you simply begin with the first lesson. Good first tracks are Python or HTML for coding, Money Basics for finance, Habits & Routines for personal growth and AI Fundamentals for AI.",
+    a: "Pick \"Total beginner\" in step three. Every SwipeFuture track starts from zero, so you simply begin with the first lesson. Good first tracks are Python or HTML for coding, Money Basics for finance, Habits & Routines for personal growth and AI Fundamentals for AI.",
   },
   {
     q: "How long does a lesson take?",
@@ -150,7 +150,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
       eyebrow="Learning Advisor"
       title="Find Your"
       highlight="Learning Path"
-      intro="Four quick questions, one clear answer: which Swipe track fits your goal, where to start and how long the free levels take at your pace."
+      intro="Four quick questions, one clear answer: which SwipeFuture track fits your goal, where to start and how long the free levels take at your pace."
       faq={ADVISOR_FAQ}
       related={[
         { href: "/quiz/programming-language", label: "Which programming language?" },
@@ -263,7 +263,7 @@ export default function Advisor({ tracks }: { tracks: TrackInfo[] }) {
               <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-6 text-stone-600">
                 <li>Do one {main.track} lesson a day — {minutes === 5 ? "one lesson fits exactly" : "a couple fit easily"} in your {minutes} minutes.</li>
                 <li>Finish each chapter with its quiz (60% to pass).</li>
-                <li>After levels 1–2, continue the full track in {area.label === "Money" ? "Swipe Finance" : area.label === "Personal growth" ? "Swipe Personal Growth" : `Swipe ${area.label}`} with streaks and XP.</li>
+                <li>After levels 1–2, continue the full track in the SwipeFuture app with streaks and XP.</li>
               </ol>
             </Card>
             <Card>

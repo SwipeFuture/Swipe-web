@@ -3,7 +3,7 @@ import EtfCalculator from "@/components/finance/etf-calculator/EtfCalculator";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance/etf-calculator" },
-  title: "ETF Savings Plan Calculator | Swipe Finance",
+  title: "ETF Savings Plan Calculator | SwipeFuture",
   description:
     "Free ETF calculator: see how a monthly ETF savings plan could grow over time, with your own return and duration — live, interactive projections.",
 };

@@ -14,7 +14,7 @@ const STRUCTURED_DATA = [
   {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About Swipe",
+    name: "About SwipeFuture",
     url: `${SITE_URL}/about`,
     mainEntity: { "@id": `${SITE_URL}/#organization` },
   },
@@ -25,7 +25,7 @@ const STRUCTURED_DATA = [
     name: "Colin",
     jobTitle: "Founder",
     url: `${SITE_URL}/about`,
-    worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Swipe", url: SITE_URL },
+    worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "SwipeFuture", url: SITE_URL },
     sameAs: SOCIAL_LINKS,
   },
 ];

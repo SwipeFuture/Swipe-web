@@ -78,14 +78,14 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
         <div>
           <p className="inline-flex flex-wrap gap-2 text-[14px] font-semibold">
-            {["Free", "No account", "5 minutes a lesson"].map((t, i) => (
-              <span key={t} className="rounded-lg px-2.5 py-1" style={{ background: AREAS[i].tint, color: AREAS[i].dark }}>{t}</span>
+            {["Free", "No account", "5 minutes a lesson"].map((t) => (
+              <span key={t} className="rounded-lg bg-[#E6F0FF] px-2.5 py-1 text-[#0057C2]">{t}</span>
             ))}
           </p>
           <h1 className="mt-6 text-left text-[38px] font-extrabold leading-[0.98] tracking-[-0.025em] min-[400px]:text-[42px] sm:text-[66px] lg:text-[78px]" style={wide}>
             Five-minute lessons that{" "}
             <span className="relative whitespace-nowrap">
-              <span className="absolute inset-x-0 bottom-[0.1em] top-[0.64em] -z-0 rounded-md bg-[#22E08A]" aria-hidden />
+              <span className="absolute inset-x-0 bottom-[0.1em] top-[0.64em] -z-0 rounded-md bg-[#0072FE]/35" aria-hidden />
               <span className="relative">actually stick.</span>
             </span>
           </h1>
@@ -95,14 +95,14 @@ function Hero() {
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
             <Link href="/learn" className="inline-block rounded-xl bg-[#121212] px-7 py-4 text-[17px] font-bold text-white transition-colors hover:bg-[#2a2a2a]">Start a free lesson</Link>
-            <Link href="/advisor" className="text-[17px] font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[#22E08A]">Find my path</Link>
+            <Link href="/advisor" className="text-[17px] font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[#0072FE]">Find my path</Link>
           </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[400px] lg:mr-6">
           {/* one Swipey next to the deck, nothing else around it */}
           <div className="pointer-events-none absolute -right-4 -top-12 z-10 w-12 sm:-right-10 sm:w-16">
-            <Swipey accent="#22E08A" accentLight="#B9F5D6" />
+            <Swipey accent="#0072FE" accentLight="#B8D4FF" />
           </div>
           <div className="relative z-[5]">
             <LessonDeck />
@@ -123,7 +123,7 @@ function Numbers() {
     { n: 0, label: "accounts needed", a: AREAS[3] },
   ];
   return (
-    <section aria-label="Swipe in numbers" className="px-6 pb-6 sm:px-10">
+    <section aria-label="SwipeFuture in numbers" className="px-6 pb-6 sm:px-10">
       <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 border-t-2 border-[#ececea] pt-8 lg:grid-cols-4">
         {items.map((it) => (
           <div key={it.label}>
@@ -149,7 +149,7 @@ function Areas() {
           <h2 className="max-w-2xl text-[36px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[52px]" style={wide}>
             Four things school rarely teaches properly.
           </h2>
-          <Link href="/blueprint" className="text-[16px] font-bold underline decoration-[3px] underline-offset-[6px] hover:decoration-[#22E08A]">
+          <Link href="/blueprint" className="text-[16px] font-bold underline decoration-[3px] underline-offset-[6px] hover:decoration-[#0072FE]">
             How they fit together
           </Link>
         </div>
@@ -285,10 +285,10 @@ function Tools() {
 /* ---------------- Apps ---------------- */
 
 const APP_LIST = [
-  { slug: "coding", name: "Swipe Coding", what: "Python, JavaScript, HTML and 7 more, from zero to real projects." },
-  { slug: "finance", name: "Swipe Finance", what: "Budgeting, investing, credit, taxes and retirement." },
-  { slug: "growth", name: "Swipe Personal Growth", what: "Habits, focus, sleep, mindset and relationships." },
-  { slug: "ai", name: "Swipe AI", what: "How AI works, prompting, agents and building with AI." },
+  { slug: "coding", name: "Coding", color: "#22E08A", what: "Python, JavaScript, HTML and 7 more, from zero to real projects." },
+  { slug: "finance", name: "Finance", color: "#FBBF24", what: "Budgeting, investing, credit, taxes and retirement." },
+  { slug: "growth", name: "Personal Growth", color: "#FB923C", what: "Habits, focus, sleep, mindset and relationships." },
+  { slug: "ai", name: "AI", color: "#8B5CF6", what: "How AI works, prompting, agents and building with AI." },
 ] as const;
 
 function Apps() {
@@ -297,19 +297,18 @@ function Apps() {
       <div className="mx-auto max-w-6xl overflow-hidden rounded-[36px] text-white" style={{ background: INK }}>
         <div className="grid items-center gap-12 px-7 pt-14 sm:px-12 sm:pt-16 lg:grid-cols-[1fr_1.05fr] lg:pb-16">
           <div>
-            <p className="inline-block rounded-lg bg-[#22E08A] px-2.5 py-1 text-[14px] font-bold text-[#121212]">Coming soon to the App Store</p>
+            <p className="inline-block rounded-lg bg-[#0072FE] px-2.5 py-1 text-[14px] font-bold text-white">Coming soon to the App Store</p>
             <h2 id="apps-title" className="mt-5 text-[38px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[54px]" style={wide}>
-              The full Swipe, in your pocket.
+              The full SwipeFuture, in your pocket.
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/75">
-              The website has the first two levels of every track. The iPhone apps have all of them, plus everything that keeps you
+              One app with four areas. The website has the first two levels of every track, the iPhone app has all of them, plus everything that keeps you
               going: a daily streak, chapter quizzes and level tests, a learning advisor, your statistics and a leaderboard.
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {APP_LIST.map((a) => (
                 <li key={a.slug} className="flex items-start gap-3 rounded-2xl bg-white/[0.06] p-3.5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/logo-${a.slug}-black.png`} alt="" width={48} height={48} className="h-12 w-12 flex-none rounded-[13px] border border-white/15" />
+                  <span className="mt-1 h-3.5 w-3.5 flex-none rounded-[5px]" style={{ background: a.color }} aria-hidden />
                   <span>
                     <span className="block text-[15px] font-extrabold" style={wide}>{a.name}</span>
                     <span className="mt-0.5 block text-[13px] leading-5 text-white/65">{a.what}</span>
@@ -318,18 +317,18 @@ function Apps() {
               ))}
             </ul>
             <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
-              <PressLink href="/apps" face="#fff" edge="#9c9c98" text={INK} className="px-6 py-3.5 text-[16px]">Meet the apps</PressLink>
-              <span className="text-[15px] text-white/60">One account for all four apps</span>
+              <PressLink href="/apps" face="#fff" edge="#9c9c98" text={INK} className="px-6 py-3.5 text-[16px]">Meet the app</PressLink>
+              <span className="text-[15px] text-white/60">One app, one account, four areas</span>
             </div>
           </div>
 
-          {/* real screens from Swipe Coding */}
+          {/* real screens from the Coding area */}
           <div className="relative mx-auto flex w-full max-w-[520px] items-end justify-center gap-3 sm:gap-4 lg:-mb-16">
-            <div className="w-[31%] -rotate-6"><div className={styles.floatSlow}><PhoneShot src="/app-screens/coding/01.webp" alt="Swipe Coding: the JavaScript learning path" /></div></div>
-            <div className="w-[36%] -translate-y-8"><div className={styles.float}><PhoneShot src="/app-screens/coding/02.webp" alt="Swipe Coding: a lesson about elif and else" /></div></div>
-            <div className="w-[31%] rotate-6"><div className={styles.floatFast}><PhoneShot src="/app-screens/coding/04.webp" alt="Swipe Coding: a chapter quiz question" /></div></div>
+            <div className="w-[31%] -rotate-6"><div className={styles.floatSlow}><PhoneShot src="/app-screens/coding/01.webp" alt="SwipeFuture app, Coding area: the JavaScript learning path" /></div></div>
+            <div className="w-[36%] -translate-y-8"><div className={styles.float}><PhoneShot src="/app-screens/coding/02.webp" alt="SwipeFuture app, Coding area: a lesson about elif and else" /></div></div>
+            <div className="w-[31%] rotate-6"><div className={styles.floatFast}><PhoneShot src="/app-screens/coding/04.webp" alt="SwipeFuture app, Coding area: a chapter quiz question" /></div></div>
             <div className="pointer-events-none absolute -left-2 top-0 w-14 sm:-left-8 sm:w-20">
-              <Swipey body="#ffffff" face={INK} accent="#22E08A" accentLight="#ffffff" />
+              <Swipey body="#ffffff" face={INK} accent="#0072FE" accentLight="#ffffff" />
             </div>
           </div>
         </div>
@@ -350,17 +349,17 @@ function Note() {
     <section className="px-6 py-20 sm:px-10 lg:py-28">
       <figure className="mx-auto flex max-w-4xl flex-col gap-8 sm:flex-row sm:items-start">
         <div className="w-20 flex-none sm:w-24">
-          <Swipey accent="#22E08A" accentLight="#B9F5D6" />
+          <Swipey accent="#0072FE" accentLight="#B8D4FF" />
         </div>
         <div>
           <blockquote className="text-[24px] font-bold leading-[1.4] tracking-[-0.01em] sm:text-[30px]">
-            &ldquo;We all spend hours a day swiping through social media, and it gets us nowhere. Swipe turns that same swipe into a
+            &ldquo;We all spend hours a day swiping through social media, and it gets us nowhere. SwipeFuture turns that same swipe into a
             few minutes a day that move you forward.&rdquo;
           </blockquote>
           <figcaption className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-[16px]">
-            <span style={{ color: MUTED }}>Colin, founder of Swipe</span>
-            <Link href="/about" className="font-bold underline decoration-2 underline-offset-[5px] hover:decoration-[#22E08A]">Read the story</Link>
-            <Link href="/motivation-experience" className="font-bold underline decoration-2 underline-offset-[5px] hover:decoration-[#22E08A]">Need a push today?</Link>
+            <span style={{ color: MUTED }}>Colin, founder of SwipeFuture</span>
+            <Link href="/about" className="font-bold underline decoration-2 underline-offset-[5px] hover:decoration-[#0072FE]">Read the story</Link>
+            <Link href="/motivation-experience" className="font-bold underline decoration-2 underline-offset-[5px] hover:decoration-[#0072FE]">Need a push today?</Link>
           </figcaption>
         </div>
       </figure>

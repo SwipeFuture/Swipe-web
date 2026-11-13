@@ -3,7 +3,7 @@ import DeveloperTools from "@/components/coding/developer-tools/DeveloperTools";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coding/developer-tools" },
-  title: "Developer Tools | Swipe Coding",
+  title: "Developer Tools | SwipeFuture",
   description: "Learn the tools professional developers use every day — code editors, the terminal, Git, GitHub, package managers and deployment workflows.",
 };
 

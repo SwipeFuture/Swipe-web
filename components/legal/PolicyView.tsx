@@ -12,7 +12,7 @@ export default function PolicyView({ label, title, updated, intro, sections }: {
   return (
     <main className="bg-white px-6 pb-24 pt-28 text-[#121212] sm:px-10 sm:pt-36">
       <div className="mx-auto max-w-3xl">
-        <span className="inline-flex rounded-lg bg-[#F6F6F4] px-2.5 py-1 text-[14px] font-bold text-[#3a3a38]">{label}</span>
+        <span className="inline-flex rounded-lg bg-[#E6F0FF] px-2.5 py-1 text-[14px] font-bold text-[#0057C2]">{label}</span>
         <h1 className="mt-5 text-[38px] font-extrabold leading-[1] tracking-[-0.025em] sm:text-[56px]">{title}</h1>
         <p className="mt-4 text-[15px] text-[#5c5c58]">Last updated: {updated}</p>
         <p className="mt-6 text-[18px] leading-8 text-[#3a3a38]">{intro}</p>
@@ -33,7 +33,7 @@ export default function PolicyView({ label, title, updated, intro, sections }: {
                 )}
               </div>
               {section.link && (
-                <Link href={section.link.href} className="mt-3 inline-block text-[16px] font-bold underline decoration-2 underline-offset-4 hover:decoration-[#22E08A]">
+                <Link href={section.link.href} className="mt-3 inline-block text-[16px] font-bold underline decoration-2 underline-offset-4 hover:decoration-[#0072FE]">
                   {section.link.label} →
                 </Link>
               )}

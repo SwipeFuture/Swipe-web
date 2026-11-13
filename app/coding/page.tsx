@@ -4,7 +4,7 @@ import Coding from "@/components/coding/Coding";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coding" },
-  title: "Swipe Coding — Learn Programming from Zero | Swipe",
+  title: "Learn Programming from Zero | SwipeFuture",
   description:
     "Learn how software is built, step by step: programming basics, web development, developer tools and the 8 most popular languages — explained simply.",
 };

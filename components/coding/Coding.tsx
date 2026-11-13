@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 // ================= Content =================
 //
 // Version 1 of the Coding page — an overview, not a full course. Five large cards
-// introduce the main areas of programming and point toward the upcoming Swipe Coding
+// introduce the main areas of programming and point toward the upcoming SwipeFuture Coding
 // platform, whose own card carries the waitlist CTA.
 
 type LearningArea = {
@@ -216,7 +216,7 @@ export default function Coding() {
       {/* Top / Bottom Fade */}
       
       {/* Bottom fade is taller and eases in earlier than the site-wide default — with how
-          saturated the dark green gets near the Swipe Coding card, the short version left too
+          saturated the dark green gets near the SwipeFuture Coding card, the short version left too
           hard an edge right before the (unchanged) white footer. */}
       
 
@@ -319,15 +319,15 @@ export default function Coding() {
             <p className="mt-4 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 text-gray-500 max-w-xl">
               Every website, app, and AI system you interact with is powered
               by code. This page is your starting point — a quick overview
-              of the main areas of programming before diving deeper into
-              Swipe Coding.
+              of the main areas of programming before diving deeper with
+              SwipeFuture.
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { icon: "🌍", label: "Powers the digital world" },
                 { icon: "🧩", label: "Five core areas to explore" },
-                { icon: "🚀", label: "Swipe Coding coming soon" },
+                { icon: "🚀", label: "The SwipeFuture app is coming" },
               ].map((item) => (
                 <div
                   key={item.label}
