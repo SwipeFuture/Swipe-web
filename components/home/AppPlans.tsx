@@ -1,12 +1,12 @@
 // How the plans in the SwipeFuture app work — explained plainly, nothing to buy on the website.
-// Plan names and daily tokens mirror the apps' lib/tokens.js (Free 500, Go 1,000, Pro unlimited).
+// Plan names and daily tokens mirror the apps' lib/tokens.js (Free 1,000, Go 2,000, Pro unlimited).
 // No prices here on purpose: Apple sets them per country and the app shows the exact price first.
 
 const wide = { fontStretch: "125%" } as const;
 
 const PLANS = [
-  { name: "Free", line: "500 tokens a day", detail: "About 5 lessons a day, in every area. Free for as long as you like, no card needed.", face: "#E6F0FF", edge: "#B8D4FF", tag: "Most people start here" },
-  { name: "Go", line: "1,000 tokens a day", detail: "About 10 lessons a day, for when you want to move faster.", face: "#FEF5DA", edge: "#F4DE9C", tag: "Optional" },
+  { name: "Free", line: "1,000 tokens a day", detail: "About 10 lessons a day, in every area. Free for as long as you like, no card needed.", face: "#E6F0FF", edge: "#B8D4FF", tag: "Most people start here" },
+  { name: "Go", line: "2,000 tokens a day", detail: "About 20 lessons a day, for when you want to move faster.", face: "#FEF5DA", edge: "#F4DE9C", tag: "Optional" },
   { name: "Pro", line: "No daily limit", detail: "Learn as much as you want, every day.", face: "#F0EAFE", edge: "#D6C8FB", tag: "Optional" },
 ];
 
@@ -21,6 +21,11 @@ export default function AppPlans({ headingLevel = "h3" }: { headingLevel?: "h2" 
   const H = headingLevel;
   return (
     <div>
+      {/* Shown wherever the plans appear (home + apps page): information only, nothing is sold here. */}
+      <p className="mb-8 inline-flex flex-wrap items-center gap-2 rounded-xl border-2 border-[#dcdcd8] bg-white px-3.5 py-2 text-[14px] font-bold">
+        <span className="rounded-md px-1.5 py-0.5 text-[12px] text-white" style={{ background: "#0072FE" }}>Info</span>
+        Subscriptions are sold and handled by Apple. This is information, not a recommendation to buy.
+      </p>
       <H className="text-[30px] font-extrabold leading-[1.05] tracking-[-0.02em] sm:text-[40px]" style={wide}>
         Free to use. Plans if you want more.
       </H>

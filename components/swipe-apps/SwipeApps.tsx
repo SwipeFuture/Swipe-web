@@ -152,13 +152,8 @@ export default function SwipeApps() {
       {/* ---------- Plans + notes ---------- */}
       <section className="bg-[#F6F6F4] px-6 py-20 sm:px-10 lg:py-24" aria-label="Plans">
         <div className="mx-auto max-w-6xl">
-          <p className="inline-flex flex-wrap items-center gap-2 rounded-xl border-2 border-[#dcdcd8] bg-white px-3.5 py-2 text-[14px] font-bold">
-            <span className="rounded-md px-1.5 py-0.5 text-[12px] text-white" style={{ background: BLUE }}>Info</span>
-            Subscriptions are sold and handled by Apple. This is information, not a recommendation to buy.
-          </p>
-          <div className="mt-8">
-            <AppPlans headingLevel="h2" />
-          </div>
+          {/* the "not a recommendation to buy" banner now lives inside AppPlans */}
+          <AppPlans headingLevel="h2" />
         </div>
       </section>
 
