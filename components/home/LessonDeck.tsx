@@ -66,7 +66,10 @@ export default function LessonDeck() {
 
   return (
     <div
-      className="relative aspect-[2/3] w-full select-none sm:aspect-[4/5]"
+      // All cards share one grid cell (stacked), so the deck is as tall as its tallest card.
+      // Before, cards were absolutely positioned in a fixed-ratio box and long content
+      // (the quiz after answering) spilled out of the card on narrow phones.
+      className="relative grid w-full grid-cols-1 select-none"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -88,7 +91,7 @@ export default function LessonDeck() {
             onPointerMove={pos === 0 ? onMove : undefined}
             onPointerUp={pos === 0 ? onUp : undefined}
             onPointerCancel={pos === 0 ? onUp : undefined}
-            className={`absolute inset-0 flex flex-col rounded-[24px] border-2 border-[#ececea] bg-white p-6 sm:p-7 ${pos === 0 ? "cursor-grab active:cursor-grabbing" : ""}`}
+            className={`relative flex aspect-[2/3] min-w-0 flex-col rounded-[24px] border-2 border-[#ececea] bg-white p-6 [grid-area:1/1] sm:aspect-[4/5] sm:p-7 ${pos === 0 ? "cursor-grab active:cursor-grabbing" : ""}`}
             style={{
               transform,
               opacity: isLeaving ? 0 : 1,
@@ -149,7 +152,8 @@ export default function LessonDeck() {
                       );
                     })}
                   </ul>
-                  <p className="mt-4 text-[14px] leading-6 text-[#5c5c58]">
+                  {/* room for two lines from the start, so the card doesn't jump when you answer */}
+                  <p className="mt-4 min-h-12 text-[14px] leading-6 text-[#5c5c58]">
                     {answer === null ? "Tap an answer." : "[0:3] takes index 0, 1 and 2, up to but not including 3."}
                   </p>
                 </>
